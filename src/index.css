@@ -1,13 +1,132 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--red-1: #fe3b3a;
+	--red-2: #ff5656;
+	--red-3: #ffbfbf;
+	--orange-1: #ff8801;
+	--orange-2: #feb555;
+	--orange-3: #fde5bb;
+	--yellow-1: #ffcc00;
+	--yellow-2: #ffe055;
+	--yellow-3: #fff6b9;
+	--green-1: #05c270;
+	--green-2: #56de9a;
+	--green-3: #a4f0cc;
+	--blue-1: #3568d4;
+	--blue-2: #3d7cff;
+	--blue-3: #b3cbff;
+	--purple-1: #6500cd;
+	--purple-2: #b56bdf;
+	--purple-3: #efd2f3;
+	--dark-1: #191a2c;
+	--dark-2: #28293d;
+	--light-1: #ffffff;
+	--light-2: #f2f2f4;
+	--gray: #9090a7;
+
+	--primary-font: "Montserrat", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+	font-size: 62.5%; /* Now 10px = 1rem! */
+}
+
+body {
+	font-family: var(--primary-font);
+	background-color: var(--dark-1);
+	color: var(--light-1);
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+p {
+	font-weight: 500;
+	text-align: center;
+}
+
+h1 {
+	font-size: 8rem;
+}
+
+h2 {
+	font-size: 5rem;
+}
+
+h3 {
+	font-size: 4rem;
+}
+
+h4 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+}
+
+a {
+	font-size: 1.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--light-1);
+}
+
+p {
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+.container {
+	width: 85%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+li {
+	list-style: none;
+}
+
+@media (min-width: 1269px) {
+	h1 {
+		font-size: 16rem;
+	}
+
+	h2 {
+		font-size: 10rem;
+	}
+
+	h3 {
+		font-size: 4.2rem;
+	}
+
+	h4 {
+		font-size: 3rem;
+	}
+
+	a {
+		font-size: 2rem;
+	}
+
+	p {
+		font-size: 2rem;
+	}
 }
