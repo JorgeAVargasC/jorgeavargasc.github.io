@@ -6,7 +6,7 @@ import './header.css'
 export default class Header extends Component {
     render() {
         return (
-            <div id='home' className='header-container'>
+            <div id='home' className='container'>
                 <Navbar />
 
                 <h1 className='presentation'>

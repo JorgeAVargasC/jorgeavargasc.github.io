@@ -1,18 +1,19 @@
 .navbar {
-	width: 85%;
+	width: 100%;
 	height: 10rem;
 	position: fixed;
 	top: 0;
 	display: flex;
 	justify-content: center;
-	/* background-color: var(--dark-2); */
+	background-color: var(--dark-1);
+	z-index: 5;
 }
 
 nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
+	width: 85%;
 }
 
 .navlinks-mobile {

@@ -100,6 +100,14 @@ p {
 	color: var(--green-1);
 }
 
+.container{
+	width: 85%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
 
 
 li {
