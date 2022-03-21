@@ -1,6 +1,7 @@
 .navbar {
 	width: 100%;
-	height: 10rem;
+	height: fit-content;
+	padding: 3rem 0;
 	position: fixed;
 	top: 0;
 	display: flex;
@@ -14,6 +15,10 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	width: 85%;
+}
+
+nav .logo{
+	width: 5rem;
 }
 
 .navlinks-mobile {
