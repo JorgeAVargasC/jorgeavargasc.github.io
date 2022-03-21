@@ -17,3 +17,5 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 ### `npm run build`
+
+### `npm run deploy`
