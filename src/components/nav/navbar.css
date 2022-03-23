@@ -18,7 +18,7 @@ nav {
 }
 
 nav .logo{
-	width: 5rem;
+	width: 4rem;
 }
 
 .navlinks-mobile {
@@ -37,6 +37,16 @@ nav .logo{
 .navlinks {
 	display: none;
 }
+
+.navlinks li a{
+	margin-left: 3rem;
+}
+
+/* TODO */
+/* .navlinks li a:hover{
+	
+} */
+
 
 @keyframes slide-left {
 	0% {
