@@ -13,7 +13,7 @@ export default class Header extends Component {
                     <span>Hi,</span>
                     <span>I'm Jorge Vargas a</span>
                     <div>
-                        <TextLoop interval={4000}>
+                        <TextLoop interval={2000}>
                             <span className='txt-blue'>Front-end</span>
                             <span className='txt-green'>Back-end</span>
                         </TextLoop>{" "}
