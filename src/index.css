@@ -7,6 +7,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 :root {
 	--red-1: #fe3b3a;
 	--red-2: #ff5656;
@@ -85,6 +86,7 @@ a {
 	font-weight: 400;
 	text-transform: uppercase;
 	text-decoration: none;
+	letter-spacing: 0.2rem;	
 	color: var(--light-1);
 }
 
@@ -93,15 +95,19 @@ p {
 	font-weight: 400;
 }
 
-.txt-blue{
+li {
+	list-style: none;
+}
+
+.txt-blue {
 	color: var(--blue-1);
 }
 
-.txt-green{
+.txt-green {
 	color: var(--green-1);
 }
 
-.container{
+.container {
 	width: 85%;
 	min-height: 100vh;
 	display: flex;
@@ -112,21 +118,75 @@ p {
 
 /* Gradient Scroll Bar */
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
 	width: 1.2rem;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
 	background-color: var(--dark-2);
 }
 
-::-webkit-scrollbar-thumb{
-	background: linear-gradient(180deg,var(--blue-1),var(--green-2));
-	border-radius: 1rem;
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, var(--blue-1), var(--blue-2));
+	border-radius: 0rem;
 }
 
-li {
-	list-style: none;
+/* Buttons */
+
+.button {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: capitalize;	
+	background: var(--blue-1);
+	box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	border: none;
+}
+
+.button:after {
+	content: " ";
+	width: 0%;
+	height: 100%;
+	background: var(--light-1);
+	position: absolute;
+	transition: all 0.4s ease-in-out;
+	right: 0;
+}
+
+.button:hover::after {
+	right: auto;
+	left: 0;
+	width: 100%;
+}
+
+.button span {	
+	width: 100%;
+	padding: 1.8rem 2.5rem;
+	color: var(--light-1);	
+	letter-spacing: 0.4rem;
+	z-index: 20;
+	transition: all 0.3s ease-in-out;
+}
+
+.button:hover span {
+	color: var(--dark-1);
+	animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0.95);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
 
 @media (min-width: 1269px) {

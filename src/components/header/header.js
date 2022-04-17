@@ -19,7 +19,13 @@ export default class Header extends Component {
                         </TextLoop>{" "}
                         <span>Developer</span>
                     </div>
+                    <a className='button' href='#about'>
+                        <span>See Who I'm</span>
+                    </a>
                 </h1>
+
+
+
             </div>
         )
     }
