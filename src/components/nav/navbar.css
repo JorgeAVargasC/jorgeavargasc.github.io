@@ -7,7 +7,7 @@
 	display: flex;
 	justify-content: center;
 	background-color: var(--dark-1);
-	z-index: 5;
+	z-index: 30;
 }
 
 nav {
