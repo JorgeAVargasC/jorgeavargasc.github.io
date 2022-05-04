@@ -3,30 +3,21 @@ import { Spin as Hamburger } from 'hamburger-react'
 import './navbar.css'
 import Logo2 from '../../assets/svg/Logo2.svg'
 
-
 export default function Navbar() {
 
     const [isOpen, setOpen] = useState(false)
 
     return (
         <div className='navbar'>
-            <nav>
+            <div className='navbar-content'>
                 <a href='#home'>
                     <img className="logo" src={Logo2} alt="" />
                 </a>
-
-
-                <ul
-                    className={isOpen ? 'navlinks-mobile' : 'navlinks'}
-                    onClick={() => setOpen(false)}
-                >
-
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-
-                </ul>
-
+                <nav className={isOpen ? 'navlinks-mobile' : 'navlinks'} onClick={() => setOpen(false)}>
+                    <a className='links' href="#home">Home</a>
+                    <a className='links' href="#about">About</a>
+                    <a className='links' href="#contact">Contact</a>
+                </nav>
                 <Hamburger
                     rounded
                     toggled={isOpen}
@@ -34,9 +25,7 @@ export default function Navbar() {
                     direction='left'
                     duration={0.6}
                 />
-
-            </nav>
-
+            </div>
         </div>
     )
 }

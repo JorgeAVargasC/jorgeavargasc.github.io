@@ -1,30 +1,42 @@
 .navbar {
 	width: 100%;
-	height: fit-content;
-	padding: 3rem 0;
+	height: 15vh;
 	position: fixed;
 	top: 0;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	background-color: var(--dark-1);
 	z-index: 30;
 }
 
-nav {
+.navbar-content{
+	width: 85%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 85%;
 }
 
-nav .logo{
+.navbar-content .logo{
+	position: relative;
+	z-index: 30;
 	width: 4rem;
+	height: auto;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 .navlinks-mobile {
-	width: 80%;
-	background-color: var(--dark-2);
+	width: 100%;
+	padding-top: 15vh;
+	background-color: var(--dark-1);
 	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 	flex-direction: column;
 	position: fixed;
 	top: 0;
@@ -34,18 +46,24 @@ nav .logo{
 	animation: slide-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+.navlinks-mobile .links{
+	margin: 0;
+	background-color: var(--dark-2);
+	border-radius: 0.8rem;
+	text-align: center;
+	width: 84%;
+	padding: 1.5rem;	
+	margin-bottom: 1rem;	
+}
+
+.navlinks-mobile .links:last-of-type{
+	margin-bottom: 0;
+}
+
 .navlinks {
 	display: none;
 }
 
-.navlinks li a{
-	margin-left: 3rem;
-}
-
-/* TODO */
-/* .navlinks li a:hover{
-	
-} */
 
 
 @keyframes slide-left {
@@ -69,11 +87,11 @@ nav .logo{
 		display: flex;
 	}
 
-	.navlinks li {
-		margin-left: 1rem;
+	.navlinks .links {
+		margin-left: 2.5rem;
 	}
 
-	.navlinks li:first-of-type {
+	.navlinks .links:first-of-type {
 		margin-left: 0;
 	}
 }

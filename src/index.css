@@ -87,7 +87,13 @@ a {
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 0.2rem;	
+	color: var(--gray);
+	transition-duration: 0.3s;
+}
+
+a:hover{
 	color: var(--light-1);
+	transition-duration: 0.4s;
 }
 
 p {
