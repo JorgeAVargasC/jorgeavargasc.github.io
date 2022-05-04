@@ -49,7 +49,7 @@ nav {
 .navlinks-mobile .links{
 	margin: 0;
 	background-color: var(--dark-2);
-	border-radius: 0.8rem;
+	border-radius: 0.5rem;
 	text-align: center;
 	width: 85%;
 	padding: 1.5rem;	
