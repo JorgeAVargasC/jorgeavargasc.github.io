@@ -9,29 +9,39 @@
 }
 
 :root {
+	--red-0: #fe3b3a20;
 	--red-1: #fe3b3a;
 	--red-2: #ff5656;
 	--red-3: #ffbfbf;
+	--orange-0: #ff880120;
 	--orange-1: #ff8801;
 	--orange-2: #feb555;
 	--orange-3: #fde5bb;
+	--yellow-0: #ffcc0020;
 	--yellow-1: #ffcc00;
 	--yellow-2: #ffe055;
 	--yellow-3: #fff6b9;
+	--green-0: #05c27020;
 	--green-1: #05c270;
 	--green-2: #56de9a;
 	--green-3: #a4f0cc;
+	--blue-0: #3568d420;
 	--blue-1: #3568d4;
 	--blue-2: #3d7cff;
 	--blue-3: #b3cbff;
+	--purple-0: #6500cd20;
 	--purple-1: #6500cd;
 	--purple-2: #b56bdf;
 	--purple-3: #efd2f3;
-	--dark-1: #191a2c;
-	--dark-2: #28293d;
+	--dark-1: #151625;
+	--dark-2: #191a2c;
+	--dark-3: #28293d;
 	--light-1: #ffffff;
 	--light-2: #f2f2f4;
 	--gray: #9090a7;
+
+	--gradient-1: linear-gradient(-68deg, var(--purple-1), var(--blue-2));
+	--gradient-2: linear-gradient(-68deg, var(--red-1), var(--orange-2));
 
 	--primary-font: "Montserrat", sans-serif;
 }
@@ -82,7 +92,7 @@ h4 {
 }
 
 a {
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	font-weight: 400;
 	text-transform: capitalize;
 	text-decoration: none;
@@ -97,7 +107,7 @@ a:hover{
 }
 
 p {
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	font-weight: 400;
 }
 
@@ -125,7 +135,7 @@ li {
 /* Gradient Scroll Bar */
 
 ::-webkit-scrollbar {
-	width: 0.8rem;
+	width: 0.7rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -213,10 +223,10 @@ li {
 	}
 
 	a {
-		font-size: 2rem;
+		font-size: 1.6rem;
 	}
 
 	p {
-		font-size: 2rem;
+		font-size: 1.6rem;
 	}
 }

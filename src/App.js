@@ -1,6 +1,6 @@
-import Header from './components/header/header'
-import About from './components/about/about'
-import Contact from './components/contact/contact'
+import Header from './components/Header/Header'
+import About from './components/About/About'
+import Contact from './components/Contact/Contact'
 
 function App() {
   return (
