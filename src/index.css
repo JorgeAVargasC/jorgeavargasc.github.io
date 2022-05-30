@@ -125,6 +125,7 @@ li {
 
 .container {
 	width: 85%;
+	padding-top: 10rem;
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;

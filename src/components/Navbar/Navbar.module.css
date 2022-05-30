@@ -1,6 +1,6 @@
 .navbar {
 	width: 100%;
-	padding: 3rem 0;
+	height: 10rem;
 	position: fixed;
 	top: 0;
 	display: flex;
@@ -32,7 +32,7 @@ nav {
 
 .navlinks_mobile {
 	width: 100%;
-	padding-top: 15vh;
+	padding-top: 10rem;
 	background-color: var(--dark-1);
 	display: flex;
 	justify-content: flex-start;
