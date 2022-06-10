@@ -133,20 +133,110 @@ a:hover::before {
 }
 
 p {
+	color: var(--light-1);
 	font-size: 1.6rem;
-	font-weight: 400;
+	font-weight: 300;
+	line-height: 2.6rem;
+	text-align: justify;
 }
 
 li {
 	list-style: none;
 }
 
-.txt-blue {
+/* Utilities */
+
+.mb-2{
+	margin-bottom: 2rem;	
+}
+
+.icon-circle{
+	width: 8rem;
+	height: 8rem;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+	background-color: var(--blue-0);
 	color: var(--blue-1);
+}
+
+.icon-circle svg{
+	width: 5rem;
+	height: auto;
+}
+
+.card{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 4rem 2.5rem 2.5rem;
+	background-color: var(--dark-2);
+	border: 0.1rem solid var(--dark-3);
+	border-radius: 1rem;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	transition-duration: 0.3s;
+}
+
+.tag{
+	padding: 0.2rem 0.9rem;
+	border-radius: 4rem;
+}
+
+.tag-red{
+	background-color: var(--red-0);
+	color: var(--red-1);
+}
+
+.tag-orange{
+	background-color: var(--orange-0);
+	color: var(--orange-1);
+}
+
+.tag-yellow{
+	background-color: var(--yellow-0);
+	color: var(--yellow-1);
+}
+
+.tag-green{
+	background-color: var(--green-0);
+	color: var(--green-1);
+}
+
+.tag-blue{
+	background-color: var(--blue-0);
+	color: var(--blue-1);
+}
+
+.tag-purple{
+	background-color: var(--purple-0);
+	color: var(--purple-2);
+}
+
+.txt-red{
+	color: var(--red-1);
+}
+
+.txt-orange{
+	color: var(--orange-1);
+}
+
+.txt-yellow{
+	color: var(--yellow-1);
 }
 
 .txt-green {
 	color: var(--green-1);
+}
+
+.txt-blue {
+	color: var(--blue-1);
+}
+
+.txt-purple{
+	color: var(--purple-1);
 }
 
 .container {

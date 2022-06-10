@@ -25,7 +25,7 @@ export default function Header() {
 					<a className={`button ${styles.button}`} href="#about">
 						<span>See Who I'm</span>
 					</a>
-					<a className={`button ${styles.button +" "+styles.button2}`} href={myCV} target="_blank">
+					<a className={`button ${styles.button +" "+styles.button2}`} href={myCV} target="_blank" rel="noreferrer">
 						<span>See My CV</span>
 					</a>
 				</div>
