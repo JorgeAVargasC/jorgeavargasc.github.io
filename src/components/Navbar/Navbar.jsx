@@ -6,6 +6,7 @@ import styles from './Navbar.module.css'
 export default function Navbar() {
 
     const [isOpen, setOpen] = useState(false)
+    const [activeLink, setActiveLink] = useState('home')
 
     return (
         <div className={styles.navbar}>
@@ -15,9 +16,9 @@ export default function Navbar() {
                 </a>
 
                 <nav className={isOpen ? styles.navlinks_mobile + " " + styles.open : styles.navlinks_mobile +" "+ styles.close} onClick={() => setOpen(false)}>
-                    <a className={styles.links} href="#home">Home</a>
-                    <a className={styles.links} href="#about">About</a>
-                    <a className={styles.links} href="#contact">Contact</a>
+                    <a className={`${styles.links} ${activeLink ==='home' ? styles.active_link : ""}`} href="#home" onClick={()=>{setActiveLink('home')}}>Home</a>
+                    <a className={`${styles.links} ${activeLink ==='about' ? styles.active_link : ""}`} href="#about" onClick={()=>{setActiveLink('about')}}>About</a>
+                    <a className={`${styles.links} ${activeLink ==='contact' ? styles.active_link : ""}`} href="#contact" onClick={()=>{setActiveLink('contact')}}>Contact</a>
                 </nav>
 
                 <div className={styles.hamburger_react}>
@@ -31,9 +32,9 @@ export default function Navbar() {
                 </div>
 
                 <nav className={styles.navlinks}>
-                    <a className={styles.links} href="#home">Home</a>
-                    <a className={styles.links} href="#about">About</a>
-                    <a className={styles.links} href="#contact">Contact</a>
+                    <a className={`${styles.links} ${activeLink ==='home' ? styles.active_link : ""}`} href="#home" onClick={()=>{setActiveLink('home')}}>Home</a>
+                    <a className={`${styles.links} ${activeLink ==='about' ? styles.active_link : ""}`} href="#about" onClick={()=>{setActiveLink('about')}}>About</a>
+                    <a className={`${styles.links} ${activeLink ==='contact' ? styles.active_link : ""}`} href="#contact" onClick={()=>{setActiveLink('contact')}}>Contact</a>
                 </nav>
             </div>
         </div>

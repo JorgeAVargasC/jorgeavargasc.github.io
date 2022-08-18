@@ -33,12 +33,12 @@
 	--purple-1: #6500cd;
 	--purple-2: #b56bdf;
 	--purple-3: #efd2f3;
-	--dark-1: #151625;
-	--dark-2: #191a2c;
-	--dark-3: #28293d;
+	--dark-1: #131416;
+	--dark-2: #1f1f24;
+	--dark-3: #2e2e31;
 	--light-1: #ffffff;
 	--light-2: #f2f2f4;
-	--gray: #9090a7;
+	--gray: #9e9ea8;
 
 	--gradient-1: linear-gradient(-68deg, var(--purple-1), var(--blue-2));
 	--gradient-2: linear-gradient(-68deg, var(--red-1), var(--orange-2));
