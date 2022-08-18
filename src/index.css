@@ -239,6 +239,10 @@ li {
 	color: var(--purple-1);
 }
 
+.txt-light{
+	color: var(--light-1);
+}
+
 .container {
 	width: 85%;
 	padding-top: 10rem;
@@ -262,6 +266,13 @@ li {
 ::-webkit-scrollbar-thumb {
 	background: linear-gradient(180deg, var(--blue-1), var(--blue-2));
 	border-radius: 1rem;
+}
+
+/* Selection Color */
+
+::selection {
+    background: var(--blue-1);
+    color: var(--light-1);
 }
 
 /* Buttons */
