@@ -38,7 +38,7 @@
 	--dark-3: #2e2e31;
 	--light-1: #ffffff;
 	--light-2: #f2f2f4;
-	--gray: #9e9ea8;
+	--gray: #878e99;
 
 	--gradient-1: linear-gradient(-68deg, var(--purple-1), var(--blue-2));
 	--gradient-2: linear-gradient(-68deg, var(--red-1), var(--orange-2));
@@ -87,8 +87,8 @@ h3 {
 
 h4 {
 	font-size: 2rem;
-	text-transform: uppercase;
-	letter-spacing: 0.14em;
+	text-transform: capitalize;
+	/* letter-spacing: 0.14em; */
 }
 
 a {
@@ -133,7 +133,7 @@ a:hover::before {
 }
 
 p {
-	color: var(--light-1);
+	color: var(--gray);
 	font-size: 1.6rem;
 	font-weight: 300;
 	line-height: 2.6rem;

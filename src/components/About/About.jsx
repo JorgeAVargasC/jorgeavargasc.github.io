@@ -7,8 +7,16 @@ import mydata from "../../data/mydata";
 export default function About() {
 	return (
 		<div id="about" className="container">
-			<h1 className="mb-2">About</h1>
-			<div className="card">
+			
+			<h3 className="mb-2">{mydata.name}</h3>
+			<h4 className="mb-2">A <span className="txt-blue">fullstack developer</span> from <span className="txt-blue">Colombia</span></h4>
+
+			<p>{mydata.bio}</p>
+
+			
+
+			{/* <h1 className="mb-2">About</h1> */}
+			{/* <div className="card">
 				<div className="icon-circle mb-2">
 					<MdPersonSearch />
 				</div>
@@ -24,7 +32,7 @@ export default function About() {
 					keeping up to date on new technologies. I'm currently learning <span className="tag tag-blue">ReactJS</span>, {" "}
 					<span className="tag tag-green">NodeJS</span>,{" "} <span className="tag tag-green">MongoDB</span>.
 				</p>
-			</div>
+			</div> */}
 		</div>
 	);
 }

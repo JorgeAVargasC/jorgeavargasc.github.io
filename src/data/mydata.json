@@ -1,13 +1,13 @@
 {
     "name": "Jorge Vargas",
-    "role": "Front-end Developer",
+    "role": "Full-stack Developer",
     "email": "javargas1209@gmail.com",
-    "direction": "Cll 55 BN Tr # 9-36, 190001, Popayán, Colombia",
+    "address": "Cll 55 BN Tr # 9-36, 190001, Popayán, Colombia",
     "phone": "+57 (314) 309-7657",
-    "bio": "I'm a motivated person with approximately 3 years of experience in web application development. During these last years I've been able to work on projects for the IEEE student branch of the University of Cauca, in addition, I've also been able to work as a freelance developer for some clients with specific needs. Online and continuous learning has allowed me to keep up to date with the latest front-end and back-end development technologies; thanks to my experience I've been able to improve skills such as communication, quick learning, teamwork and troubleshooting.",
+    "bio": "I'm a motivated person with approximately 2 years of experience in web application development. During these last years I've been able to work on projects for the IEEE student branch of the University of Cauca, in addition, I've also been able to work as a freelance developer for some clients with specific needs. Online and continuous learning has allowed me to keep up to date with the latest front-end and back-end development technologies; thanks to my experience I've been able to improve skills such as communication, quick learning, teamwork and troubleshooting.",
     "experience": [
         {
-            "title": "Front-end Developer",
+            "title": "Full-stack Developer",
             "company": "IEEE Student Branch of the University of Cauca",
             "date": "January 2020 - December 2022",
             "link": "https://drive.google.com/file/d/1asuOSelfYdDqPcB8D9GffAIqdLZnKisa/view"
