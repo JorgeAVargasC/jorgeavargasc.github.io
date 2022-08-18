@@ -37,12 +37,8 @@ export default function About() {
 					<p>{mydata.email}</p>
 				</div>
 				<div className={styles.item}>
-					<p className="">Phone</p>
-					<p>{mydata.phone}</p>
-				</div>
-				<div className={styles.item}>
-					<p className="">Phone</p>
-					<p>{mydata.phone}</p>
+					<p className="">Residence</p>
+					<p>{`${mydata.residence.city}, ${mydata.residence.country}`}</p>
 				</div>
 			</div>
 

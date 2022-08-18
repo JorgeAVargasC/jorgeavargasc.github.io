@@ -16,7 +16,7 @@
     position: relative;
     color: white;
     font-weight: 600;
-    width: 10rem;
+    width: 11rem;
 }
 
 .item p:first-of-type::before{
