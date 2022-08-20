@@ -64,11 +64,11 @@
     }
 
     .about_content_item:first-of-type{
-        width: 30%;
+        width: 40%;
     }
 
     .about_content_item:last-of-type{
-        width: 60%;
+        width:55%;
     }
 
     .about_list{
