@@ -181,5 +181,6 @@
             "value": 60
         }
     ],
-    "hobbies": "I've been playing piano empirically since 2014 mainly in the urban salsa genre. Coming from a family of musicians, I consider the interpretation of the piano and music excellent activities that my parents have left me, having given me the opportunity to play in his orchestra along with well-known artists of the genre. These activities have allowed me to get out of the routine, and have helped me to improve my performance as an engineer and web developer."
+    "hobbieText": "I've been playing piano empirically since 2014 mainly in the urban salsa genre. Coming from a family of musicians, I consider the interpretation of the piano and music excellent activities that my parents have left me, having given me the opportunity to play in his orchestra along with well-known artists of the genre. These activities have allowed me to get out of the routine, and have helped me to improve my performance as an engineer and web developer.",
+    "hobbies":["Piano"]
 }
