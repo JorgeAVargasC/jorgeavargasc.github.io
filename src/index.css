@@ -36,9 +36,12 @@
 	--dark-1: #131416;
 	--dark-2: #1f1f24;
 	--dark-3: #2e2e31;
+	--dark-1: #1C1C28;
+	--dark-2: #28293D;
+	--dark-3: #8F90A6;
 	--light-1: #ffffff;
 	--light-2: #f2f2f4;
-	--gray: #878e99;
+	--gray: #8F90A6;
 
 	--gradient-1: linear-gradient(-68deg, var(--purple-1), var(--blue-2));
 	--gradient-2: linear-gradient(-68deg, var(--red-1), var(--orange-2));
