@@ -5,7 +5,7 @@ import styles from "./Header.module.css";
 
 export default function Header() {
 
-	const myCV = "https://drive.google.com/file/d/1gQblZ6LEPeU0gLBQQn52SJIXh65C5Fbe/view?usp=sharing"
+	const myCV = "https://drive.google.com/file/d/1NeD8WMAKSokGV4_eqrzHgBwmZeY2Ab-J/view?usp=sharing"
 
 	return (
 		<div id="home" className="container">

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./About.module.css";
 import getAge from "../../functions/getAge";
-import { MdPersonSearch } from "react-icons/md";
+// import { MdPersonSearch } from "react-icons/md";
 
 import mydata from "../../data/mydata";
 import photo from "../../assets/img/photo.png";
@@ -46,8 +46,8 @@ export default function About() {
 
 						<div className={styles.about_list_item}>
 							<div className={styles.item}>
-								<p className="">E-mail</p>
-								<p>{mydata.email}</p>
+								<p className="">G-mail</p>
+								<p><a href={`mailto:${mydata.email}@gmail.com`} target="_blank" rel="noreferrer">{mydata.email}</a></p>
 							</div>
 							<div className={styles.item}>
 								<p className="">Residence</p>

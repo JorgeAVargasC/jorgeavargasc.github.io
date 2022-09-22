@@ -25,6 +25,19 @@
     flex-direction: column;
 }
 
+.about_list a{
+    color: var(--gray);
+	font-size: 1.6rem;
+	font-weight: 300;
+	text-align: justify;
+    text-transform: lowercase;
+    letter-spacing: 0;	
+}
+
+.about_list a:hover{
+    color: var(--light-1);
+}
+
 .about_list_item{
     width:100%;
 }
