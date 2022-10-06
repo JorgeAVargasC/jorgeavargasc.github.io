@@ -1,0 +1,99 @@
+/*Card */
+.card {
+	width: 190px;
+	height: 254px;
+	background: #f5f5f5;
+    border-radius: 1rem;
+	position: relative;
+	box-shadow: 0px 2px 5px rgba(35, 35, 35, 0.3);
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.card_info {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 1rem;
+	text-align: center;
+}
+
+/*Image*/
+.card_img {
+	background: #00ff88;
+	background: linear-gradient(to top, #00ff88 0%, #61efff 100%);
+    border-radius: 1rem;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transition: transform 0.3s ease-in-out;
+	z-index: 2;
+}
+
+/*Buttons*/
+.social_media {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 1rem;
+	transform: translateY(-200%);
+	z-index: 3;
+}
+
+.social_media li {
+	background: #f5f5f5;
+	padding: 10px 12px;
+	border-radius: 50%;
+	cursor: pointer;
+	opacity: 0;
+	transition: all 0.3s ease-in;
+}
+
+/*Text*/
+.title {
+	font-size: 1.5em;
+	font-weight: 500;
+}
+
+.subtitle {
+	letter-spacing: 1px;
+	font-size: 0.9em;
+}
+
+ul {
+	list-style: none;
+}
+
+svg {
+	--size: 25px;
+	width: var(--size);
+	height: var(--size);
+	fill: #252525;
+}
+
+/* Hover */
+.card:hover {
+	box-shadow: 1px 2px 10px rgba(35, 35, 35, 0.5);
+}
+
+.card:hover .card_img {
+	transform: translateY(-30%);
+}
+
+.card:hover .social_media li {
+	transform: translateY(-5%);
+	opacity: 1;
+}
+
+.card:hover .social_media li:nth-child(1) {
+	transition-delay: 0s;
+}
+
+.card:hover .social_media li:nth-child(2) {
+	transition-delay: 0.2s;
+}
+
+.card:hover .social_media li:nth-child(3) {
+	transition-delay: 0.3s;
+}
