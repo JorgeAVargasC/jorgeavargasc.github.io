@@ -23,8 +23,8 @@ export default function Project ({ project }) {
         </li>
       </ul>
       <div class={styles.card_info}>
-        <p class={styles.title}>Person</p>
-        <p class={styles.subtitle}>Web Dev</p>
+        <p class={styles.title}>{project.name}</p>
+        <p class={styles.subtitle}>Jorge Vargas</p>
       </div>
     </div>
   )

@@ -1,3 +1,8 @@
+h3{
+	margin-bottom: 10rem;
+}
+
+
 /*Card */
 .card {
 	width: 190px;
@@ -19,8 +24,8 @@
 
 /*Image*/
 .card_img {
-	background: #00ff88;
-	background: linear-gradient(to top, #00ff88 0%, #61efff 100%);
+	background: url('../../assets/img/twitch.png');
+	background-size: cover;
     border-radius: 1rem;
 	height: 100%;
 	width: 100%;
@@ -79,6 +84,8 @@ svg {
 
 .card:hover .card_img {
 	transform: translateY(-30%);
+	filter: brightness(0.5);
+	transition: transform 0.3s ease-in-out;
 }
 
 .card:hover .social_media li {

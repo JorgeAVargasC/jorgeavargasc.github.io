@@ -19,7 +19,7 @@
     "projects": [
         {
             "id": "1",
-            "name": "Twitch TOP Games API",
+            "name": "Twitch Games API",
             "description": "This project was developed using the Twitch API, it allows you to see the top games on Twitch ",
             "githubURL": "https://github.com/JorgeAVargasC/twitch",
             "liveURL": "https://javc-twitch.vercel.app/"
