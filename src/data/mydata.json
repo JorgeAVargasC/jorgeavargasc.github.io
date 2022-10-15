@@ -20,9 +20,9 @@
         {
             "id": "1",
             "name": "Twitch Games API",
-            "description": "This project was developed using the Twitch API, it allows you to see the top games on Twitch ",
-            "githubURL": "https://github.com/JorgeAVargasC/twitch",
-            "liveURL": "https://javc-twitch.vercel.app/"
+            "description": "This project was developed using the Twitch API, it allows you to see the top games on Twitch",
+            "githubURL": "https://github.com/jorgeavargasc/twitch",
+            "liveURL": "https://jorgeavargasc.github.io/twitch/"
         }
     ],
     "experience": [
