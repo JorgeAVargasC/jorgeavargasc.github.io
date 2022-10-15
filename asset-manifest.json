@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.3ba3cb24.css",
+    "main.css": "/static/css/main.7519b62f.css",
     "main.js": "/static/js/main.ed1f2930.js",
     "static/media/photo.png": "/static/media/photo.50091ffaf8ae26bc8078.png",
     "static/media/twitch.png": "/static/media/twitch.c59d3603e3c3ab1dfc8f.png",
     "static/media/Logo2.svg": "/static/media/Logo2.ad11edd39ea2b6175e5469febdde5646.svg",
     "index.html": "/index.html",
-    "main.3ba3cb24.css.map": "/static/css/main.3ba3cb24.css.map",
+    "main.7519b62f.css.map": "/static/css/main.7519b62f.css.map",
     "main.ed1f2930.js.map": "/static/js/main.ed1f2930.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ba3cb24.css",
+    "static/css/main.7519b62f.css",
     "static/js/main.ed1f2930.js"
   ]
 }
