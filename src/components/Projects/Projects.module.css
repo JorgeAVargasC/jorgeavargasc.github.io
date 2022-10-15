@@ -43,6 +43,7 @@ h3{
 	width: 100%;
 	padding: 0 1rem;
 	transform: translateY(-200%);
+	z-index: 0;
 }
 
 .social_media li {
