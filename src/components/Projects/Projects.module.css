@@ -43,7 +43,6 @@ h3{
 	width: 100%;
 	padding: 0 1rem;
 	transform: translateY(-200%);
-	z-index: 3;
 }
 
 .social_media li {
@@ -95,6 +94,10 @@ svg {
 	transform: translateY(-30%);
 	filter: brightness(0.5);
 	transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .social_media {
+	z-index: 3;
 }
 
 .card:hover .social_media li {
