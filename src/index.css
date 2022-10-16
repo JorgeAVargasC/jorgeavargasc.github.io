@@ -36,12 +36,12 @@
 	/* --dark-1: #131416;
 	--dark-2: #1f1f24;
 	--dark-3: #2e2e31; */
-	--dark-1: #1C1C28;
-	--dark-2: #28293D;
-	--dark-3: #8F90A6;
+	--dark-1: #1c1c28;
+	--dark-2: #28293d;
+	--dark-3: #8f90a6;
 	--light-1: #ffffff;
 	--light-2: #f2f2f4;
-	--gray: #8F90A6;
+	--gray: #8f90a6;
 
 	--gradient-1: linear-gradient(-68deg, var(--purple-1), var(--blue-2));
 	--gradient-2: linear-gradient(-68deg, var(--red-1), var(--orange-2));
@@ -77,7 +77,7 @@ p {
 }
 
 h1 {
-	font-size: 5rem;
+	font-size: 4.9rem;
 }
 
 h2 {
@@ -89,9 +89,13 @@ h3 {
 }
 
 h4 {
-	font-size: 2rem;
+	font-size: 1.7rem;
 	text-transform: capitalize;
 	/* letter-spacing: 0.14em; */
+}
+
+small {
+	font-size: 1.3rem;
 }
 
 a {
@@ -99,7 +103,7 @@ a {
 	font-weight: 400;
 	text-transform: capitalize;
 	text-decoration: none;
-	letter-spacing: 0.2rem;	
+	letter-spacing: 0.2rem;
 	color: var(--gray);
 	transition-duration: 0.3s;
 }
@@ -118,7 +122,7 @@ a:hover {
 a::before {
 	content: "";
 	position: absolute;
-	
+
 	width: 100%;
 	height: 2px;
 	border-radius: 2px;
@@ -139,8 +143,8 @@ p {
 	color: var(--gray);
 	font-size: 1.6rem;
 	font-weight: 300;
-	line-height: 2.6rem;
 	text-align: justify;
+	line-height: 1.5;
 }
 
 li {
@@ -149,27 +153,27 @@ li {
 
 /* Utilities */
 
-.mb-2{
-	margin-bottom: 2rem;	
+.mb-2 {
+	margin-bottom: 2rem;
 }
 
-.icon-circle{
+.icon-circle {
 	width: 8rem;
 	height: 8rem;
 	border-radius: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: center;	
+	justify-content: center;
 	background-color: var(--blue-0);
 	color: var(--blue-1);
 }
 
-.icon-circle svg{
+.icon-circle svg {
 	width: 5rem;
 	height: auto;
 }
 
-.card{
+.card {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -183,50 +187,50 @@ li {
 	transition-duration: 0.3s;
 }
 
-.tag{
+.tag {
 	padding: 0.2rem 0.9rem;
 	border-radius: 4rem;
 }
 
-.tag-red{
+.tag-red {
 	background-color: var(--red-0);
 	color: var(--red-1);
 }
 
-.tag-orange{
+.tag-orange {
 	background-color: var(--orange-0);
 	color: var(--orange-1);
 }
 
-.tag-yellow{
+.tag-yellow {
 	background-color: var(--yellow-0);
 	color: var(--yellow-1);
 }
 
-.tag-green{
+.tag-green {
 	background-color: var(--green-0);
 	color: var(--green-1);
 }
 
-.tag-blue{
+.tag-blue {
 	background-color: var(--blue-0);
 	color: var(--blue-1);
 }
 
-.tag-purple{
+.tag-purple {
 	background-color: var(--purple-0);
 	color: var(--purple-2);
 }
 
-.txt-red{
+.txt-red {
 	color: var(--red-1);
 }
 
-.txt-orange{
+.txt-orange {
 	color: var(--orange-1);
 }
 
-.txt-yellow{
+.txt-yellow {
 	color: var(--yellow-1);
 }
 
@@ -238,11 +242,11 @@ li {
 	color: var(--blue-1);
 }
 
-.txt-purple{
+.txt-purple {
 	color: var(--purple-1);
 }
 
-.txt-light{
+.txt-light {
 	color: var(--light-1);
 }
 
@@ -274,8 +278,8 @@ li {
 /* Selection Color */
 
 ::selection {
-    background: var(--blue-1);
-    color: var(--light-1);
+	background: var(--blue-1);
+	color: var(--light-1);
 }
 
 /* Buttons */
@@ -285,7 +289,7 @@ li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	text-transform: capitalize;	
+	text-transform: capitalize;
 	background: var(--blue-1);
 	box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
@@ -308,10 +312,10 @@ li {
 	width: 100%;
 }
 
-.button span {	
+.button span {
 	width: 100%;
 	padding: 1.8rem 2.5rem;
-	color: var(--light-1);	
+	color: var(--light-1);
 	letter-spacing: 0.4rem;
 	z-index: 20;
 	transition: all 0.3s ease-in-out;
@@ -342,15 +346,15 @@ li {
 	}
 
 	h2 {
-		font-size: 6rem;
+		font-size: 5rem;
 	}
 
 	h3 {
-		font-size: 4.2rem;
+		font-size: 4rem;
 	}
 
 	h4 {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 
 	a {

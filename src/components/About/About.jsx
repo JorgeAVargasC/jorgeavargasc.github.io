@@ -17,7 +17,7 @@ export default function About () {
     <div id='about' className='container'>
       <div className={styles.about_content}>
         <div className={styles.about_content_item}>
-          <img src={photo} className={styles.photo + ' mb-2'} alt='' srcset='' />
+          <img src={photo} className={styles.photo} alt='' srcset='' />
         </div>
         <div className={styles.about_content_item}>
           <h3 className='mb-2'>{mydata.name}</h3>

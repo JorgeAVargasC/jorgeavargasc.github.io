@@ -48,35 +48,35 @@
     "courses": [
         {
             "title": "Diploma in Programming Skills - ICT Mission 2022",
-            "Institution": "National University of Colombia",
+            "institution": "National University of Colombia",
             "date": "May 2021 - December 2021",
             "id": "08S1ICW43N0CI",
             "link": "https://drive.google.com/file/d/1Xktno-sLJfH3joSz3rcQZukBALpuH0xG/view"
         },
         {
             "title": "Diploma in Coding and Programming",
-            "Institution": "Pontifical Xaverian University and Samsung",
+            "institution": "Pontifical Xaverian University and Samsung",
             "date": "September 2020 - March 2021",
             "id": "CA218708A001",
             "link": "https://wallet.xertify.co/certificates/CA218708A001"
         },
         {
             "title": "ML0101EN: Machine Learning with Python: A Practical Introduction",
-            "Institution": "IBM (International Business Machines)",
+            "institution": "IBM (International Business Machines)",
             "date": "August 2020",
             "id": "9c5ca63de562478dbc1e37e1aa4f7a9f",
             "link": "https://courses.edx.org/certificates/9c5ca63de562478dbc1e37e1aa4f7a9f"
         },
         {
             "title": "MATLAB Fundamentals",
-            "Institution": "MathWorks",
+            "institution": "MathWorks",
             "date": "Mayo 2020",
             "id": "657aab2f-f074-40be-aa0f-842dd90eabcb",
             "link": "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=657aab2f-f074-40be-aa0f-842dd90eabcb"
         },
         {
             "title": "Scrum Fundamentals Certified",
-            "Institution": "SCRUMstudy - Accreditation Body for Scrum and Agile",
+            "institution": "SCRUMstudy - Accreditation Body for Scrum and Agile",
             "date": "September 2019",
             "id": "733509",
             "link": "https://81cd1176253f3f59d435-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificates/ScrumFundamentalsCertified-JorgeAndr%C3%A9sVargasCordoba-733509.pdf"
