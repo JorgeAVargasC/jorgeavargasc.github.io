@@ -65,10 +65,17 @@ export default function Navbar () {
         </div>
 
         <nav className={styles.navlinks}>
-          <a className={`${styles.links} ${activeLink === 'home' ? styles.active_link : ''}`} href='#home' onClick={() => { setActiveLink('home') }}>Home</a>
-          <a className={`${styles.links} ${activeLink === 'about' ? styles.active_link : ''}`} href='#about' onClick={() => { setActiveLink('about') }}>About</a>
-          <a className={`${styles.links} ${activeLink === 'courses' ? styles.active_link : ''}`} href='#courses' onClick={() => { setActiveLink('courses') }}>Courses</a>
-          <a className={`${styles.links} ${activeLink === 'projects' ? styles.active_link : ''}`} href='#projects' onClick={() => { setActiveLink('projects') }}>Projects</a>
+
+          {links.map(link =>
+            <a
+              key={link.id}
+              href={'#' + link.name}
+              className={`${styles.links} ${activeLink === link.name ? styles.active_link : ''}`}
+              onClick={() => setActiveLink(link.name)}
+            >
+              {link.name}
+            </a>
+          )}
         </nav>
       </div>
     </div>
