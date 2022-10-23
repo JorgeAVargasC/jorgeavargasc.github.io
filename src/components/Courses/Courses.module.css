@@ -75,6 +75,7 @@
 	background-color: var(--blue-2);
 	color: var(--light-1);
 	border-radius: 0.5rem;
+	letter-spacing: 1px;
 }
 
 .courses a svg {
