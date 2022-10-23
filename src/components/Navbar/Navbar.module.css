@@ -48,12 +48,28 @@ nav {
 
 .navlinks_mobile .links{
 	margin: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: align-start;
+	align-items: center;
 	background-color: var(--dark-2);
 	border-radius: 0.5rem;
 	text-align: center;
 	width: 85%;
 	padding: 1.5rem;	
-	margin-bottom: 1rem;	
+	margin-bottom: 1rem;
+}
+
+.navlinks_mobile .links > svg{
+	fill: var(--dark-3);
+	margin-right: 2rem;
+	width: 3rem;
+	transition-duration: 200ms;
+}
+
+.navlinks_mobile .links:hover > svg{
+	fill: var(--light-1);
+	transition-duration: 200ms;
 }
 
 .open{
@@ -78,6 +94,10 @@ nav {
 	position: relative;
 	padding: 0.4rem;
 	color: var(--light-1);
+}
+
+.navlinks_mobile .active_link > svg{
+	fill: var(--light-1);
 }
 
 .active_link::before {
