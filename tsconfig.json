@@ -19,7 +19,8 @@
     ],
     "paths": {
       "@providers/*": ["./src/app/shared/providers/*"],
-      "@styles/*": ["./src/app/shared/styles/*"]
+      "@styles/*": ["./src/app/shared/styles/*"],
+      "@store/*": ["./src/app/shared/store/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
