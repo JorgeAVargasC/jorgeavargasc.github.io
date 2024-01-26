@@ -10,11 +10,14 @@ import {
   CardFooter,
   CardHeader,
   Checkbox,
+  CheckboxGroup,
+  Divider,
   Dropdown,
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-  Input
+  Input,
+  Skeleton
 } from '@nextui-org/react'
 import { useThemeStore } from '@store/theme'
 
@@ -26,7 +29,11 @@ export const ContactForm = () => {
       <Card className='w-full'>
         <CardHeader>
           <h2>Form</h2>
+          <Skeleton className='rounded-lg w-[200px]'>
+            <div className='h-8 rounded-lg bg-default-300'></div>
+          </Skeleton>
         </CardHeader>
+        <Divider />
 
         <CardBody>
           <Accordion selectionMode='multiple'>
@@ -74,8 +81,18 @@ export const ContactForm = () => {
                 </Checkbox>
               </div>
             </AccordionItem>
+            <AccordionItem key='4' aria-label='Accordion 4' title='Accordion 4'>
+              <CheckboxGroup label='Select cities' defaultValue={['buenos-aires', 'london']}>
+                <Checkbox value='buenos-aires'>Buenos Aires</Checkbox>
+                <Checkbox value='sydney'>Sydney</Checkbox>
+                <Checkbox value='san-francisco'>San Francisco</Checkbox>
+                <Checkbox value='london'>London</Checkbox>
+                <Checkbox value='tokyo'>Tokyo</Checkbox>
+              </CheckboxGroup>
+            </AccordionItem>
           </Accordion>
         </CardBody>
+        <Divider />
         <CardFooter>
           <Button onClick={toggleTheme} color='primary' fullWidth variant='shadow'>
             Send
