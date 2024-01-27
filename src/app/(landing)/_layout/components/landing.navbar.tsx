@@ -61,11 +61,8 @@ export const LandingNavbar = () => {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify='end'>
-        <div
-          onClick={toggleTheme}
-          className='grid h-8 w-8 cursor-pointer place-items-center rounded-lg border border-gray-500'
-        >
-          {theme === 'dark' ? <TbMoon size={20} /> : <TbSun size={20} />}
+        <div onClick={toggleTheme} aria-label='Toggle theme' className='cursor-pointer'>
+          {theme === 'dark' ? <TbMoon size={24} /> : <TbSun size={24} />}
         </div>
       </NavbarContent>
       <NavbarMenu>
