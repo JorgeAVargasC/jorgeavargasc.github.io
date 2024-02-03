@@ -1,10 +1,5 @@
 'use client'
 import {
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
   Link,
   Navbar,
   NavbarBrand,
@@ -15,16 +10,34 @@ import {
   NavbarMenuToggle
 } from '@nextui-org/react'
 import { useThemeStore } from '@store/theme'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { TbMoon, TbSun } from 'react-icons/tb'
 
 export const LandingNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
   const theme = useThemeStore((state) => state.theme)
   const toggleTheme = useThemeStore((state) => state.toggleTheme)
+  const pathname = usePathname()
 
-  const menuItems = ['Home', 'About Me', 'Courses', 'Projects']
+  const menuItems = [
+    {
+      name: 'Home',
+      href: '/'
+    },
+    {
+      name: 'About',
+      href: '/about'
+    },
+    {
+      name: 'Services',
+      href: '/services'
+    },
+    {
+      name: 'Examples',
+      href: '/examples'
+    }
+  ]
 
   return (
     <Navbar maxWidth='2xl' onMenuOpenChange={setIsMenuOpen}>
@@ -39,26 +52,13 @@ export const LandingNavbar = () => {
       </NavbarContent>
 
       <NavbarContent className='hidden gap-4 sm:flex' justify='center'>
-        <NavbarItem>
-          <Link color='foreground' href='#'>
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href='#' aria-current='page'>
-            About Me
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color='foreground' href='#'>
-            Courses
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color='foreground' href='#'>
-            Projects
-          </Link>
-        </NavbarItem>
+        {menuItems.map((item, index) => (
+          <NavbarItem key={`${item.href}-${index}`}>
+            <Link color={pathname === item.href ? 'primary' : 'foreground'} href={item.href}>
+              {item.name}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
       <NavbarContent justify='end'>
         <div onClick={toggleTheme} aria-label='Toggle theme' className='cursor-pointer'>
@@ -67,16 +67,14 @@ export const LandingNavbar = () => {
       </NavbarContent>
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem key={`${item.href}-${index}`}>
             <Link
-              color={
-                index === 2 ? 'primary' : index === menuItems.length - 1 ? 'danger' : 'foreground'
-              }
+              color={pathname === item.href ? 'primary' : 'foreground'}
               className='w-full'
               href='#'
               size='lg'
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}

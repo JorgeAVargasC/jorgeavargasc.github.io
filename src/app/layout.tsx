@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ThemeProvider, FontsProvider, NextUIProvider } from '@providers/index'
+import { ThemeProvider, FontsProvider, NextUIProvider } from './_shared/providers/index'
 import '@styles/index.css'
 
 type Props = {

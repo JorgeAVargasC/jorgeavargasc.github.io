@@ -1,8 +1,3 @@
-import { ContactForm } from './components'
 export default function Home() {
-  return (
-    <main>
-      <ContactForm />
-    </main>
-  )
+  return <div>HomePage</div>
 }

@@ -1,0 +1,171 @@
+import { IUser } from '@core/landing/user/domain/models'
+
+export const userInfo: IUser = {
+  name: 'Jorge Vargas',
+  birthday: '1999/09/12',
+  country: 'Colombia',
+  role: 'Full-stack Developer',
+  email: 'javargas1209',
+  residence: {
+    city: 'Popayán',
+    state: 'Cauca',
+    country: 'Colombia',
+    postal: '190001',
+    neighborhood: 'Urbanización Santa Lucia',
+    address: 'Cll 55 BN Tr # 9-36',
+    comments: 'Tercera entrada del conjunto'
+  },
+  phone: '+57 (314) 309-7657',
+  bio: "I'm a motivated person with approximately 2 years of experience in web application development. During these last years I've been able to work on projects for the IEEE student branch of the University of Cauca, in addition, I've also been able to work as a freelance developer for some clients with specific needs. Online and continuous learning has allowed me to keep up to date with the latest front-end and back-end development technologies; thanks to my experience I've been able to improve skills such as communication, quick learning, teamwork and troubleshooting.",
+  shortbio:
+    'I design and develop services for clients, specializing in creating modern, elegant and interactive websites. My passion is to design creative solutions that improve the user experience.',
+  projects: [
+    {
+      id: '1',
+      name: 'Twitch Games API',
+      description:
+        'This project was developed using the Twitch API, it allows you to see the top games on Twitch',
+      githubURL: 'https://github.com/jorgeavargasc/twitch',
+      liveURL: 'https://jorgeavargasc.github.io/twitch/'
+    }
+  ],
+  experience: [
+    {
+      name: 'Full-stack Developer',
+      company: 'IEEE Student Branch of the University of Cauca',
+      date: 'January 2020 - December 2022',
+      link: 'https://drive.google.com/file/d/1asuOSelfYdDqPcB8D9GffAIqdLZnKisa/view'
+    }
+  ],
+  education: [
+    {
+      name: 'Electronic and Telecommunications Engineering',
+      institution: 'University of Cauca',
+      date: 'August 2016 - December 2022'
+    },
+    {
+      name: "Academic bachelor's degree",
+      institution: 'Archdiocesan Minor Seminary',
+      date: 'Agosto 2005 - Junio 2016'
+    }
+  ],
+  courses: [
+    {
+      name: 'Diploma in Programming Skills - ICT Mission 2022',
+      institution: 'National University of Colombia',
+      date: 'May 2021 - December 2021',
+      id: '08S1ICW43N0CI',
+      link: 'https://drive.google.com/file/d/1Xktno-sLJfH3joSz3rcQZukBALpuH0xG/view'
+    },
+    {
+      name: 'Diploma in Coding and Programming',
+      institution: 'Pontifical Xaverian University and Samsung',
+      date: 'September 2020 - March 2021',
+      id: 'CA218708A001',
+      link: 'https://wallet.xertify.co/certificates/CA218708A001'
+    },
+    {
+      name: 'ML0101EN: Machine Learning with Python: A Practical Introduction',
+      institution: 'IBM (International Business Machines)',
+      date: 'August 2020',
+      id: '9c5ca63de562478dbc1e37e1aa4f7a9f',
+      link: 'https://courses.edx.org/certificates/9c5ca63de562478dbc1e37e1aa4f7a9f'
+    },
+    {
+      name: 'MATLAB Fundamentals',
+      institution: 'MathWorks',
+      date: 'Mayo 2020',
+      id: '657aab2f-f074-40be-aa0f-842dd90eabcb',
+      link: 'https://matlabacademy.mathworks.com/progress/share/certificate.html?id=657aab2f-f074-40be-aa0f-842dd90eabcb'
+    },
+    {
+      name: 'Scrum Fundamentals Certified',
+      institution: 'SCRUMstudy - Accreditation Body for Scrum and Agile',
+      date: 'September 2019',
+      id: '733509',
+      link: 'https://81cd1176253f3f59d435-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificates/ScrumFundamentalsCertified-JorgeAndr%C3%A9sVargasCordoba-733509.pdf'
+    }
+  ],
+  techSkills: [
+    {
+      category: 'Principal Stack',
+      tags: ['React', 'Node.js']
+    },
+    {
+      category: 'Front-end Technologies',
+      tags: ['HTML5', 'CSS3', 'Javascript']
+    },
+    {
+      category: 'Back-end Technologies',
+      tags: ['Node.js', 'Python', 'PHP']
+    },
+    {
+      category: 'Databases',
+      tags: ['MongoDB', 'PostgreSQL', 'MySQL']
+    },
+    {
+      category: 'Development Tools',
+      tags: ['Git', 'Github', 'Bitbucket', 'Jira', 'Heroku', 'Thunder Client', 'VSCode']
+    },
+    {
+      category: 'Operating Systems',
+      tags: ['Windows', 'Ubuntu', 'Android']
+    },
+    {
+      category: 'Mockups',
+      tags: ['Figma']
+    }
+  ],
+  links: {
+    linkedin: 'https://www.linkedin.com/in/jorgeavargasc/',
+    github: 'https://github.com/jorgeavargasc',
+    portfolio: 'https://jorgeavargasc.github.io'
+  },
+  skills: [
+    {
+      name: 'Quick Learning',
+      value: 100
+    },
+    {
+      name: 'Troubleshooting',
+      value: 100
+    },
+    {
+      name: 'Creativity',
+      value: 100
+    },
+    {
+      name: 'Teamwork',
+      value: 100
+    },
+    {
+      name: 'Time Management',
+      value: 80
+    },
+    {
+      name: 'Organized',
+      value: 80
+    },
+    {
+      name: 'Analytical Thinking',
+      value: 80
+    },
+    {
+      name: 'Work Under Pressure',
+      value: 60
+    }
+  ],
+  languages: [
+    {
+      name: 'Spanish',
+      value: 100
+    },
+    {
+      name: 'English',
+      value: 60
+    }
+  ],
+  hobbieText:
+    "I've been playing piano empirically since 2014 mainly in the urban salsa genre. Coming from a family of musicians, I consider the interpretation of the piano and music excellent activities that my parents have left me, having given me the opportunity to play in his orchestra along with well-known artists of the genre. These activities have allowed me to get out of the routine, and have helped me to improve my performance as an engineer and web developer.",
+  hobbies: ['Piano']
+}

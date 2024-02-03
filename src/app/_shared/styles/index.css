@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  @apply text-3xl;
+}
+
+small {
+  @apply text-xs;
+}
+
+p {
+  @apply text-sm;
+}
+
+::-webkit-scrollbar{
+  @apply hidden;
+}
+
+/* ::-webkit-scrollbar:hover{
+  @apply w-4;
+}
+
+::-webkit-scrollbar-track{
+  @apply bg-primary-600;
+}
+
+::-webkit-scrollbar-thumb{
+  @apply bg-primary-400;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  @apply bg-primary-50 duration-300;
+} */
