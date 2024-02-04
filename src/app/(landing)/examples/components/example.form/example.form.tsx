@@ -37,7 +37,7 @@ export const ExampleForm = () => {
         </form>
       </FormProvider>
 
-      <Code className='p-4'>
+      <Code className='p-4 flex-1 fixed right-12'>
         <pre>Watched Values: </pre>
         <br />
         <pre>{JSON.stringify(methods.watch(), null, 2)}</pre>

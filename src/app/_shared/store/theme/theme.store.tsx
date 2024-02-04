@@ -6,11 +6,13 @@ type State = {
 
 type Actions = {
   toggleTheme: () => void
+  setTheme: (theme: State['theme']) => void
 }
 
 type Store = State & Actions
 
 export const useThemeStore = create<Store>((set, get) => ({
-  theme: 'light',
-  toggleTheme: () => set({ theme: get().theme === 'light' ? 'dark' : 'light' })
+  theme: 'dark',
+  toggleTheme: () => set({ theme: get().theme === 'light' ? 'dark' : 'light' }),
+  setTheme: (theme) => set({ theme })
 }))

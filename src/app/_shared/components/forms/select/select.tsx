@@ -7,7 +7,7 @@ import { Select as NextUISelect, SelectItem } from '@nextui-org/react'
 export const Select = ({
   name,
   isVisible = true,
-  options,
+  items,
   color = 'primary',
   size = 'sm',
   variant = 'bordered',
@@ -15,7 +15,7 @@ export const Select = ({
 }: ISelect) => {
   const {
     control,
-    formState: { errors }
+    formState: { errors, defaultValues }
   } = useFormContext()
 
   const errorMessage = get(errors, name)?.message
@@ -33,12 +33,13 @@ export const Select = ({
                 color={color}
                 size={size}
                 variant={variant}
+                defaultSelectedKeys={defaultValues ? [defaultValues[name]] : undefined}
                 {...field}
                 {...rest}
               >
-                {options?.map((option, index) => (
-                  <SelectItem key={index} value={option.value}>
-                    {option.label}
+                {items?.map((item) => (
+                  <SelectItem key={item.value} value={item.value}>
+                    {item.label}
                   </SelectItem>
                 ))}
               </NextUISelect>

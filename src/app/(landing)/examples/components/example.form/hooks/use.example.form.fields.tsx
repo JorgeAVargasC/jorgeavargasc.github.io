@@ -11,31 +11,31 @@ export const useExampleFormFields = ({ methods }: Props) => {
     fullName: {
       name: 'fullName',
       label: 'Full Name',
-      placeholder: 'Enter your full name',
+      // placeholder: 'Enter your full name',
     },
     age: {
       name: 'age',
       label: 'Age',
-      placeholder: 'Enter your age',
+      // placeholder: 'Enter your age',
       inputMode: 'numeric'
     },
     email: {
       name: 'email',
       label: 'Email',
-      placeholder: 'Enter your email',
+      // placeholder: 'Enter your email',
       inputMode: 'email'
     },
     gender: {
       name: 'gender',
       label: 'Gender',
-      placeholder: '',
+      // placeholder: '',
       options: [
         {
-          value: '1',
+          value: 'male',
           label: 'Male'
         },
         {
-          value: '2',
+          value: 'female',
           label: 'Female'
         }
       ]
@@ -43,22 +43,30 @@ export const useExampleFormFields = ({ methods }: Props) => {
     description: {
       name: 'description',
       label: 'Description',
-      placeholder: 'Enter your description',
+      // placeholder: 'Enter your description',
       inputMode: 'text'
     },
     skills: {
       name: 'skills',
       label: 'Skills',
-      placeholder: 'Enter your skills',
+      // placeholder: 'Enter your skills',
       selectionMode: 'multiple',
       options: [
         {
-          value: '1',
+          value: 'react',
           label: 'React'
         },
         {
-          value: '2',
+          value: 'vue',
           label: 'Vue'
+        },
+        {
+          value: 'angular',
+          label: 'Angular'
+        },
+        {
+          value: 'nextjs',
+          label: 'Next.js'
         }
       ],
       inputMode: 'text'
@@ -66,13 +74,13 @@ export const useExampleFormFields = ({ methods }: Props) => {
     tel: {
       name: 'tel',
       label: 'Tel',
-      placeholder: 'Enter your tel',
+      // placeholder: 'Enter your tel',
       inputMode: 'tel'
     },
     accept: {
       name: 'accept',
       label: 'Accept',
-      placeholder: 'Accept'
+      // placeholder: 'Accept'
     },
     amenities: {
       name: 'amenities',

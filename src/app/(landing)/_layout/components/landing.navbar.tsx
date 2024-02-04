@@ -11,7 +11,7 @@ import {
 } from '@nextui-org/react'
 import { useThemeStore } from '@store/theme'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { TbMoon, TbSun } from 'react-icons/tb'
 
 export const LandingNavbar = () => {
@@ -39,8 +39,12 @@ export const LandingNavbar = () => {
     }
   ]
 
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [pathname])
+
   return (
-    <Navbar maxWidth='2xl' onMenuOpenChange={setIsMenuOpen}>
+    <Navbar maxWidth='2xl' isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
@@ -71,7 +75,7 @@ export const LandingNavbar = () => {
             <Link
               color={pathname === item.href ? 'primary' : 'foreground'}
               className='w-full'
-              href='#'
+              href={item.href}
               size='lg'
             >
               {item.name}

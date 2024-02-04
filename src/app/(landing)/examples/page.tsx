@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { Content } from './components'
 
 export const metadata: Metadata = {
-  title: 'Catastro SW | Examples'
+  title: 'Jorge Vargas | Examples'
 }
 
 const ExamplePage = () => {
