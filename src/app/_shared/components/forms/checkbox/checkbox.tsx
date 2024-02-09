@@ -17,16 +17,11 @@ export const Checkbox = ({ name, label, isVisible = true, ...rest }: ICheckbox) 
       <Controller
         name={name}
         control={control}
-        render={({ field: { onChange, value } }) => (
+        render={({ field }) => (
           <>
             {isVisible && (
               <div className='flex flex-col'>
-                <NextUICheckbox
-                  onChange={onChange}
-                  value={value}
-                  isInvalid={!!errorMessage}
-                  {...rest}
-                >
+                <NextUICheckbox isInvalid={!!errorMessage} {...field} {...rest}>
                   {label}
                 </NextUICheckbox>
                 {errorMessage && <small className='text-danger-500'>{errorMessage}</small>}

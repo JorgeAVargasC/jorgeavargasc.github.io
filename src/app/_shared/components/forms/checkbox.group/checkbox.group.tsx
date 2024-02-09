@@ -20,14 +20,13 @@ export const CheckboxGroup = ({ name, isVisible = true, options, ...rest }: IChe
       <Controller
         control={control}
         name={name}
-        render={({ field: { onChange, value } }) => (
+        render={({ field }) => (
           <>
             {isVisible && (
               <NextUICheckboxGroup
-                onChange={onChange}
-                value={value}
                 isInvalid={!!errorMessage}
                 errorMessage={errorMessage}
+                {...field}
                 {...rest}
               >
                 {options?.map((option, index) => (

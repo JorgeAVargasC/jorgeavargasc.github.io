@@ -16,7 +16,8 @@ export const useExampleForm = () => {
   })
 
   const onSubmit = methods.handleSubmit((data) => {
-    console.log(data)
+    console.clear()
+    console.table(data)
   })
 
   const { form } = useExampleFormFields({ methods })

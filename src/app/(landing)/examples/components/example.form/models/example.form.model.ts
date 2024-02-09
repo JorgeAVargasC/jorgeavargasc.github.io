@@ -35,16 +35,16 @@ export type IFormValues = {
 }
 
 export const defaultValues: IFormValues = {
-  fullName: '',
-  age: 0,
-  email: '',
-  tel: '',
-  skills: '0',
-  gender: '1',
-  description: '',
+  fullName: 'asdsadsa',
+  age: 20,
+  email: 'andres19561@gmail.com',
+  tel: '3143097657',
+  skills: 'react,nextjs',
+  gender: 'male',
+  description: 'Hiiii',
   accept: false,
-  amenities: [],
-  plan: ''
+  amenities: ['pool','gym'],
+  plan: 'pro'
 }
 
 export const schema = yup.object().shape({
@@ -59,3 +59,59 @@ export const schema = yup.object().shape({
   amenities: yup.array().min(1, 'Amenities is required'),
   plan: yup.string().required('Plan is required')
 })
+
+export const genderOptions: ISelect['options'] = [
+  {
+    value: 'male',
+    label: 'Male'
+  },
+  {
+    value: 'female',
+    label: 'Female'
+  }
+]
+
+export const skillsOptions: ISelect['options'] = [
+  {
+    value: 'react',
+    label: 'React'
+  },
+  {
+    value: 'vue',
+    label: 'Vue'
+  },
+  {
+    value: 'angular',
+    label: 'Angular'
+  },
+  {
+    value: 'nextjs',
+    label: 'Next.js'
+  }
+]
+
+export const amenitiesOptions: ICheckboxGroup['options'] = [
+  {
+    value: 'pool',
+    label: 'Pool'
+  },
+  {
+    value: 'gym',
+    label: 'Gym'
+  }
+]
+
+export const planOptions: IRadioGroup['options'] = [
+  {
+    value: 'basic',
+    label: 'Basic'
+  },
+  {
+    value: 'pro',
+    label: 'Pro'
+  },
+  {
+    value: 'enterprise',
+    label: 'Enterprise'
+  }
+]

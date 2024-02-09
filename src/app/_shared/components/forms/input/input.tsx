@@ -1,5 +1,5 @@
 'use client'
-import { get, useFormContext } from 'react-hook-form'
+import { Controller, get, useFormContext } from 'react-hook-form'
 
 import { IInput } from './input.model'
 import { Input as NextUIInput } from '@nextui-org/react'
@@ -13,7 +13,7 @@ export const Input = ({
   ...rest
 }: IInput) => {
   const {
-    register,
+    control,
     formState: { errors }
   } = useFormContext()
 
@@ -21,16 +21,24 @@ export const Input = ({
 
   return (
     <>
-      {isVisible && (
-        <NextUIInput
-          {...register(name)}
-          errorMessage={errorMessage}
-          variant={variant}
-          color={color}
-          size={size}
-          {...rest}
-        />
-      )}
+      <Controller
+        name={name}
+        control={control}
+        render={({ field }) => (
+          <>
+            {isVisible && (
+              <NextUIInput
+                errorMessage={errorMessage}
+                variant={variant}
+                color={color}
+                size={size}
+                {...field}
+                {...rest}
+              />
+            )}
+          </>
+        )}
+      />
     </>
   )
 }

@@ -17,14 +17,13 @@ export const RadioGroup = ({ name, isVisible = true, options, ...rest }: IRadioG
       <Controller
         control={control}
         name={name}
-        render={({ field: { onChange, value } }) => (
+        render={({ field }) => (
           <>
             {isVisible && (
               <NextUIRadioGroup
-                onChange={onChange}
-                value={value}
                 isInvalid={!!errorMessage}
                 errorMessage={errorMessage}
+                {...field}
                 {...rest}
               >
                 {options?.map((option, index) => (

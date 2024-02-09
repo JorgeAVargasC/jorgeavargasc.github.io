@@ -1,7 +1,9 @@
 import { SelectProps } from '@nextui-org/react'
-export interface ISelect extends Omit<SelectProps, 'children'> {
+export interface ISelect extends Omit<SelectProps, 'children' | 'items'> {
   name: string
   isVisible?: boolean
-  items: SelectProps['items']
-  
+  options: {
+    value: string
+    label: string
+  }[]
 }

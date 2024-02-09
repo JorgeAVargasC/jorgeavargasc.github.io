@@ -1,5 +1,12 @@
 'use client'
-import { IFormFields, IFormValues } from '../models'
+import {
+  IFormFields,
+  IFormValues,
+  amenitiesOptions,
+  genderOptions,
+  planOptions,
+  skillsOptions
+} from '../models'
 import { UseFormReturn } from 'react-hook-form'
 
 type Props = {
@@ -10,7 +17,7 @@ export const useExampleFormFields = ({ methods }: Props) => {
   const form: IFormFields = {
     fullName: {
       name: 'fullName',
-      label: 'Full Name',
+      label: 'Full Name'
       // placeholder: 'Enter your full name',
     },
     age: {
@@ -29,16 +36,7 @@ export const useExampleFormFields = ({ methods }: Props) => {
       name: 'gender',
       label: 'Gender',
       // placeholder: '',
-      options: [
-        {
-          value: 'male',
-          label: 'Male'
-        },
-        {
-          value: 'female',
-          label: 'Female'
-        }
-      ]
+      options: genderOptions
     },
     description: {
       name: 'description',
@@ -51,24 +49,7 @@ export const useExampleFormFields = ({ methods }: Props) => {
       label: 'Skills',
       // placeholder: 'Enter your skills',
       selectionMode: 'multiple',
-      options: [
-        {
-          value: 'react',
-          label: 'React'
-        },
-        {
-          value: 'vue',
-          label: 'Vue'
-        },
-        {
-          value: 'angular',
-          label: 'Angular'
-        },
-        {
-          value: 'nextjs',
-          label: 'Next.js'
-        }
-      ],
+      options: skillsOptions,
       inputMode: 'text'
     },
     tel: {
@@ -79,41 +60,19 @@ export const useExampleFormFields = ({ methods }: Props) => {
     },
     accept: {
       name: 'accept',
-      label: 'Accept',
+      label: 'Accept'
       // placeholder: 'Accept'
     },
     amenities: {
       name: 'amenities',
       label: 'Amenities',
-      options: [
-        {
-          value: '1',
-          label: 'Pool'
-        },
-        {
-          value: '2',
-          label: 'Gym'
-        }
-      ],
+      options: amenitiesOptions,
       inputMode: 'text'
     },
     plan: {
       name: 'plan',
       label: 'Plan',
-      options: [
-        {
-          value: '1',
-          label: 'Basic'
-        },
-        {
-          value: '2',
-          label: 'Pro'
-        },
-        {
-          value: '3',
-          label: 'Enterprise'
-        }
-      ]
+      options: planOptions
     }
   }
 
