@@ -22,17 +22,30 @@ export const Select = ({
   const errorMessage = get(errors, name)?.message
 
   const [initialOptions, setInitialOptions] = useState<ISelect['options']>([])
+  const [defaultSelectedKeys, setDefaultSelectedKeys] = useState<string[]>([])
 
   useEffect(() => {
     options && options.length > 0 && setInitialOptions(options)
   }, [options])
+
+  useEffect(() => {
+    defaultValues &&
+      initialOptions.length > 0 &&
+      setDefaultSelectedKeys(defaultValues[name].split(','))
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialOptions])
+
+  useEffect(() => {
+    console.log('defaultSelectedKeys', defaultSelectedKeys)
+  }, [defaultSelectedKeys])
 
   return (
     <>
       <Controller
         control={control}
         name={name}
-        render={({ field }) => (
+        render={({ field: { value, ...restField } }) => (
           <>
             {isVisible && (
               <NextUISelect
@@ -40,12 +53,9 @@ export const Select = ({
                 color={color}
                 size={size}
                 variant={variant}
-                // defaultSelectedKeys={
-                //   defaultValues && initialOptions.length > 0
-                //     ? defaultValues[name].split(',')
-                //     : []
-                // }
-                {...field}
+                defaultSelectedKeys={defaultSelectedKeys}
+                value={value.split(',')}
+                {...restField}
                 {...rest}
               >
                 {initialOptions.map((option) => (
