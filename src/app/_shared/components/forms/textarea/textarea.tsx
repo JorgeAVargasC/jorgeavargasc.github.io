@@ -1,5 +1,5 @@
 'use client'
-import { Controller, get, useFormContext } from 'react-hook-form'
+import { Controller, useFormContext } from 'react-hook-form'
 
 import { ITextArea } from './textarea.model'
 import { Textarea as NextUITextArea } from '@nextui-org/react'
@@ -7,31 +7,29 @@ import { Textarea as NextUITextArea } from '@nextui-org/react'
 export const TextArea = ({
   name,
   isVisible = true,
-  size = 'sm',
+  size = 'md',
   variant = 'bordered',
   color = 'primary',
   ...rest
 }: ITextArea) => {
   const {
     control,
-    formState: { errors }
   } = useFormContext()
-
-  const errorMessage = get(errors, name)?.message
 
   return (
     <>
       <Controller
         name={name}
         control={control}
-        render={({ field }) => (
+        render={({ field, fieldState }) => (
           <>
             {isVisible && (
               <NextUITextArea
                 color={color}
                 size={size}
                 variant={variant}
-                errorMessage={errorMessage}
+                errorMessage={fieldState.error?.message}
+                isInvalid={fieldState.invalid}
                 {...field}
                 {...rest}
               />

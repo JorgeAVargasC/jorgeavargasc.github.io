@@ -44,7 +44,7 @@ export const defaultValues: IFormValues = {
   description: 'Hiiii',
   accept: false,
   amenities: ['pool','gym'],
-  plan: 'pro'
+  plan: ''
 }
 
 export const schema = yup.object().shape({

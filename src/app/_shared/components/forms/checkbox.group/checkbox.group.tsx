@@ -1,5 +1,5 @@
 'use client'
-import { Controller, get, useFormContext } from 'react-hook-form'
+import { Controller, useFormContext } from 'react-hook-form'
 
 import { ICheckboxGroup } from './checkbox.group.model'
 import {
@@ -7,25 +7,27 @@ import {
   Checkbox as NextUICheckboxItem
 } from '@nextui-org/react'
 
-export const CheckboxGroup = ({ name, isVisible = true, options, ...rest }: ICheckboxGroup) => {
-  const {
-    control,
-    formState: { errors }
-  } = useFormContext()
-
-  const errorMessage = get(errors, name)?.message
+export const CheckboxGroup = ({
+  name,
+  isVisible = true,
+  options,
+  size = 'md',
+  ...rest
+}: ICheckboxGroup) => {
+  const { control } = useFormContext()
 
   return (
     <>
       <Controller
         control={control}
         name={name}
-        render={({ field }) => (
+        render={({ field, fieldState }) => (
           <>
             {isVisible && (
               <NextUICheckboxGroup
-                isInvalid={!!errorMessage}
-                errorMessage={errorMessage}
+                isInvalid={fieldState.invalid}
+                errorMessage={fieldState.error?.message}
+                size={size}
                 {...field}
                 {...rest}
               >

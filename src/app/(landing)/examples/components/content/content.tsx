@@ -5,7 +5,12 @@ import { ExampleForm } from '..'
 
 export const Content = () => {
   return (
-    <Accordion selectionMode='multiple' variant='bordered' keepContentMounted={true}>
+    <Accordion
+      defaultExpandedKeys={['1']}
+      selectionMode='multiple'
+      variant='bordered'
+      keepContentMounted={true}
+    >
       <AccordionItem key={1} title='Example Form' aria-label='Example Form'>
         <ExampleForm />
       </AccordionItem>

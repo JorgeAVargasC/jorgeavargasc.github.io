@@ -1,28 +1,30 @@
 'use client'
-import { Controller, get, useFormContext } from 'react-hook-form'
+import { Controller, useFormContext } from 'react-hook-form'
 
 import { IRadioGroup } from './radio.group.model'
 import { RadioGroup as NextUIRadioGroup, Radio as NextUIRadio } from '@nextui-org/react'
 
-export const RadioGroup = ({ name, isVisible = true, options, ...rest }: IRadioGroup) => {
-  const {
-    control,
-    formState: { errors }
-  } = useFormContext()
-
-  const errorMessage = get(errors, name)?.message
+export const RadioGroup = ({
+  name,
+  isVisible = true,
+  options,
+  size = 'md',
+  ...rest
+}: IRadioGroup) => {
+  const { control } = useFormContext()
 
   return (
     <>
       <Controller
         control={control}
         name={name}
-        render={({ field }) => (
+        render={({ field, fieldState }) => (
           <>
             {isVisible && (
               <NextUIRadioGroup
-                isInvalid={!!errorMessage}
-                errorMessage={errorMessage}
+                isInvalid={fieldState.invalid}
+                errorMessage={fieldState.error?.message}
+                size={size}
                 {...field}
                 {...rest}
               >

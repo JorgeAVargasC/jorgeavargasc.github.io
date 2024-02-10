@@ -1,5 +1,5 @@
 'use client'
-import { Controller, get, useFormContext } from 'react-hook-form'
+import { Controller, useFormContext } from 'react-hook-form'
 
 import { ISelect } from './select.model'
 import { Select as NextUISelect, SelectItem } from '@nextui-org/react'
@@ -10,52 +10,42 @@ export const Select = ({
   isVisible = true,
   options,
   color = 'primary',
-  size = 'sm',
+  size = 'md',
   variant = 'bordered',
+  selectionMode = 'single',
   ...rest
 }: ISelect) => {
-  const {
-    control,
-    formState: { errors, defaultValues }
-  } = useFormContext()
-
-  const errorMessage = get(errors, name)?.message
+  const { control } = useFormContext()
 
   const [initialOptions, setInitialOptions] = useState<ISelect['options']>([])
-  const [defaultSelectedKeys, setDefaultSelectedKeys] = useState<string[]>([])
 
   useEffect(() => {
     options && options.length > 0 && setInitialOptions(options)
   }, [options])
-
-  useEffect(() => {
-    defaultValues &&
-      initialOptions.length > 0 &&
-      setDefaultSelectedKeys(defaultValues[name].split(','))
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialOptions])
-
-  useEffect(() => {
-    console.log('defaultSelectedKeys', defaultSelectedKeys)
-  }, [defaultSelectedKeys])
 
   return (
     <>
       <Controller
         control={control}
         name={name}
-        render={({ field: { value, ...restField } }) => (
+        render={({ field, fieldState }) => (
           <>
             {isVisible && (
               <NextUISelect
-                errorMessage={errorMessage}
+                errorMessage={fieldState.error?.message}
+                isInvalid={fieldState.invalid}
                 color={color}
                 size={size}
                 variant={variant}
-                defaultSelectedKeys={defaultSelectedKeys}
-                value={value.split(',')}
-                {...restField}
+                selectionMode={selectionMode}
+                selectedKeys={
+                  initialOptions.length > 0 && field.value
+                    ? selectionMode !== 'multiple'
+                      ? [field.value]
+                      : field.value.split(',')
+                    : []
+                }
+                {...field}
                 {...rest}
               >
                 {initialOptions.map((option) => (

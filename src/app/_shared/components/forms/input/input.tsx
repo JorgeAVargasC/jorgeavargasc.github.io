@@ -7,28 +7,24 @@ import { Input as NextUIInput } from '@nextui-org/react'
 export const Input = ({
   name,
   isVisible = true,
-  size = 'sm',
+  size = 'md',
   color = 'primary',
   variant = 'bordered',
   ...rest
 }: IInput) => {
-  const {
-    control,
-    formState: { errors }
-  } = useFormContext()
-
-  const errorMessage = get(errors, name)?.message
+  const { control } = useFormContext()
 
   return (
     <>
       <Controller
         name={name}
         control={control}
-        render={({ field }) => (
+        render={({ field, fieldState }) => (
           <>
             {isVisible && (
               <NextUIInput
-                errorMessage={errorMessage}
+                errorMessage={fieldState.error?.message}
+                isInvalid={fieldState.invalid}
                 variant={variant}
                 color={color}
                 size={size}
