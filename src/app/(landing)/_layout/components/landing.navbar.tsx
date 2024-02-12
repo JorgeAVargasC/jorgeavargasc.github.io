@@ -10,9 +10,12 @@ import {
   NavbarMenuToggle
 } from '@nextui-org/react'
 import { useThemeStore } from '@store/theme'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { TbMoon, TbSun } from 'react-icons/tb'
+
+import logo from '@assets/home/logo.webp'
 
 export const LandingNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -44,14 +47,14 @@ export const LandingNavbar = () => {
   }, [pathname])
 
   return (
-    <Navbar maxWidth='2xl' isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar maxWidth='xl' isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           className='sm:hidden'
         />
         <NavbarBrand>
-          <p className='font-bold text-inherit'>ACME</p>
+          <Image src={logo.src} alt='ACME' width={30} height={30} />
         </NavbarBrand>
       </NavbarContent>
 

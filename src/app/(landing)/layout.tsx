@@ -9,7 +9,7 @@ const LandingLayout: React.FC<Props> = ({ children }) => {
   return (
     <div className='flex flex-col items-center'>
       <LandingNavbar />
-      <main className='w-full max-w-screen-2xl px-6'>{children}</main>
+      <main className='w-full max-w-screen-xl px-6'>{children}</main>
     </div>
   )
 }

@@ -25,7 +25,9 @@
 
       "@core/landing/*": ["./src/core/landing/*"],
 
-      "@axios/*": ["./src/axios/*"]
+      "@axios/*": ["./src/axios/*"],
+
+      "@assets/*": ["./src/assets/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

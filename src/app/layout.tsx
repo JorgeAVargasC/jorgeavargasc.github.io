@@ -18,19 +18,6 @@ export const metadata: Metadata = {
     'NextUI',
     'Fullstack Developer'
   ],
-  openGraph: {
-    type: 'website',
-    url: 'https://example.com',
-    title: 'Jorge Vargas | Portfolio',
-    description: 'A Fullstack Developer Portfolio',
-    siteName: 'Jorge Vargas | Portfolio',
-    images: [
-      {
-        // url: 'https://example.com/og.png'
-        url: '/512.png'
-      }
-    ]
-  },
   icons: [
     {
       url: '/favicon.ico',

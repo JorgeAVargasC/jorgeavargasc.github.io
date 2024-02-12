@@ -2,34 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-  @apply text-3xl;
+@layer base {
+  h1 {
+    @apply font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  small {
+    @apply text-xs;
+  }
+
+  p {
+    @apply text-base;
+  }
 }
 
-small {
-  @apply text-xs;
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-br from-sky-500 to-green-400 bg-clip-text text-transparent;
+  }
 }
 
-p {
-  @apply text-sm;
-}
-
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   @apply hidden;
 }
 
-/* ::-webkit-scrollbar:hover{
-  @apply w-4;
-}
-
-::-webkit-scrollbar-track{
-  @apply bg-primary-600;
-}
-
-::-webkit-scrollbar-thumb{
-  @apply bg-primary-400;
-}
-
-::-webkit-scrollbar-thumb:hover{
-  @apply bg-primary-50 duration-300;
-} */
+@import './animations.css';
