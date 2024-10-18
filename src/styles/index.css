@@ -65,7 +65,7 @@
   }
 
   .dark {
-    --background: 0 0% 3.9%;
+    --background: 0 0% 0%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -97,7 +97,6 @@
   .text-gradient {
     @apply bg-gradient-to-br from-sky-500 to-green-400 bg-clip-text text-transparent;
   }
-
 }
 
 ::-webkit-scrollbar {
@@ -113,4 +112,7 @@
     @apply bg-background text-foreground;
   }
 
+  html {
+    @apply antialiased bg-background text-foreground;
+  }
 }

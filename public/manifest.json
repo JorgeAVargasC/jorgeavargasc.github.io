@@ -19,10 +19,10 @@
     }
   ],
   "start_url": "/",
-  "background_color": "#3292FF",
+  "background_color": "#000000",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#3292FF",
+  "theme_color": "#000000",
   "description": "Awesome portfolio for Jorge Vargas",
   "screenshots": [
     {
