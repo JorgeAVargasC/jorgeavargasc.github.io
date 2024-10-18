@@ -3,7 +3,9 @@ import { Banner } from '../components'
 export const HomePage = () => {
 	return (
 		<div>
-			<Banner />
+			<section id='banner'>
+				<Banner />
+			</section>
 		</div>
 	)
 }
