@@ -3,7 +3,7 @@
   "name": "🚀 Jorge Vargas | 💻 Developer Portfolio ⚡",
   "icons": [
     {
-      "src": "logo.svg",
+      "src": "/images/logo.svg",
       "type": "image/svg+xml",
       "sizes": "512x512"
     },
