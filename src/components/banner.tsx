@@ -49,7 +49,7 @@ export const Banner = () => {
 						alt='me'
 						width={270}
 						height={300}
-						className='contrast-125 saturate-0'
+						className=''
 					/>
 				</div>
 			</BlurFade>
