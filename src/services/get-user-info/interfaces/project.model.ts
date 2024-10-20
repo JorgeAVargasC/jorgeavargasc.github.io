@@ -4,4 +4,5 @@ export interface Project {
   description: string
   githubURL: string
   liveURL: string
+  imageUrl: string
 }

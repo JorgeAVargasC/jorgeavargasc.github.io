@@ -3,10 +3,10 @@ import { IUser } from './interfaces'
 export const getUserInfo = (): IUser => {
 	const userInfo: IUser = {
 		name: 'Jorge Vargas',
-		image: '/me.webp',
+		image: 'https://media.licdn.com/dms/image/v2/D4E03AQEoEQKXdaI8Nw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729216713191?e=1735171200&v=beta&t=1UYXJgfOVxDi_uKhK0oseKQDQwXUZLbCgVySJupmGGE',
 		country: 'Colombia',
 		role: 'Full-stack Developer',
-		email: 'javargas1209',
+		email: 'javargas1209@gmail.com',
 		phone: '+57 (314) 309-7657',
 		bio: "I'm a motivated person with approximately 2 years of experience in web application development. During these last years I've been able to work on projects for the IEEE student branch of the University of Cauca, in addition, I've also been able to work as a freelance developer for some clients with specific needs. Online and continuous learning has allowed me to keep up to date with the latest front-end and back-end development technologies; thanks to my experience I've been able to improve skills such as communication, quick learning, teamwork and troubleshooting.",
 		shortbio:
@@ -14,11 +14,33 @@ export const getUserInfo = (): IUser => {
 		projects: [
 			{
 				id: '1',
-				name: 'Twitch Games API',
+				name: '🐝 Beehive Management Dashboard',
 				description:
-					'This project was developed using the Twitch API, it allows you to see the top games on Twitch',
+					"Efficiently manage and monitor the conditions of your beehives 🐝 with this comprehensive administrative panel. Track key metrics 📊, control hive health 🌡️, and optimize your apiary's performance with real-time data 🕒. Stay connected to your bees and ensure a thriving colony! 🍯",
+				githubURL: 'https://github.com/JorgeAVargasC/bee-key-frontend',
+				liveURL: 'https://bee-key-frontend.vercel.app',
+				imageUrl:
+					'https://media.licdn.com/dms/image/v2/D4E2DAQGBv9K7k2LOZA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1727727002318?e=1729926000&v=beta&t=x-f_bgsu5ginoB92Zcj68nBHpdZF8A9CHfRfV2A3C94'
+			},
+			{
+				id: '2',
+				name: '🎮 Twitch Stream Finder',
+				description:
+					'Discover your favorite streamers with ease and explore the hottest games right now! 🔥 This project uses the Twitch API to let you search for live streams 🎥 and get the top 20 most played games 🎮. Stay updated with the world of streaming in just a few clicks! 🌟',
 				githubURL: 'https://github.com/jorgeavargasc/twitch',
-				liveURL: 'https://jorgeavargasc.github.io/twitch/'
+				liveURL: 'https://jorgeavargasc.github.io/twitch/',
+				imageUrl:
+					'https://media.licdn.com/dms/image/v2/D4E2DAQFC8XJfyPLKYA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1727726628852?e=1729926000&v=beta&t=WAwRrVpZVOwvumCXdLhWiVQq6sIEr3CqE1tLAuZ2Szs'
+			},
+			{
+				id: '3',
+				name: '📝 Material-UI Forms',
+				description:
+					'📝 Material-UI Forms Create dynamic and responsive forms effortlessly with this intuitive form builder powered by Material-UI 🚀. Customize your forms with ease ✨, and generate clean, user-friendly interfaces for any application 📑. Start building forms faster and more efficiently!',
+				githubURL: 'https://github.com/jorgeavargasc/material-ui-forms',
+				liveURL: 'https://material-ui-forms.vercel.app/',
+				imageUrl:
+					'https://media.licdn.com/dms/image/v2/D4E2DAQE_UcPQEP_Wmw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1727727238577?e=1729926000&v=beta&t=lIaKqczb4QByz0OF_ADyoYa3FUYcIQMnyOszeafJTx4'
 			}
 		],
 		experience: [
@@ -34,11 +56,6 @@ export const getUserInfo = (): IUser => {
 				name: 'Electronic and Telecommunications Engineering',
 				institution: 'University of Cauca',
 				date: 'August 2016 - December 2022'
-			},
-			{
-				name: "Academic bachelor's degree",
-				institution: 'Archdiocesan Minor Seminary',
-				date: 'Agosto 2005 - Junio 2016'
 			}
 		],
 		courses: [
@@ -119,7 +136,8 @@ export const getUserInfo = (): IUser => {
 		links: {
 			linkedin: 'https://www.linkedin.com/in/jorgeavargasc/',
 			github: 'https://github.com/jorgeavargasc',
-			portfolio: 'https://jorgeavargasc.github.io'
+			portfolio: 'https://jorgeavargasc.github.io',
+			email: 'mailto:javargas1209@gmail.com'
 		},
 		skills: [
 			{

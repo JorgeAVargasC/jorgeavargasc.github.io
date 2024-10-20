@@ -1,31 +1,30 @@
-@import './animations.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   h1 {
-    @apply font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+    @apply font-semibold text-3xl;
   }
 
   h2 {
-    @apply font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl;
+    @apply font-semibold text-xl;
   }
 
   h3 {
-    @apply font-semibold text-base sm:text-lg md:text-xl lg:text-2xl;
+    @apply font-semibold text-lg;
   }
 
   h4 {
-    @apply font-semibold text-sm sm:text-base md:text-lg lg:text-xl;
+    @apply font-semibold text-base;
   }
 
   h5 {
-    @apply font-semibold text-xs sm:text-sm md:text-base lg:text-lg;
+    @apply font-semibold text-sm;
   }
 
   h6 {
-    @apply font-semibold text-xs sm:text-sm md:text-base lg:text-lg;
+    @apply font-semibold text-sm;
   }
 
   small {
@@ -113,6 +112,6 @@
   }
 
   html {
-    @apply antialiased bg-background text-foreground;
+    @apply antialiased bg-background text-foreground scroll-smooth;
   }
 }

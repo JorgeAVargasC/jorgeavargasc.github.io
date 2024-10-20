@@ -53,6 +53,40 @@ export default {
 					4: 'hsl(var(--chart-4))',
 					5: 'hsl(var(--chart-5))'
 				}
+			},
+			animation: {
+				shine: 'shine var(--duration) infinite linear',
+				levitate: 'levitate'
+			},
+			keyframes: {
+				shine: {
+					'0%': {
+						'background-position': '0% 0%'
+					},
+					'50%': {
+						'background-position': '100% 100%'
+					},
+					to: {
+						'background-position': '0% 0%'
+					}
+				},
+				levitate: {
+					'0%': {
+						transform: ' translateY(0)'
+					},
+					'30%': {
+						transform: ' translateY(-10px)'
+					},
+					'50%': {
+						transform: 'translateY(4px)'
+					},
+					'70%': {
+						transform: 'translateY(-15px)'
+					},
+					'100%': {
+						transform: 'translateY(0)'
+					}
+				}
 			}
 		}
 	},
