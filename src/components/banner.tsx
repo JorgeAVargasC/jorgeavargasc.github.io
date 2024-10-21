@@ -3,18 +3,13 @@ import { getUserInfo } from '../services'
 import BlurFade from './ui/blur-fade'
 
 import me from '@/assets/me.webp'
+import { getDelay } from '@/utils'
 
 export const Banner = () => {
 	const user = getUserInfo()
 
-	const getDelay = (index: number) => {
-		const initialDelay = 0.5
-		const delay = 0.7
-		return initialDelay + index * delay
-	}
-
 	return (
-		<div className='flex min-h-[100dvh] flex-col items-center justify-center gap-5 md:flex-row md:justify-between'>
+		<div className='flex flex-col items-center justify-center gap-5 md:flex-row md:justify-between'>
 			<h1 className='grid gap-2 text-balance'>
 				<BlurFade
 					delay={getDelay(0)}

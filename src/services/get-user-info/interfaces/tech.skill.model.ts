@@ -1,4 +1,4 @@
 export interface TechSkill {
-  category: string
-  tags: string[]
+	category: string
+	tags: string[]
 }

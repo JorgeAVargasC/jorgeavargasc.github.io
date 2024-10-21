@@ -1,4 +1,4 @@
 export type Language = {
-  name: string
-  value: number
+	name: string
+	value: number
 }

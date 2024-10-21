@@ -3,7 +3,8 @@ import { IUser } from './interfaces'
 export const getUserInfo = (): IUser => {
 	const userInfo: IUser = {
 		name: 'Jorge Vargas',
-		image: 'https://media.licdn.com/dms/image/v2/D4E03AQEoEQKXdaI8Nw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729216713191?e=1735171200&v=beta&t=1UYXJgfOVxDi_uKhK0oseKQDQwXUZLbCgVySJupmGGE',
+		image:
+			'https://media.licdn.com/dms/image/v2/D4E03AQEoEQKXdaI8Nw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729216713191?e=1735171200&v=beta&t=1UYXJgfOVxDi_uKhK0oseKQDQwXUZLbCgVySJupmGGE',
 		country: 'Colombia',
 		role: 'Full-stack Developer',
 		email: 'javargas1209@gmail.com',
@@ -137,7 +138,8 @@ export const getUserInfo = (): IUser => {
 			linkedin: 'https://www.linkedin.com/in/jorgeavargasc/',
 			github: 'https://github.com/jorgeavargasc',
 			portfolio: 'https://jorgeavargasc.github.io',
-			email: 'mailto:javargas1209@gmail.com'
+			email: 'mailto:javargas1209@gmail.com',
+			cv: 'https://drive.google.com/drive/folders/1_VxKkbBV0Tu3WC7M4at8GqH_gPMG9i-8?usp=drive_link'
 		},
 		skills: [
 			{

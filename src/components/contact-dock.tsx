@@ -1,4 +1,4 @@
-import { CodeIcon, HomeIcon, MailIcon } from 'lucide-react'
+import { CodeIcon, HomeIcon, MailIcon, NotepadText } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
@@ -21,12 +21,12 @@ const DATA = {
 	],
 	contact: {
 		social: {
-			GitHub: {
+			gitHub: {
 				name: 'GitHub',
 				url: user.links.github,
 				icon: Icons.github
 			},
-			LinkedIn: {
+			linkedIn: {
 				name: 'LinkedIn',
 				url: user.links.linkedin,
 				icon: Icons.linkedin
@@ -96,6 +96,32 @@ export function ContactDock() {
 							</Tooltip>
 						</DockIcon>
 					))}
+					<Separator
+						orientation='vertical'
+						className='h-full'
+					/>
+					{/* CV */}
+					<DockIcon>
+						<Tooltip>
+							<TooltipTrigger asChild>
+								<a
+									href={user.links.cv}
+									aria-label={'CV'}
+									className={cn(
+										buttonVariants({ variant: 'ghost', size: 'icon' }),
+										'size-12 rounded-full'
+									)}
+									target='_blank'
+									rel='noreferrer'
+								>
+									<NotepadText className='size-4' />
+								</a>
+							</TooltipTrigger>
+							<TooltipContent>
+								<p>CV</p>
+							</TooltipContent>
+						</Tooltip>
+					</DockIcon>
 				</Dock>
 			</TooltipProvider>
 		</div>

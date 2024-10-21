@@ -8,22 +8,22 @@ import { Skill } from './skill.model'
 import { TechSkill } from './tech.skill.model'
 
 export type IUser = {
-  name: string
-  image: string
-  country: string
-  role: string
-  email: string
-  phone: string
-  bio: string
-  shortbio: string
-  projects: Project[]
-  experience: Experience[]
-  education: Education[]
-  courses: Course[]
-  techSkills: TechSkill[]
-  links: Links
-  skills: Skill[]
-  languages: Language[]
-  hobbieText: string
-  hobbies: string[]
+	name: string
+	image: string
+	country: string
+	role: string
+	email: string
+	phone: string
+	bio: string
+	shortbio: string
+	projects: Project[]
+	experience: Experience[]
+	education: Education[]
+	courses: Course[]
+	techSkills: TechSkill[]
+	links: Links
+	skills: Skill[]
+	languages: Language[]
+	hobbieText: string
+	hobbies: string[]
 }
