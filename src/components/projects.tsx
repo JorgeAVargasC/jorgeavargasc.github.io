@@ -8,7 +8,7 @@ import {
 	TooltipProvider,
 	TooltipTrigger
 } from './ui/tooltip'
-import { InfoIcon } from 'lucide-react'
+import { InfoIcon, LinkIcon } from 'lucide-react'
 import {
 	Accordion,
 	AccordionContent,
@@ -22,10 +22,19 @@ export const Projects = () => {
 	const user = getUserInfo()
 
 	return (
-		<div className='flex flex-col justify-center items-center'>
-			<h2 className='py-8 text-center'>My Last Projects</h2>
+		<div className='flex flex-col gap-8'>
+			<a
+				href='#projects'
+				className='group flex flex-row items-center'
+			>
+				<LinkIcon
+					size={18}
+					className='w-0 duration-200 group-hover:w-6'
+				/>
+				<h2>My Last Projects</h2>
+			</a>
 
-			<div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+			<div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
 				{user.projects.map((project) => (
 					<BlurFade
 						key={project.id}

@@ -1,9 +1,20 @@
+import { useEffect } from 'react'
 import { ContactDock } from './components'
 import BlurFade from './components/ui/blur-fade'
 import { HomePage } from './pages'
 import { getDelay } from './utils'
 
 export default function App() {
+	useEffect(() => {
+		const hash = window.location.hash
+		if (hash) {
+			const element = document.querySelector(hash)
+			if (element) {
+				element.scrollIntoView({ behavior: 'smooth' })
+			}
+		}
+	}, [])
+
 	return (
 		<main className='dark min-h-[100dvh] bg-background pb-36 text-foreground'>
 			<HomePage />

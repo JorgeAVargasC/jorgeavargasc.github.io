@@ -1,7 +1,8 @@
 export type Course = {
+	id: string
 	name: string
 	institution: string
-	date: string
-	id: string
+	from: string | null
+	to: string
 	link: string
 }

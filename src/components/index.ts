@@ -1,3 +1,5 @@
 export * from './banner'
 export * from './contact-dock'
 export * from './projects'
+export * from './experience'
+export * from './courses'

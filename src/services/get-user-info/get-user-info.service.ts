@@ -46,10 +46,20 @@ export const getUserInfo = (): IUser => {
 		],
 		experience: [
 			{
+				name: 'Frontend Developer',
+				company: 'BPO Labs Solutions',
+				from: '2022-10-11',
+				to: null,
+				link: 'https://www.linkedin.com/company/bpo-labs-solutions/',
+				description: ''
+			},
+			{
 				name: 'Full-stack Developer',
 				company: 'IEEE Student Branch of the University of Cauca',
-				date: 'January 2020 - December 2022',
-				link: 'https://drive.google.com/file/d/1asuOSelfYdDqPcB8D9GffAIqdLZnKisa/view'
+				from: '2020-01-01',
+				to: '2022-12-31',
+				link: 'https://drive.google.com/file/d/1asuOSelfYdDqPcB8D9GffAIqdLZnKisa/view',
+				description: ''
 			}
 		],
 		education: [
@@ -63,35 +73,40 @@ export const getUserInfo = (): IUser => {
 			{
 				name: 'Diploma in Programming Skills - ICT Mission 2022',
 				institution: 'National University of Colombia',
-				date: 'May 2021 - December 2021',
+				from: '2021-05-01',
+				to: '2021-12-31',
 				id: '08S1ICW43N0CI',
 				link: 'https://drive.google.com/file/d/1Xktno-sLJfH3joSz3rcQZukBALpuH0xG/view'
 			},
 			{
 				name: 'Diploma in Coding and Programming',
 				institution: 'Pontifical Xaverian University and Samsung',
-				date: 'September 2020 - March 2021',
+				from: '2020-09-01',
+				to: '2021-03-31',
 				id: 'CA218708A001',
 				link: 'https://wallet.xertify.co/certificates/CA218708A001'
 			},
 			{
 				name: 'ML0101EN: Machine Learning with Python: A Practical Introduction',
 				institution: 'IBM (International Business Machines)',
-				date: 'August 2020',
+				from: null,
+				to: '2020-08-31',
 				id: '9c5ca63de562478dbc1e37e1aa4f7a9f',
 				link: 'https://courses.edx.org/certificates/9c5ca63de562478dbc1e37e1aa4f7a9f'
 			},
 			{
 				name: 'MATLAB Fundamentals',
 				institution: 'MathWorks',
-				date: 'Mayo 2020',
+				from: null,
+				to: '2020-05-31',
 				id: '657aab2f-f074-40be-aa0f-842dd90eabcb',
 				link: 'https://matlabacademy.mathworks.com/progress/share/certificate.html?id=657aab2f-f074-40be-aa0f-842dd90eabcb'
 			},
 			{
 				name: 'Scrum Fundamentals Certified',
 				institution: 'SCRUMstudy - Accreditation Body for Scrum and Agile',
-				date: 'September 2019',
+				from: null,
+				to: '2019-09-30',
 				id: '733509',
 				link: 'https://81cd1176253f3f59d435-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificates/ScrumFundamentalsCertified-JorgeAndr%C3%A9sVargasCordoba-733509.pdf'
 			}
