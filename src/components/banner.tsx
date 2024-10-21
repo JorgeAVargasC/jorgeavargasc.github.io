@@ -14,7 +14,7 @@ export const Banner = () => {
 	}
 
 	return (
-		<div className='flex min-h-screen flex-col items-center justify-center gap-5 md:flex-row md:justify-between'>
+		<div className='flex min-h-[100dvh] flex-col items-center justify-center gap-5 md:flex-row md:justify-between'>
 			<h1 className='grid gap-2 text-balance'>
 				<BlurFade
 					delay={getDelay(0)}

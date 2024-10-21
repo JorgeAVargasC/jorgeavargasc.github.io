@@ -32,7 +32,7 @@
   }
 
   p {
-    @apply text-base;
+    @apply text-sm;
   }
 
   :root {
@@ -74,7 +74,7 @@
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 213 32% 74%;
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
     --accent: 0 0% 14.9%;

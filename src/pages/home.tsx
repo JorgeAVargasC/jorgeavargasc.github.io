@@ -7,6 +7,8 @@ export const HomePage = () => {
 			</section>
 
 			<section id='projects'>
+				<h2 className='py-6 text-center'>My Last Projects</h2>
+
 				<Projects />
 			</section>
 		</div>

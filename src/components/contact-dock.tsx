@@ -84,12 +84,14 @@ export function ContactDock() {
 											buttonVariants({ variant: 'ghost', size: 'icon' }),
 											'size-12 rounded-full'
 										)}
+										target='_blank'
+										rel='noreferrer'
 									>
 										<social.icon className='size-4' />
 									</a>
 								</TooltipTrigger>
 								<TooltipContent>
-									<p>{name}</p>
+									<p>{social.name}</p>
 								</TooltipContent>
 							</Tooltip>
 						</DockIcon>

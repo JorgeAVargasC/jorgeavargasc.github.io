@@ -36,7 +36,7 @@ export const getUserInfo = (): IUser => {
 				id: '3',
 				name: '📝 Material-UI Forms',
 				description:
-					'📝 Material-UI Forms Create dynamic and responsive forms effortlessly with this intuitive form builder powered by Material-UI 🚀. Customize your forms with ease ✨, and generate clean, user-friendly interfaces for any application 📑. Start building forms faster and more efficiently!',
+					'Material-UI Forms Create dynamic and responsive forms effortlessly with this intuitive form builder powered by Material-UI 🚀. Customize your forms with ease ✨, and generate clean, user-friendly interfaces for any application 📑. Start building forms faster and more efficiently!',
 				githubURL: 'https://github.com/jorgeavargasc/material-ui-forms',
 				liveURL: 'https://material-ui-forms.vercel.app/',
 				imageUrl:

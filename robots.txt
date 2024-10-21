@@ -1,0 +1,6 @@
+# Allow all web crawlers
+User-agent: *
+Disallow: 
+
+# Sitemap URL
+Sitemap: https://jorgeavargasc.github.io/sitemap.xml
