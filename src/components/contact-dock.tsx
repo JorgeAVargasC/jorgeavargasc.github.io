@@ -49,7 +49,7 @@ export function ContactDock() {
 					className='bg-background'
 				>
 					{DATA.navbar.map((item) => (
-						<DockIcon key={item.label}>
+						<DockIcon key={item.label} className='hidden md:grid'>
 							<Tooltip>
 								<TooltipTrigger asChild>
 									<a
@@ -71,7 +71,7 @@ export function ContactDock() {
 					))}
 					<Separator
 						orientation='vertical'
-						className='h-full'
+						className='h-full hidden md:block'
 					/>
 					{Object.entries(DATA.contact.social).map(([name, social]) => (
 						<DockIcon key={name}>

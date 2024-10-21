@@ -3,6 +3,8 @@ import { ContactDock } from './components'
 import BlurFade from './components/ui/blur-fade'
 import { HomePage } from './pages'
 import { getDelay } from './utils'
+import { Button } from './components/ui/button'
+import { ArrowUp } from 'lucide-react'
 
 export default function App() {
 	useEffect(() => {
@@ -16,7 +18,7 @@ export default function App() {
 	}, [])
 
 	return (
-		<main className='dark min-h-[100dvh] bg-background pb-36 text-foreground'>
+		<main className='dark min-h-[100dvh] bg-background pb-20 text-foreground'>
 			<HomePage />
 
 			<div className='fixed bottom-5 right-1/2 z-10 translate-x-1/2'>
@@ -25,6 +27,22 @@ export default function App() {
 					inView
 				>
 					<ContactDock />
+				</BlurFade>
+			</div>
+
+			<div className='fixed bottom-7 right-5'>
+				<BlurFade
+					delay={getDelay(3)}
+					inView
+				>
+					<a href='#banner'>
+						<Button
+							variant={'default'}
+							size={'icon'}
+						>
+							<ArrowUp />
+						</Button>
+					</a>
 				</BlurFade>
 			</div>
 		</main>

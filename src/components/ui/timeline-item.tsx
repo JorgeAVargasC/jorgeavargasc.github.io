@@ -27,6 +27,7 @@ export const TimelineItem: React.FC<Props> = ({
 		if (from && to) {
 			return `${format(from, 'MMM, YYYY', 'en')} - ${format(to, 'MMM, YYYY', 'en')}`
 		}
+
 		if (from) {
 			return `${format(from, 'MMM, YYYY', 'en')} - Present`
 		}
@@ -51,11 +52,11 @@ export const TimelineItem: React.FC<Props> = ({
 					{getDateLabel()}
 				</h6>
 
-				<h5 className='flex  gap-x-1.5'>
-					<div className='min-w-5'>{icon}</div>
+				<h5 className='flex gap-x-1.5 text-justify'>
+					{icon && <div className='min-w-5'>{icon}</div>}
 					{title}
 				</h5>
-				<p className='text-sm text-secondary-foreground'>{subtitle}</p>
+				<p className='text-sm text-secondary-foreground text-justify'>{subtitle}</p>
 				<a href={link}>
 					<Button
 						size={'sm'}

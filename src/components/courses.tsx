@@ -1,9 +1,16 @@
 import { getUserInfo } from '@/services'
-import { BookTextIcon, LinkIcon } from 'lucide-react'
+import { LinkIcon } from 'lucide-react'
 import { TimelineItem } from './ui/timeline-item'
+import { useState } from 'react'
+import { Button } from './ui/button'
 
 export const Courses = () => {
 	const user = getUserInfo()
+
+	const [showMore, setShowMore] = useState(false)
+
+	const firstFiveCourses = user.courses.slice(0, 5)
+	const restCourses = user.courses.slice(5)
 
 	return (
 		<div className='flex flex-col gap-5'>
@@ -18,7 +25,7 @@ export const Courses = () => {
 				<h2>Courses</h2>
 			</a>
 			<div>
-				{user.courses.map((course) => (
+				{firstFiveCourses.map((course) => (
 					<TimelineItem
 						key={course.name}
 						from={course.from}
@@ -27,9 +34,31 @@ export const Courses = () => {
 						linkLabel={course.id}
 						title={course.name}
 						subtitle={course.institution}
-						icon={<BookTextIcon size={18} />}
 					/>
 				))}
+
+				{showMore &&
+					restCourses.map((course) => (
+						<TimelineItem
+							key={course.name}
+							from={course.from}
+							to={course.to}
+							link={course.link}
+							linkLabel={course.id}
+							title={course.name}
+							subtitle={course.institution}
+						/>
+					))}
+
+				{restCourses.length > 0 && (
+					<Button
+						className='mt-4'
+						onClick={() => setShowMore(!showMore)}
+						variant={'outline'}
+					>
+						{showMore ? 'Show Less' : `Show ${restCourses.length} More`}
+					</Button>
+				)}
 			</div>
 		</div>
 	)

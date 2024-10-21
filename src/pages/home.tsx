@@ -1,7 +1,7 @@
 import { Banner, Courses, Experience, Projects } from '../components'
 export const HomePage = () => {
 	return (
-		<div className='mx-auto grid max-w-5xl gap-5 px-5'>
+		<div className='mx-auto grid max-w-5xl px-5'>
 			<section
 				id='banner'
 				className='grid min-h-screen'
