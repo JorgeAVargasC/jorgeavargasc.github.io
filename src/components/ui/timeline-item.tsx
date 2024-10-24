@@ -7,9 +7,9 @@ type Props = {
 	from: string | null
 	to: string | null
 	title: string
-	subtitle: string
-	link: string
-	linkLabel: string
+	subtitle?: string
+	link?: string | null
+	linkLabel?: string | null
 	icon?: React.ReactNode
 	description?: string
 }
@@ -47,7 +47,7 @@ export const TimelineItem: React.FC<Props> = ({
 				</div>
 			</div>
 
-			<div className='grid grow gap-1 pb-6'>
+			<div className='grid gap-1 pb-6'>
 				<h6 className='flex h-7 items-center leading-none text-secondary-foreground'>
 					{getDateLabel()}
 				</h6>
@@ -56,16 +56,23 @@ export const TimelineItem: React.FC<Props> = ({
 					{icon && <div className='min-w-5'>{icon}</div>}
 					{title}
 				</h5>
-				<p className='text-sm text-secondary-foreground text-justify'>{subtitle}</p>
-				<a href={link}>
-					<Button
-						size={'sm'}
-						variant={'outline'}
-					>
-						<small>{linkLabel}</small>
-						<ExternalLinkIcon size={14} />
-					</Button>
-				</a>
+				{subtitle && (
+					<p className='text-justify text-sm text-secondary-foreground'>
+						{subtitle}
+					</p>
+				)}
+
+				{link && linkLabel && (
+					<a href={link}>
+						<Button
+							size={'sm'}
+							variant={'outline'}
+						>
+							<small>{linkLabel}</small>
+							<ExternalLinkIcon size={14} />
+						</Button>
+					</a>
+				)}
 			</div>
 		</div>
 	)

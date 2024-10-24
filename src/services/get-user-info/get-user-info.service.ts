@@ -20,8 +20,7 @@ export const getUserInfo = (): IUser => {
 					"Efficiently manage and monitor the conditions of your beehives 🐝 with this comprehensive administrative panel. Track key metrics 📊, control hive health 🌡️, and optimize your apiary's performance with real-time data 🕒. Stay connected to your bees and ensure a thriving colony! 🍯",
 				githubURL: 'https://github.com/JorgeAVargasC/bee-key-frontend',
 				liveURL: 'https://bee-key-frontend.vercel.app',
-				imageUrl:
-					'https://media.licdn.com/dms/image/v2/D4E2DAQGBv9K7k2LOZA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1727727002318?e=1729926000&v=beta&t=x-f_bgsu5ginoB92Zcj68nBHpdZF8A9CHfRfV2A3C94'
+				imageUrl: '/images/projects/1.webp'
 			},
 			{
 				id: '2',
@@ -30,8 +29,7 @@ export const getUserInfo = (): IUser => {
 					'Discover your favorite streamers with ease and explore the hottest games right now! 🔥 This project uses the Twitch API to let you search for live streams 🎥 and get the top 20 most played games 🎮. Stay updated with the world of streaming in just a few clicks! 🌟',
 				githubURL: 'https://github.com/jorgeavargasc/twitch',
 				liveURL: 'https://jorgeavargasc.github.io/twitch/',
-				imageUrl:
-					'https://media.licdn.com/dms/image/v2/D4E2DAQFC8XJfyPLKYA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1727726628852?e=1729926000&v=beta&t=WAwRrVpZVOwvumCXdLhWiVQq6sIEr3CqE1tLAuZ2Szs'
+				imageUrl: '/images/projects/2.webp'
 			},
 			{
 				id: '3',
@@ -40,8 +38,7 @@ export const getUserInfo = (): IUser => {
 					'Material-UI Forms Create dynamic and responsive forms effortlessly with this intuitive form builder powered by Material-UI 🚀. Customize your forms with ease ✨, and generate clean, user-friendly interfaces for any application 📑. Start building forms faster and more efficiently!',
 				githubURL: 'https://github.com/jorgeavargasc/material-ui-forms',
 				liveURL: 'https://material-ui-forms.vercel.app/',
-				imageUrl:
-					'https://media.licdn.com/dms/image/v2/D4E2DAQE_UcPQEP_Wmw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1727727238577?e=1729926000&v=beta&t=lIaKqczb4QByz0OF_ADyoYa3FUYcIQMnyOszeafJTx4'
+				imageUrl: '/images/projects/3.webp'
 			}
 		],
 		experience: [
@@ -50,7 +47,7 @@ export const getUserInfo = (): IUser => {
 				company: 'BPO Labs Solutions',
 				from: '2022-10-11',
 				to: null,
-				link: 'https://drive.google.com/drive/u/1/folders/1z103TdG_vVshfrZOYMUyRsuLKKjQH6R3',
+				companyLink: 'https://www.linkedin.com/company/bpolabs',
 				description: ''
 			},
 			{
@@ -58,15 +55,17 @@ export const getUserInfo = (): IUser => {
 				company: 'IEEE Student Branch of the University of Cauca',
 				from: '2020-01-01',
 				to: '2022-12-31',
-				link: 'https://drive.google.com/file/d/1asuOSelfYdDqPcB8D9GffAIqdLZnKisa/view',
+				companyLink: 'https://www.linkedin.com/company/ieee-unicauca',
 				description: ''
 			}
 		],
 		education: [
 			{
 				name: 'Electronic and Telecommunications Engineering',
-				institution: 'University of Cauca',
-				date: 'August 2016 - December 2022'
+				institution: 'Universidad del Cauca',
+				companyLink: 'https://www.linkedin.com/school/universidad-del-cauca/',
+				from: '2016-08-01',
+				to: '2024-03-14'
 			}
 		],
 		courses: [
@@ -264,10 +263,7 @@ export const getUserInfo = (): IUser => {
 				name: 'English',
 				value: 60
 			}
-		],
-		hobbieText:
-			"I've been playing piano empirically since 2014 mainly in the urban salsa genre. Coming from a family of musicians, I consider the interpretation of the piano and music excellent activities that my parents have left me, having given me the opportunity to play in his orchestra along with well-known artists of the genre. These activities have allowed me to get out of the routine, and have helped me to improve my performance as an engineer and web developer.",
-		hobbies: ['Piano']
+		]
 	}
 
 	return userInfo

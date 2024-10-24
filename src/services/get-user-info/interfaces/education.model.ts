@@ -1,5 +1,7 @@
 export type Education = {
 	name: string
 	institution: string
-	date: string
+	from: string
+	companyLink: string
+	to: string | null
 }

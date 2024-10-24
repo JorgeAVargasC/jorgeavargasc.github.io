@@ -1,5 +1,5 @@
 import { getUserInfo } from '@/services'
-import { BookTextIcon, LinkIcon } from 'lucide-react'
+import { BriefcaseBusiness, LinkIcon } from 'lucide-react'
 import { TimelineItem } from './ui/timeline-item'
 
 export const Experience = () => {
@@ -24,11 +24,10 @@ export const Experience = () => {
 						key={experience.name}
 						from={experience.from}
 						to={experience.to}
-						link={experience.link}
-						linkLabel={'View Certificate'}
+						link={experience.companyLink}
+						linkLabel={experience.company}
 						title={experience.name}
-						subtitle={experience.company}
-						icon={<BookTextIcon size={18} />}
+						icon={<BriefcaseBusiness size={18} />}
 					/>
 				))}
 			</div>

@@ -24,6 +24,4 @@ export type IUser = {
 	links: Links
 	skills: Skill[]
 	languages: Language[]
-	hobbieText: string
-	hobbies: string[]
 }

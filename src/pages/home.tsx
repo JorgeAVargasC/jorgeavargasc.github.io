@@ -1,4 +1,4 @@
-import { Banner, Courses, Experience, Projects } from '../components'
+import { Banner, Courses, Education, Experience, Projects } from '../components'
 export const HomePage = () => {
 	return (
 		<div className='mx-auto grid max-w-5xl px-5'>
@@ -21,6 +21,13 @@ export const HomePage = () => {
 				className='grid py-8'
 			>
 				<Experience />
+			</section>
+
+			<section
+				id='education'
+				className='grid py-8'
+			>
+				<Education />
 			</section>
 
 			<section
