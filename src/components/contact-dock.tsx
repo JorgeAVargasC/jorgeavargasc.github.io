@@ -1,4 +1,12 @@
-import { CodeIcon, HomeIcon, MailIcon, NotepadText } from 'lucide-react'
+import {
+	BookText,
+	BriefcaseBusiness,
+	CodeIcon,
+	GraduationCapIcon,
+	HomeIcon,
+	MailIcon,
+	NotepadText
+} from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
@@ -17,7 +25,10 @@ const user = getUserInfo()
 const DATA = {
 	navbar: [
 		{ href: '#banner', icon: HomeIcon, label: 'Home' },
-		{ href: '#projects', icon: CodeIcon, label: 'Projects' }
+		{ href: '#projects', icon: CodeIcon, label: 'Projects' },
+		{ href: '#experience', icon: BriefcaseBusiness, label: 'Experience' },
+		{ href: '#education', icon: GraduationCapIcon, label: 'Education' },
+		{ href: '#courses', icon: BookText, label: 'Courses' }
 	],
 	contact: {
 		social: {
@@ -49,7 +60,10 @@ export function ContactDock() {
 					className='bg-background'
 				>
 					{DATA.navbar.map((item) => (
-						<DockIcon key={item.label} className='hidden md:grid'>
+						<DockIcon
+							key={item.label}
+							className='hidden md:grid'
+						>
 							<Tooltip>
 								<TooltipTrigger asChild>
 									<a
@@ -71,7 +85,7 @@ export function ContactDock() {
 					))}
 					<Separator
 						orientation='vertical'
-						className='h-full hidden md:block'
+						className='hidden h-full md:block'
 					/>
 					{Object.entries(DATA.contact.social).map(([name, social]) => (
 						<DockIcon key={name}>
