@@ -17,7 +17,7 @@ export const About = () => {
 				<h2>About</h2>
 			</a>
 
-			<div className='grid gap-4'>
+			<div className='grid gap-4 text-justify'>
 				{user.bio.map((bio, index) => (
 					<p className='text-secondary-foreground' key={index}>{bio}</p>
 				))}
