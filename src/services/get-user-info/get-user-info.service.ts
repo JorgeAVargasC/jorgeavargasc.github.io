@@ -3,13 +3,16 @@ import { IUser } from './interfaces'
 export const getUserInfo = (): IUser => {
 	const userInfo: IUser = {
 		name: 'Jorge Vargas',
-		image:
-			'https://media.licdn.com/dms/image/v2/D4E03AQEoEQKXdaI8Nw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729216713191?e=1735171200&v=beta&t=1UYXJgfOVxDi_uKhK0oseKQDQwXUZLbCgVySJupmGGE',
+		image: '/images/profile-photo.webp',
 		country: 'Colombia',
 		role: 'Full-stack Developer',
 		email: 'javargas1209@gmail.com',
-		phone: '+57 (314) 309-7657',
-		bio: "I'm a motivated person with approximately 2 years of experience in web application development. During these last years I've been able to work on projects for the IEEE student branch of the University of Cauca, in addition, I've also been able to work as a freelance developer for some clients with specific needs. Online and continuous learning has allowed me to keep up to date with the latest front-end and back-end development technologies; thanks to my experience I've been able to improve skills such as communication, quick learning, teamwork and troubleshooting.",
+		bio: [
+			'Hi There 👋',
+			"I'm a Frontend Developer with approximately 4 years of experience 🌟 and effective collaboration in multidisciplinary teams 🤝.",
+			'Specialized in ReactJS ⚛️, I focus on translating creative visions into solid technical solutions 🎨💻. My ability to communicate effectively 🗣️ has led to the success of complex projects 🚀.',
+			'I apply the Scrum framework for agile development 🏃‍♂️,	emphasizing proactive tracking of daily tasks 📋. I use Jira and ClickUp for task management 🛠️, ensuring efficient and high-quality deliveries within established deadlines ⏰.'
+		],
 		shortbio:
 			'I design and develop services for clients, specializing in creating modern, elegant and interactive websites. My passion is to design creative solutions that improve the user experience.',
 		projects: [

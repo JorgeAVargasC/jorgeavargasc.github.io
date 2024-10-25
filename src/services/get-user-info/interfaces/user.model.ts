@@ -13,8 +13,7 @@ export type IUser = {
 	country: string
 	role: string
 	email: string
-	phone: string
-	bio: string
+	bio: string[]
 	shortbio: string
 	projects: Project[]
 	experience: Experience[]
