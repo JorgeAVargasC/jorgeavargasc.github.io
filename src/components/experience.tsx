@@ -1,6 +1,8 @@
 import { getUserInfo } from '@/services'
 import { BriefcaseBusiness, LinkIcon } from 'lucide-react'
 import { TimelineItem } from './ui/timeline-item'
+import BlurFade from './ui/blur-fade'
+import { getDelay } from '@/utils'
 
 export const Experience = () => {
 	const user = getUserInfo()
@@ -15,20 +17,30 @@ export const Experience = () => {
 					size={18}
 					className='w-0 duration-200 group-hover:w-6'
 				/>
-				<h2>Experience</h2>
+				<BlurFade
+					delay={getDelay(0)}
+					inView
+				>
+					<h2>Experience</h2>
+				</BlurFade>
 			</a>
 
 			<div>
-				{user.experience.map((experience) => (
-					<TimelineItem
+				{user.experience.map((experience, index) => (
+					<BlurFade
+						delay={getDelay(index)}
 						key={experience.name}
-						from={experience.from}
-						to={experience.to}
-						link={experience.companyLink}
-						linkLabel={experience.company}
-						title={experience.name}
-						icon={<BriefcaseBusiness size={18} />}
-					/>
+						inView
+					>
+						<TimelineItem
+							from={experience.from}
+							to={experience.to}
+							link={experience.companyLink}
+							linkLabel={experience.company}
+							title={experience.name}
+							icon={<BriefcaseBusiness size={18} />}
+						/>
+					</BlurFade>
 				))}
 			</div>
 		</div>

@@ -1,5 +1,7 @@
 import { getUserInfo } from '@/services'
 import { LinkIcon } from 'lucide-react'
+import BlurFade from './ui/blur-fade'
+import { getDelay } from '@/utils'
 
 export const About = () => {
 	const user = getUserInfo()
@@ -14,12 +16,23 @@ export const About = () => {
 					size={18}
 					className='w-0 duration-200 group-hover:w-6'
 				/>
-				<h2>About</h2>
+				<BlurFade
+					delay={getDelay(0)}
+					inView
+				>
+					<h2>About</h2>
+				</BlurFade>
 			</a>
 
 			<div className='grid gap-4 text-justify'>
 				{user.bio.map((bio, index) => (
-					<p className='text-secondary-foreground' key={index}>{bio}</p>
+					<BlurFade
+						delay={getDelay(index)}
+						inView
+						key={index}
+					>
+						<p className='text-secondary-foreground'>{bio}</p>
+					</BlurFade>
 				))}
 			</div>
 		</div>

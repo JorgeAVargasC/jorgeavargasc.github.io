@@ -38,7 +38,7 @@ export const Banner = () => {
 					<FaReact
 						className={`absolute left-0 top-[95px] h-auto w-[100px] animate-[levitate_6s_ease-in-out_infinite] fill-sky-400`}
 					/>
-					<FaNodeJs className='absolute right-0 top-[140px] h-[100px] w-[65px] animate-[levitate_6s_ease-in-out_infinite_1s] fill-green-400' />
+					<FaNodeJs className='absolute right-0 top-[140px] h-auto w-[65px] animate-[levitate_6s_ease-in-out_infinite_1s] fill-green-400' />
 					<img
 						src={me}
 						alt='me'

@@ -4,6 +4,8 @@ import { TimelineItem } from './ui/timeline-item'
 import { useState } from 'react'
 import { Button } from './ui/button'
 import { IUser } from '@/services/get-user-info/interfaces'
+import BlurFade from './ui/blur-fade'
+import { getDelay } from '@/utils'
 
 export const Courses = () => {
 	const user = getUserInfo()
@@ -14,18 +16,24 @@ export const Courses = () => {
 	const firstCourses = user.courses.slice(0, l)
 	const restCourses = user.courses.slice(l)
 
-	const renderCourse = (course: IUser['courses'][0]) => {
+	const renderCourse = (course: IUser['courses'][0], index: number) => {
 		return (
-			<TimelineItem
+			<BlurFade
 				key={course.name}
-				from={course.from}
-				to={course.to}
-				link={course.link}
-				linkLabel={'View Certificate'}
-				title={course.name}
-				subtitle={course.institution}
-				icon={<BookTextIcon size={18} />}
-			/>
+				delay={getDelay(index)}
+				inView
+			>
+				<TimelineItem
+					key={course.name}
+					from={course.from}
+					to={course.to}
+					link={course.link}
+					linkLabel={'View Certificate'}
+					title={course.name}
+					subtitle={course.institution}
+					icon={<BookTextIcon size={18} />}
+				/>
+			</BlurFade>
 		)
 	}
 
@@ -42,9 +50,10 @@ export const Courses = () => {
 				<h2>Courses</h2>
 			</a>
 			<div>
-				{firstCourses.map((course) => renderCourse(course))}
+				{firstCourses.map((course, index) => renderCourse(course, index))}
 
-				{showMore && restCourses.map((course) => renderCourse(course))}
+				{showMore &&
+					restCourses.map((course, index) => renderCourse(course, index + l))}
 
 				{restCourses.length > 0 && (
 					<Button

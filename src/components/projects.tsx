@@ -31,14 +31,19 @@ export const Projects = () => {
 					size={18}
 					className='w-0 duration-200 group-hover:w-6'
 				/>
-				<h2>My Last Projects</h2>
+				<BlurFade
+					delay={getDelay(0)}
+					inView
+				>
+					<h2>My Last Projects</h2>
+				</BlurFade>
 			</a>
 
 			<div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-				{user.projects.map((project) => (
+				{user.projects.map((project, index) => (
 					<BlurFade
 						key={project.id}
-						delay={getDelay(0)}
+						delay={getDelay(index)}
 						inView
 					>
 						<ShineBorder

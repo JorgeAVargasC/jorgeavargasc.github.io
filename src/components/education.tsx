@@ -1,6 +1,8 @@
 import { getUserInfo } from '@/services'
 import { GraduationCap, LinkIcon } from 'lucide-react'
 import { TimelineItem } from './ui/timeline-item'
+import BlurFade from './ui/blur-fade'
+import { getDelay } from '@/utils'
 
 export const Education = () => {
 	const user = getUserInfo()
@@ -15,20 +17,30 @@ export const Education = () => {
 					size={18}
 					className='w-0 duration-200 group-hover:w-6'
 				/>
-				<h2>Education</h2>
+				<BlurFade
+					delay={getDelay(0)}
+					inView
+				>
+					<h2>Education</h2>
+				</BlurFade>
 			</a>
 
 			<div>
-				{user.education.map((education) => (
-					<TimelineItem
+				{user.education.map((education, index) => (
+					<BlurFade
 						key={education.name}
-						from={education.from}
-						to={education.to}
-						link={education.companyLink}
-						linkLabel={education.institution}
-						title={education.name}
-						icon={<GraduationCap size={18} />}
-					/>
+						delay={getDelay(index)}
+						inView
+					>
+						<TimelineItem
+							from={education.from}
+							to={education.to}
+							link={education.companyLink}
+							linkLabel={education.institution}
+							title={education.name}
+							icon={<GraduationCap size={18} />}
+						/>
+					</BlurFade>
 				))}
 			</div>
 		</div>
