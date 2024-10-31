@@ -26,10 +26,10 @@ export const Education = () => {
 			</a>
 
 			<div>
-				{user.education.map((education, index) => (
+				{user.education.map((education) => (
 					<BlurFade
 						key={education.name}
-						delay={getDelay(index)}
+						delay={getDelay(0)}
 						inView
 					>
 						<TimelineItem

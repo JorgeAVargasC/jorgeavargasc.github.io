@@ -26,9 +26,9 @@ export const Experience = () => {
 			</a>
 
 			<div>
-				{user.experience.map((experience, index) => (
+				{user.experience.map((experience) => (
 					<BlurFade
-						delay={getDelay(index)}
+						delay={getDelay(0)}
 						key={experience.name}
 						inView
 					>

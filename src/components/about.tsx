@@ -25,11 +25,11 @@ export const About = () => {
 			</a>
 
 			<div className='grid gap-4 text-justify'>
-				{user.bio.map((bio, index) => (
+				{user.bio.map((bio) => (
 					<BlurFade
-						delay={getDelay(index)}
+						delay={getDelay(0)}
 						inView
-						key={index}
+						key={bio}
 					>
 						<p className='text-secondary-foreground'>{bio}</p>
 					</BlurFade>

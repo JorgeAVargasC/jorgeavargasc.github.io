@@ -40,10 +40,10 @@ export const Projects = () => {
 			</a>
 
 			<div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-				{user.projects.map((project, index) => (
+				{user.projects.map((project) => (
 					<BlurFade
 						key={project.id}
-						delay={getDelay(index)}
+						delay={getDelay(0)}
 						inView
 					>
 						<ShineBorder

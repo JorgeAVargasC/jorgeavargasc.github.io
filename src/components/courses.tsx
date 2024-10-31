@@ -16,11 +16,11 @@ export const Courses = () => {
 	const firstCourses = user.courses.slice(0, l)
 	const restCourses = user.courses.slice(l)
 
-	const renderCourse = (course: IUser['courses'][0], index: number) => {
+	const renderCourse = (course: IUser['courses'][0]) => {
 		return (
 			<BlurFade
 				key={course.name}
-				delay={getDelay(index)}
+				delay={getDelay(0)}
 				inView
 			>
 				<TimelineItem
@@ -47,22 +47,32 @@ export const Courses = () => {
 					size={18}
 					className='w-0 duration-200 group-hover:w-6'
 				/>
-				<h2>Courses</h2>
+				<BlurFade
+					delay={getDelay(0)}
+					inView
+				>
+					<h2>Courses</h2>
+				</BlurFade>
 			</a>
-			<div>
-				{firstCourses.map((course, index) => renderCourse(course, index))}
 
-				{showMore &&
-					restCourses.map((course, index) => renderCourse(course, index + l))}
+			<div>
+				{firstCourses.map((course) => renderCourse(course))}
+
+				{showMore && restCourses.map((course) => renderCourse(course))}
 
 				{restCourses.length > 0 && (
-					<Button
-						className='mt-4'
-						onClick={() => setShowMore(!showMore)}
-						variant={'outline'}
+					<BlurFade
+						delay={getDelay(0)}
+						inView
 					>
-						{showMore ? 'Show Less' : `Show ${restCourses.length} More`}
-					</Button>
+						<Button
+							className='mt-4'
+							onClick={() => setShowMore(!showMore)}
+							variant={'outline'}
+						>
+							{showMore ? 'Show Less' : `Show ${restCourses.length} More`}
+						</Button>
+					</BlurFade>
 				)}
 			</div>
 		</div>
