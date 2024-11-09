@@ -1,4 +1,12 @@
-import { About, Banner, Courses, Education, Experience, Projects } from '../components'
+import {
+	About,
+	Banner,
+	Courses,
+	Education,
+	Experience,
+	Projects,
+	Reviews
+} from '../components'
 export const HomePage = () => {
 	return (
 		<div className='mx-auto grid max-w-5xl px-5'>
@@ -41,6 +49,13 @@ export const HomePage = () => {
 				className='grid py-8'
 			>
 				<Courses />
+			</section>
+
+			<section
+				id='reviews'
+				className='grid py-8'
+			>
+				<Reviews />
 			</section>
 		</div>
 	)

@@ -34,7 +34,7 @@ export const Banner = () => {
 				delay={getDelay(2)}
 				inView
 			>
-				<div className='relative grid h-[340px] w-[300px] place-items-center'>
+				<div className='relative grid h-[340px] w-[300px] place-items-center lg:h-auto lg:w-[350px]'>
 					<FaReact
 						className={`absolute left-0 top-[95px] h-auto w-[100px] animate-[levitate_6s_ease-in-out_infinite] fill-sky-400`}
 					/>
@@ -42,8 +42,6 @@ export const Banner = () => {
 					<img
 						src={me}
 						alt='me'
-						width={270}
-						height={300}
 						className=''
 					/>
 				</div>

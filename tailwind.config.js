@@ -13,6 +13,19 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			colors: {
+				bunker: {
+					50: 'var(--bunker-50)',
+					100: 'var(--bunker-100)',
+					200: 'var(--bunker-200)',
+					300: 'var(--bunker-300)',
+					400: 'var(--bunker-400)',
+					500: 'var(--bunker-500)',
+					600: 'var(--bunker-600)',
+					700: 'var(--bunker-700)',
+					800: 'var(--bunker-800)',
+					900: 'var(--bunker-900)',
+					950: 'var(--bunker-950)'
+				},
 				background: 'var(--background)',
 				foreground: 'var(--foreground)',
 				card: {
@@ -58,7 +71,9 @@ export default {
 				shine: 'shine var(--duration) infinite linear',
 				levitate: 'levitate',
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				marquee: 'marquee var(--duration) infinite linear',
+				'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
 			},
 			keyframes: {
 				shine: {
@@ -103,6 +118,22 @@ export default {
 					},
 					to: {
 						height: '0'
+					}
+				},
+				marquee: {
+					from: {
+						transform: 'translateX(0)'
+					},
+					to: {
+						transform: 'translateX(calc(-100% - var(--gap)))'
+					}
+				},
+				'marquee-vertical': {
+					from: {
+						transform: 'translateY(0)'
+					},
+					to: {
+						transform: 'translateY(calc(-100% - var(--gap)))'
 					}
 				}
 			}

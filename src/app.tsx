@@ -5,8 +5,7 @@ import { HomePage } from './pages'
 import { getDelay } from './utils'
 import { Button } from './components/ui/button'
 import { ArrowUp } from 'lucide-react'
-
-import bgsvg from '@/assets/background.svg'
+import Particles from './components/ui/particles'
 
 export default function App() {
 	useEffect(() => {
@@ -21,17 +20,13 @@ export default function App() {
 
 	return (
 		<main className='dark min-h-[100dvh] bg-background pb-20 text-foreground'>
-			<div
-				className='fixed left-0 top-0 z-0 grid min-h-[100vh] min-w-full place-items-center'
-				// style={{
-				// 	background:
-				// 		'radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0,0,0,0.7) 100%)'
-				// }}
-			>
-				<img
-					src={bgsvg}
-					alt='bgsvg'
-					className='aspect-video max-w-4xl object-cover'
+			<div className='fixed left-0 top-0 z-0 grid min-h-[100vh] min-w-full place-items-center'>
+				<Particles
+					className='absolute inset-0'
+					quantity={100}
+					ease={80}
+					color={'#FFF'}
+					refresh
 				/>
 			</div>
 			<HomePage />
