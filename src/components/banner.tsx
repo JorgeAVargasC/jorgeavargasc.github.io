@@ -4,6 +4,7 @@ import BlurFade from './ui/blur-fade'
 
 import me from '@/assets/me.webp'
 import { getDelay } from '@/utils'
+import { cn } from '@/lib/utils'
 
 export const Banner = () => {
 	const user = getUserInfo()
@@ -34,11 +35,39 @@ export const Banner = () => {
 				delay={getDelay(2)}
 				inView
 			>
-				<div className='relative grid h-[340px] w-[300px] place-items-center lg:h-auto lg:w-[350px]'>
+				<div
+					className={cn(
+						'relative',
+						'grid',
+						'h-[340px]',
+						'w-[300px]',
+						'place-items-center',
+						'lg:h-auto',
+						'lg:w-[350px]'
+					)}
+				>
 					<FaReact
-						className={`absolute left-0 top-[95px] h-auto w-[100px] animate-[levitate_6s_ease-in-out_infinite] fill-sky-400`}
+						className={cn(
+							'absolute',
+							'left-0',
+							'top-[95px]',
+							'h-auto',
+							'w-[100px]',
+							'animate-[levitate_6s_ease-in-out_infinite]',
+							'fill-sky-400'
+						)}
 					/>
-					<FaNodeJs className='absolute right-0 top-[140px] h-auto w-[65px] animate-[levitate_6s_ease-in-out_infinite_1s] fill-green-400' />
+					<FaNodeJs
+						className={cn(
+							'absolute',
+							'right-0',
+							'top-[190px]',
+							'h-auto',
+							'w-[60px]',
+							'animate-[levitate_6s_ease-in-out_infinite_1s]',
+							'fill-green-400'
+						)}
+					/>
 					<img
 						src={me}
 						alt='me'
