@@ -63,7 +63,11 @@ export const TimelineItem: React.FC<Props> = ({
 				)}
 
 				{link && linkLabel && (
-					<a href={link}>
+					<a
+						href={link}
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						<Button
 							size={'sm'}
 							variant={'outline'}

@@ -5,7 +5,7 @@ import {
 	Education,
 	Experience,
 	Projects,
-	Reviews
+	Recommendations
 } from '../components'
 export const HomePage = () => {
 	return (
@@ -52,10 +52,10 @@ export const HomePage = () => {
 			</section>
 
 			<section
-				id='reviews'
+				id='recommendations'
 				className='grid py-8'
 			>
-				<Reviews />
+				<Recommendations />
 			</section>
 		</div>
 	)

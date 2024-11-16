@@ -1,12 +1,12 @@
 import { getUserInfo } from '@/services'
 import Marquee from './ui/marquee'
-import { ReviewCard } from './review-card'
+import { RecommendationCard } from './recommendation-card'
 import { LinkIcon } from 'lucide-react'
 import BlurFade from './ui/blur-fade'
 import { getDelay } from '@/utils'
 
-export const Reviews = () => {
-	const { reviews } = getUserInfo()
+export const Recommendations = () => {
+	const { recommendations: reviews } = getUserInfo()
 
 	const firstRow = reviews.slice(0, reviews.length / 2)
 	const secondRow = reviews.slice(reviews.length / 2)
@@ -14,7 +14,7 @@ export const Reviews = () => {
 	return (
 		<div className='grid gap-5'>
 			<a
-				href='#reviews'
+				href='#recommendations'
 				className='group flex flex-row items-center'
 			>
 				<LinkIcon
@@ -25,7 +25,7 @@ export const Reviews = () => {
 					delay={getDelay(0)}
 					inView
 				>
-					<h2>Reviews</h2>
+					<h2>Recommendations</h2>
 				</BlurFade>
 			</a>
 
@@ -35,7 +35,7 @@ export const Reviews = () => {
 					className='[--duration:20s]'
 				>
 					{firstRow.map((review) => (
-						<ReviewCard
+						<RecommendationCard
 							key={review.username}
 							{...review}
 						/>
@@ -47,7 +47,7 @@ export const Reviews = () => {
 					className='[--duration:20s]'
 				>
 					{secondRow.map((review) => (
-						<ReviewCard
+						<RecommendationCard
 							key={review.username}
 							{...review}
 						/>

@@ -1,6 +1,7 @@
 import {
 	BookText,
 	BriefcaseBusiness,
+	CheckCheckIcon,
 	CircleUserRound,
 	CodeIcon,
 	GraduationCapIcon,
@@ -30,7 +31,8 @@ const DATA = {
 		{ href: '#projects', icon: CodeIcon, label: 'Projects' },
 		{ href: '#experience', icon: BriefcaseBusiness, label: 'Experience' },
 		{ href: '#education', icon: GraduationCapIcon, label: 'Education' },
-		{ href: '#courses', icon: BookText, label: 'Courses' }
+		{ href: '#courses', icon: BookText, label: 'Courses' },
+		{ href: '#recommendations', icon: CheckCheckIcon, label: 'Recommendations' }
 	],
 	contact: {
 		social: {
@@ -101,7 +103,7 @@ export function ContactDock() {
 											'size-12 rounded-full'
 										)}
 										target='_blank'
-										rel='noreferrer'
+										rel='noreferrer noopenner'
 									>
 										<social.icon className='size-4' />
 									</a>

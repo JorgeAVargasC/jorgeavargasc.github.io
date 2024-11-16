@@ -5,7 +5,7 @@ import {
 	Language,
 	Links,
 	Project,
-	Review,
+	Recommendation,
 	Skill,
 	TechSkill
 } from '.'
@@ -18,7 +18,7 @@ export type IUser = {
 	email: string
 	bio: string[]
 	shortbio: string
-	reviews: Review[]
+	recommendations: Recommendation[]
 	projects: Project[]
 	experience: Experience[]
 	education: Education[]

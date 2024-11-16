@@ -15,42 +15,54 @@ export const getUserInfo = (): IUser => {
 		],
 		shortbio:
 			'I design and develop services for clients, specializing in creating modern, elegant and interactive websites. My passion is to design creative solutions that improve the user experience.',
-		reviews: [
+		recommendations: [
 			{
-				name: 'Jack',
-				username: '@jack',
-				body: "I've never seen anything like this before. It's amazing. I love it.",
-				img: 'https://avatar.vercel.sh/jack'
+				name: 'Daniel Gómez',
+				username: '@dgomez216',
+				role: 'Product Developer | IT Project manager | Scrum Master | Six Sigma White Belt',
+				body: "The dictionary defines superlative as 'of the highest kind, quality, or order; surpassing all else or others; supreme.' I define it as Jorge Vargas. As a Frontend Developer Lead, as a Engineer, as a friend. He is of the highest kind, quality, and order, supreme.",
+				img: '/images/recommendations/daniel-gomez.webp',
+				linkedIn: 'https://linkedin.com/in/dgomez216'
 			},
 			{
-				name: 'Jill',
-				username: '@jill',
-				body: "I don't know what to say. I'm speechless. This is amazing.",
-				img: 'https://avatar.vercel.sh/jill'
+				name: 'Elmer Muñoz',
+				username: '@el-jose',
+				role: 'IT Business Analyst | Software Developer | Project Manager',
+				body: "Excellence in frontend development isn't just about writing clean code or keeping up with the latest trends, it's about creating experiences that truly connect with users. That's exactly what Jorge does.",
+				img: '/images/recommendations/elmer-munoz.webp',
+				linkedIn: 'https://linkedin.com/in/el-jose'
 			},
 			{
 				name: 'John',
 				username: '@john',
+				role: 'Role',
 				body: "I'm at a loss for words. This is amazing. I love it.",
-				img: 'https://avatar.vercel.sh/john'
+				img: 'https://avatar.vercel.sh/john',
+				linkedIn: null
 			},
 			{
 				name: 'Jane',
 				username: '@jane',
+				role: 'Role',
 				body: "I'm at a loss for words. This is amazing. I love it.",
-				img: 'https://avatar.vercel.sh/jane'
+				img: 'https://avatar.vercel.sh/jane',
+				linkedIn: null
 			},
 			{
 				name: 'Jenny',
 				username: '@jenny',
+				role: 'Role',
 				body: "I'm at a loss for words. This is amazing. I love it.",
-				img: 'https://avatar.vercel.sh/jenny'
+				img: 'https://avatar.vercel.sh/jenny',
+				linkedIn: null
 			},
 			{
 				name: 'James',
 				username: '@james',
+				role: 'Role',
 				body: "I'm at a loss for words. This is amazing. I love it.",
-				img: 'https://avatar.vercel.sh/james'
+				img: 'https://avatar.vercel.sh/james',
+				linkedIn: null
 			}
 		],
 		projects: [
