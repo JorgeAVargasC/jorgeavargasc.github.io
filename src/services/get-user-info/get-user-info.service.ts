@@ -123,6 +123,14 @@ export const getUserInfo = (): IUser => {
 		],
 		courses: [
 			{
+				name: 'Angular: De cero a experto',
+				institution: 'Udemy',
+				from: null,
+				to: '2024-12-31',
+				id: 'UC-c41f7c48-ff01-431b-8950-d346231fdda0',
+				link: 'https://www.udemy.com/certificate/UC-c41f7c48-ff01-431b-8950-d346231fdda0'
+			},
+			{
 				name: 'Shadcn/ui: Componentes accesibles y personalizables',
 				institution: 'DevTalles',
 				from: null,
