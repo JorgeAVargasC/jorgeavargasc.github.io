@@ -33,12 +33,12 @@ export const getUserInfo = (): IUser => {
 				linkedIn: 'https://linkedin.com/in/el-jose'
 			},
 			{
-				name: 'John',
-				username: '@john',
-				role: 'Role',
-				body: "I'm at a loss for words. This is amazing. I love it.",
-				img: 'https://avatar.vercel.sh/john',
-				linkedIn: null
+				name: 'Deiber Verano',
+				username: '@deiber-verano',
+				role: 'Frontend Developer | React | Next | Typescript | Node',
+				body: 'It was a true pleasure working alongside Jorge on the frontend team. His leadership skills are remarkable, as he not only makes key decisions about the technologies we use but also ensures collaboration and consensus within the team 🤝. This reflects his dedication to fostering an inclusive and productive work environment.',
+				img: '/images/recommendations/deiber-verano.webp',
+				linkedIn: 'https://www.linkedin.com/in/deiber-verano'
 			},
 			{
 				name: 'Jane',
