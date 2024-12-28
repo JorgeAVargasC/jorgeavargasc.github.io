@@ -6,6 +6,7 @@ import { Button } from './ui/button'
 import { IUser } from '@/services/get-user-info/interfaces'
 import BlurFade from './ui/blur-fade'
 import { getDelay } from '@/utils'
+import { Icons } from './icons/icons'
 
 export const Courses = () => {
 	const user = getUserInfo()
@@ -39,21 +40,38 @@ export const Courses = () => {
 
 	return (
 		<div className='flex flex-col gap-5'>
-			<a
-				href='#courses'
-				className='group flex flex-row items-center'
+			<BlurFade
+				delay={getDelay(0)}
+				inView
 			>
-				<LinkIcon
-					size={18}
-					className='w-0 duration-200 group-hover:w-6'
-				/>
-				<BlurFade
-					delay={getDelay(0)}
-					inView
-				>
-					<h2>Courses</h2>
-				</BlurFade>
-			</a>
+				<div className='flex items-center justify-between'>
+					<a
+						href='#courses'
+						className='group flex flex-row items-center'
+					>
+						<LinkIcon
+							size={18}
+							className='w-0 duration-200 group-hover:w-6'
+						/>
+						<h2>Courses</h2>
+					</a>
+
+					<a
+						href={user.links.linkedInCourses}
+						target='_blank'
+						rel='noreferrer noopener'
+					>
+						<Button
+							variant={'outline'}
+							size={'sm'}
+							className='bg-[#005FBF] hover:bg-[#005FBF]/80'
+						>
+							{<Icons.linkedin />}
+							Show All
+						</Button>
+					</a>
+				</div>
+			</BlurFade>
 
 			<div>
 				{firstCourses.map((course) => renderCourse(course))}

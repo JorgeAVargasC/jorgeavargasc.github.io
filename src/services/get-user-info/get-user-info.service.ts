@@ -44,7 +44,7 @@ export const getUserInfo = (): IUser => {
 				name: 'Lina Muñoz',
 				username: '@lina-munoz-garces',
 				role: 'Project Manager | Quality Analyst | Requirements Analyst',
-				body: "It has been a privilege to witness Jorge's growth as a front-end developer over the years. He is a disciplined professional who consistently achieves the goals he sets for himself. His methodical and highly organized approach to work ensures that the projects he handles are not only flawless but also delivered within the expected timelines. Jorge stands out for his proactivity and leadership, always supporting his team in ways that amplify their skills and contributions. His ability to take initiative and lead by example fosters a collaborative environment that drives success. I wholeheartedly recommend Jorge for any endeavor; his dedication, expertise, and leadership make him an invaluable asset to any team.",
+				body: "It has been a privilege to witness Jorge's growth as a front-end developer over the years. He is a disciplined professional who consistently achieves the goals he sets for himself. His methodical and highly organized approach to work ensures that the projects he handles are not only flawless but also delivered within the expected timelines.",
 				img: '/images/recommendations/lina-munoz.webp',
 				linkedIn: 'https://linkedin.com/in/lina-munoz-garces'
 			},
@@ -275,7 +275,11 @@ export const getUserInfo = (): IUser => {
 			}
 		],
 		links: {
-			linkedin: 'https://www.linkedin.com/in/jorgeavargasc/',
+			linkedIn: 'https://www.linkedin.com/in/jorgeavargasc/',
+			linkedInRecommendations:
+				'https://www.linkedin.com/in/jorgeavargasc/details/recommendations/?detailScreenTabIndex=0',
+			linkedInCourses:
+				'https://www.linkedin.com/in/jorgeavargasc/details/certifications/',
 			github: 'https://github.com/jorgeavargasc',
 			portfolio: 'https://jorgeavargasc.github.io',
 			email: 'mailto:javargas1209@gmail.com',

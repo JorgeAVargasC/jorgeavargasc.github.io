@@ -4,30 +4,49 @@ import { RecommendationCard } from './recommendation-card'
 import { LinkIcon } from 'lucide-react'
 import BlurFade from './ui/blur-fade'
 import { getDelay } from '@/utils'
+import { Button } from './ui/button'
+import { Icons } from './icons/icons'
 
 export const Recommendations = () => {
-	const { recommendations: reviews } = getUserInfo()
+	const { recommendations: reviews, links } = getUserInfo()
 
 	const firstRow = reviews.slice(0, reviews.length / 2)
 	const secondRow = reviews.slice(reviews.length / 2)
 
 	return (
 		<div className='grid gap-5'>
-			<a
-				href='#recommendations'
-				className='group flex flex-row items-center'
+			<BlurFade
+				delay={getDelay(0)}
+				inView
 			>
-				<LinkIcon
-					size={18}
-					className='w-0 duration-200 group-hover:w-6'
-				/>
-				<BlurFade
-					delay={getDelay(0)}
-					inView
-				>
-					<h2>Recommendations</h2>
-				</BlurFade>
-			</a>
+				<div className='flex items-center justify-between'>
+					<a
+						href='#recommendations'
+						className='group flex flex-row items-center'
+					>
+						<LinkIcon
+							size={18}
+							className='w-0 duration-200 group-hover:w-6'
+						/>
+						<h2>Recommendations</h2>
+					</a>
+
+					<a
+						href={links.linkedInRecommendations}
+						target='_blank'
+						rel='noreferrer noopener'
+					>
+						<Button
+							variant={'outline'}
+							size={'sm'}
+							className='bg-[#005FBF] hover:bg-[#005FBF]/80'
+						>
+							{<Icons.linkedin />}
+							Show All
+						</Button>
+					</a>
+				</div>
+			</BlurFade>
 
 			<div className='relative flex w-full flex-col items-center justify-center overflow-hidden md:shadow-xl'>
 				<Marquee

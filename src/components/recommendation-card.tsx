@@ -19,29 +19,30 @@ export const RecommendationCard = ({
 			)}
 			gradientColor={''}
 		>
-			<div className='flex flex-row items-center gap-2'>
+			<a
+				href={linkedIn || '#recommendations'}
+				className='flex flex-row items-center gap-2'
+			>
 				<img
 					className='rounded-full'
-					width='32'
-					height='32'
+					width='48'
+					height='48'
 					alt={name}
 					src={img}
 				/>
 				<div className='flex flex-col'>
-					<a href={linkedIn || '#recommendations'}>
-						<div className='group flex items-center gap-1'>
-							<LinkedInLogoIcon />
-							<figcaption className='text-sm font-medium dark:text-card-foreground'>
-								{name}
-							</figcaption>
-							<ArrowRightIcon className='w-0 duration-200 group-hover:w-6' />
-						</div>
-					</a>
+					<div className='group flex items-center gap-1'>
+						<LinkedInLogoIcon />
+						<figcaption className='text-sm font-medium dark:text-card-foreground'>
+							{name}
+						</figcaption>
+						<ArrowRightIcon className='w-0 duration-200 group-hover:w-6' />
+					</div>
 					<p className='text-xs font-medium dark:text-secondary-foreground'>
 						{role}
 					</p>
 				</div>
-			</div>
+			</a>
 			<blockquote className='mt-2 text-justify text-sm'>{body}</blockquote>
 		</MagicCard>
 	)

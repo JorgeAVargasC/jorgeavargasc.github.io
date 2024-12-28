@@ -43,7 +43,7 @@ const DATA = {
 			},
 			linkedIn: {
 				name: 'LinkedIn',
-				url: user.links.linkedin,
+				url: user.links.linkedIn,
 				icon: Icons.linkedin
 			},
 			email: {
