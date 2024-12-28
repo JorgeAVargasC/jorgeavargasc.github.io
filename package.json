@@ -10,8 +10,7 @@
 		"lint": "eslint .",
 		"preview": "vite preview",
 		"format": "prettier --write .",
-		"deploy": "gh-pages -d dist",
-		"prepare": "husky install"
+		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
 		"@formkit/tempo": "^0.1.2",
@@ -50,9 +49,5 @@
 		"typescript": "^5.5.3",
 		"typescript-eslint": "^8.7.0",
 		"vite": "^5.4.8"
-	},
-	"lint-staged": {
-		"*.{js,jsx,ts,tsx}": "eslint --cache --fix",
-		"*.{js,jsx,ts,tsx,css,md}": "prettier --write"
 	}
 }

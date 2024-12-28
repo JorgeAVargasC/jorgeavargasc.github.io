@@ -6,6 +6,7 @@ import { getDelay } from './utils'
 import { Button } from './components/ui/button'
 import { ArrowUp } from 'lucide-react'
 import Particles from './components/ui/particles'
+import ScrollProgress from './components/ui/scroll-progress'
 
 export default function App() {
 	useEffect(() => {
@@ -20,6 +21,7 @@ export default function App() {
 
 	return (
 		<main className='dark min-h-[100dvh] bg-background pb-20 text-foreground'>
+			<ScrollProgress className='top-0 bg-gradient-to-r from-sky-400 via-sky-500 to-green-400' />
 			<div className='fixed left-0 top-0 z-0 grid min-h-[100vh] min-w-full place-items-center'>
 				<Particles
 					className='absolute inset-0'
