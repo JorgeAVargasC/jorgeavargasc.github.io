@@ -40,7 +40,7 @@ export const Banner = () => {
 						'relative',
 						'grid',
 						'h-[340px]',
-						'w-[300px]',
+						'w-[280px]',
 						'place-items-center',
 						'lg:h-auto',
 						'lg:w-[350px]'

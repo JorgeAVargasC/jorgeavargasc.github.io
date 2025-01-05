@@ -10,13 +10,19 @@ import ScrollProgress from './components/ui/scroll-progress'
 
 export default function App() {
 	useEffect(() => {
-		const hash = window.location.hash
-		if (hash) {
-			const element = document.querySelector(hash)
-			if (element) {
-				element.scrollIntoView({ behavior: 'smooth' })
+		const scrollToHash = () => {
+			const hash = window.location.hash
+			if (hash) {
+				const element = document.querySelector(hash)
+				if (element) {
+					element.scrollIntoView({ behavior: 'smooth' })
+				}
 			}
 		}
+
+		const timeout = setTimeout(scrollToHash, 100)
+
+		return () => clearTimeout(timeout)
 	}, [])
 
 	return (

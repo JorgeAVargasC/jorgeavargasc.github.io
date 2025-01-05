@@ -52,7 +52,7 @@ export const TimelineItem: React.FC<Props> = ({
 					{getDateLabel()}
 				</h6>
 
-				<h5 className='flex gap-x-1.5 text-justify'>
+				<h5 className='flex gap-x-1.5 text-start'>
 					{icon && <div className='min-w-5'>{icon}</div>}
 					{title}
 				</h5>
@@ -72,7 +72,9 @@ export const TimelineItem: React.FC<Props> = ({
 							size={'sm'}
 							variant={'outline'}
 						>
-							<small>{linkLabel}</small>
+							<div className='grid'>
+								<small className='truncate'>{linkLabel}</small>
+							</div>
 							<ExternalLinkIcon size={14} />
 						</Button>
 					</a>
