@@ -20,7 +20,7 @@ export default function App() {
 			}
 		}
 
-		const timeout = setTimeout(scrollToHash, 100)
+		const timeout = setTimeout(scrollToHash, 1600)
 
 		return () => clearTimeout(timeout)
 	}, [])

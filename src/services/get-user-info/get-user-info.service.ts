@@ -49,12 +49,12 @@ export const getUserInfo = (): IUser => {
 				linkedIn: 'https://linkedin.com/in/lina-munoz-garces'
 			},
 			{
-				name: 'Jenny',
-				username: '@jenny',
-				role: 'Role',
-				body: "I'm at a loss for words. This is amazing. I love it.",
-				img: 'https://avatar.vercel.sh/jenny',
-				linkedIn: null
+				name: 'Sofia Henao',
+				username: '@sofia-henao-5634ab222',
+				role: 'Quality Analyst | Requirement Analyst | Functional Tester',
+				body: 'Jorge has always stood out for being highly organized in every task. He is a skilled professional, consistently seeking optimal solutions to his challenges. Creative and collaborative, Jorge is always willing to support his teammates. He is open to continuous learning and professional development, often taking the initiative to learn independently. As an integral professional, he demonstrates multidisciplinary abilities and strong leadership skills. It is genuinely a pleasure to work alongside him on any team.',
+				img: '/images/recommendations/sofia-henao.webp',
+				linkedIn: 'https://www.linkedin.com/in/sofia-henao-5634ab222'
 			},
 			{
 				name: 'James',
