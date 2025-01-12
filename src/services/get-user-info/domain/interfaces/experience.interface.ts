@@ -1,4 +1,4 @@
-export type Experience = {
+export type IExperience = {
 	name: string
 	company: string
 	companyLink: string

@@ -7,7 +7,7 @@ import { getDelay } from '@/utils'
 import { cn } from '@/lib/utils'
 
 export const Banner = () => {
-	const user = getUserInfo()
+	const { general } = getUserInfo()
 
 	return (
 		<div className='flex flex-col items-center justify-center gap-5 md:flex-row md:justify-between'>
@@ -16,18 +16,20 @@ export const Banner = () => {
 					delay={getDelay(0)}
 					inView
 				>
-					<span>{`Hi, I'm ${user.name} a`}</span>
+					<span>{`Hi, I'm ${general.name} a`}</span>
 				</BlurFade>
 				<BlurFade
 					delay={getDelay(1)}
 					inView
 				>
 					<div className='relative grid place-items-center'>
-						<span className='text-gradient z-10'>{user.role}</span>
+						<span className='text-gradient z-10'>{general.role}</span>
 						<span className='text-gradient absolute z-0 blur-xl'>
-							{user.role}
+							{general.role}
 						</span>
-						<span className='text-gradient absolute blur-3xl'>{user.role}</span>
+						<span className='text-gradient absolute blur-3xl'>
+							{general.role}
+						</span>
 					</div>
 				</BlurFade>
 			</h1>

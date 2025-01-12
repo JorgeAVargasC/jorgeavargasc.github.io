@@ -1,8 +1,8 @@
-export interface Recommendation {
+export interface IRecommendation {
 	name: string
 	username: string
 	role: string
-	body: string
+	body: string[]
 	img: string
 	linkedIn: string | null
 }

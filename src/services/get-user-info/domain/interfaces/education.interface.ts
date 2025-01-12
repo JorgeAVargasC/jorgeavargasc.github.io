@@ -1,4 +1,4 @@
-export type Education = {
+export type IEducation = {
 	name: string
 	institution: string
 	from: string

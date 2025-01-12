@@ -1,4 +1,4 @@
-export type Course = {
+export type ICourse = {
 	id: string
 	name: string
 	institution: string

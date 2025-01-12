@@ -1,21 +1,20 @@
-import { getUserInfo } from '@/services'
+import { getUserInfo, IUser } from '@/services'
 import { BookTextIcon, LinkIcon } from 'lucide-react'
 import { TimelineItem } from './ui/timeline-item'
 import { useState } from 'react'
 import { Button } from './ui/button'
-import { IUser } from '@/services/get-user-info/interfaces'
 import BlurFade from './ui/blur-fade'
 import { getDelay } from '@/utils'
 import { Icons } from './icons/icons'
 
 export const Courses = () => {
-	const user = getUserInfo()
+	const data = getUserInfo()
 
 	const [showMore, setShowMore] = useState(false)
 
 	const l = 3
-	const firstCourses = user.courses.slice(0, l)
-	const restCourses = user.courses.slice(l)
+	const firstCourses = data.courses.slice(0, l)
+	const restCourses = data.courses.slice(l)
 
 	const renderCourse = (course: IUser['courses'][0]) => {
 		return (
@@ -57,7 +56,7 @@ export const Courses = () => {
 					</a>
 
 					<a
-						href={user.links.linkedInCourses}
+						href={data.links.linkedInCourses}
 						target='_blank'
 						rel='noreferrer noopener'
 					>

@@ -4,7 +4,7 @@ import BlurFade from './ui/blur-fade'
 import { getDelay } from '@/utils'
 
 export const About = () => {
-	const user = getUserInfo()
+	const { general } = getUserInfo()
 
 	return (
 		<div className='flex flex-col gap-5'>
@@ -25,7 +25,7 @@ export const About = () => {
 			</a>
 
 			<div className='grid gap-4 text-justify'>
-				{user.bio.map((bio) => (
+				{general.bio.map((bio) => (
 					<BlurFade
 						delay={getDelay(0)}
 						inView

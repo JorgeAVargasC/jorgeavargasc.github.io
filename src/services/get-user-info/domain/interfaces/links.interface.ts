@@ -1,4 +1,4 @@
-export interface Links {
+export interface ILinks {
 	linkedIn: string
 	linkedInRecommendations: string
 	linkedInCourses: string

@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
-import { Recommendation } from '@/services/get-user-info/interfaces'
 import { MagicCard } from './ui/magic-card'
 import { ArrowRightIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
+import { IRecommendation } from '@/services'
 
 export const RecommendationCard = ({
 	img,
@@ -9,7 +9,7 @@ export const RecommendationCard = ({
 	body,
 	role,
 	linkedIn
-}: Recommendation) => {
+}: IRecommendation) => {
 	return (
 		<MagicCard
 			key={name}
@@ -43,7 +43,7 @@ export const RecommendationCard = ({
 					</p>
 				</div>
 			</a>
-			<blockquote className='mt-2 text-justify text-sm'>{body}</blockquote>
+			<blockquote className='mt-2 text-justify text-sm'>{body[0]}</blockquote>
 		</MagicCard>
 	)
 }
