@@ -63,7 +63,9 @@ export const recommendations: IRecommendation[] = [
 		name: 'James',
 		username: '@james',
 		role: 'Role',
-		body: ["I'm at a loss for words. This is amazing. I love it."],
+		body: [
+			"I've worked with Jorge on a few projects, and he's a great developer. He's always been helpful and friendly, and I'm looking forward to working with him again!"
+		],
 		img: 'https://avatar.vercel.sh/james',
 		linkedIn: null
 	}
