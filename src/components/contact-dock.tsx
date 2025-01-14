@@ -1,13 +1,13 @@
 import {
-	BookText,
 	BriefcaseBusiness,
-	CheckCheckIcon,
 	CircleUserRound,
 	CodeIcon,
+	FileBadge2,
 	GraduationCapIcon,
 	HomeIcon,
 	MailIcon,
-	NotepadText
+	NotepadText,
+	QuoteIcon
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button'
@@ -31,8 +31,8 @@ const DATA = {
 		{ href: '#projects', icon: CodeIcon, label: 'Projects' },
 		{ href: '#experience', icon: BriefcaseBusiness, label: 'Experience' },
 		{ href: '#education', icon: GraduationCapIcon, label: 'Education' },
-		{ href: '#courses', icon: BookText, label: 'Courses' },
-		{ href: '#recommendations', icon: CheckCheckIcon, label: 'Recommendations' }
+		{ href: '#courses', icon: FileBadge2, label: 'Courses' },
+		{ href: '#recommendations', icon: QuoteIcon, label: 'Recommendations' }
 	],
 	contact: {
 		social: {

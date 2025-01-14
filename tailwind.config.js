@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: [
@@ -140,5 +142,32 @@ export default {
 		}
 	},
 	darkMode: ['class'],
-	plugins: [require('tailwindcss-animate')]
+	plugins: [
+		require('tailwindcss-animate'),
+		plugin(function ({ addComponents, theme }) {
+			addComponents({
+				'.scrollbar': {
+					'&::-webkit-scrollbar': {
+						width: '8px',
+						height: '8px'
+					},
+					'&::-webkit-scrollbar-track': {
+						background: theme('colors.bunker-800')
+					},
+					'&::-webkit-scrollbar-thumb': {
+						background: theme('colors.border'),
+						borderRadius: '8px'
+					},
+					'&::-webkit-scrollbar-thumb:hover': {
+						background: theme('colors.bunker-500')
+					}
+				},
+				'.scrollbar-hidden': {
+					'&::-webkit-scrollbar': {
+						display: 'none'
+					}
+				}
+			})
+		})
+	]
 }

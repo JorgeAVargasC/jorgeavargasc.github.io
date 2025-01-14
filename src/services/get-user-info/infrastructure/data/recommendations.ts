@@ -6,7 +6,8 @@ export const recommendations: IRecommendation[] = [
 		username: '@dgomez216',
 		role: 'Product Developer | IT Project manager | Scrum Master | Six Sigma White Belt',
 		body: [
-			"The dictionary defines superlative as 'of the highest kind, quality, or order; surpassing all else or others; supreme.' I define it as Jorge Vargas. As a Frontend Developer Lead, as a Engineer, as a friend. He is of the highest kind, quality, and order, supreme."
+			"The dictionary defines superlative as 'of the highest kind, quality, or order; surpassing all else or others; supreme.' I define it as Jorge Vargas. As a Frontend Developer Lead, as a Engineer, as a friend. ",
+			'He is of the highest kind, quality, and order, supreme.'
 		],
 		img: '/images/recommendations/daniel-gomez.webp',
 		linkedIn: 'https://linkedin.com/in/dgomez216'

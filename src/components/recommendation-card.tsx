@@ -11,6 +11,7 @@ import {
 	DrawerTrigger
 } from './ui/drawer'
 import clsx from 'clsx'
+import { DialogDescription, DialogTitle } from '@radix-ui/react-dialog'
 
 export const RecommendationCard = ({
 	img,
@@ -85,9 +86,12 @@ export const RecommendationCard = ({
 							</DrawerTrigger>
 							<DrawerContent>
 								<div className='mx-auto w-full max-w-xl'>
-									<DrawerHeader>{renderUser()}</DrawerHeader>
+									<DrawerHeader>
+										<DialogTitle className='px-2'>{renderUser()}</DialogTitle>
+										<DialogDescription></DialogDescription>
+									</DrawerHeader>
 									<DrawerFooter>
-										<div className='grid gap-5'>
+										<div className='scrollbar grid max-h-[40vh] gap-5 overflow-y-auto px-2'>
 											{body.map((item, index) => (
 												<blockquote
 													key={index}
