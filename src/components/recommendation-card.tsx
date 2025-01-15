@@ -41,7 +41,7 @@ export const RecommendationCard = ({
 						</figcaption>
 						<ArrowRightIcon className='w-0 duration-200 group-hover:w-6' />
 					</div>
-					<p className='text-start text-xs font-medium text-secondary-foreground'>
+					<p className='text-start text-xs font-medium text-secondary-foreground line-clamp-2'>
 						{role}
 					</p>
 				</div>
