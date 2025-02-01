@@ -1,3 +1,14 @@
+import { cn } from '@/lib/utils'
+import { buttonVariants } from '@/components/ui/button'
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger
+} from '@/components/ui/tooltip'
+import { Dock, DockIcon } from '@/components/ui/dock'
+import { getUserInfo } from '@/services'
+import { Icons } from './icons/icons'
 import {
 	BriefcaseBusiness,
 	CircleUserRound,
@@ -9,18 +20,6 @@ import {
 	NotepadText,
 	QuoteIcon
 } from 'lucide-react'
-import { cn } from '@/lib/utils'
-import { buttonVariants } from '@/components/ui/button'
-import { Separator } from '@/components/ui/separator'
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipProvider,
-	TooltipTrigger
-} from '@/components/ui/tooltip'
-import { Dock, DockIcon } from '@/components/ui/dock'
-import { getUserInfo } from '@/services'
-import { Icons } from './icons/icons'
 
 const user = getUserInfo()
 
@@ -36,26 +35,22 @@ const DATA = {
 	],
 	contact: {
 		social: {
-			gitHub: {
-				name: 'GitHub',
-				url: user.links.github,
-				icon: Icons.github
-			},
+			gitHub: { name: 'GitHub', url: user.links.github, icon: Icons.github },
 			linkedIn: {
 				name: 'LinkedIn',
 				url: user.links.linkedIn,
 				icon: Icons.linkedin
 			},
-			email: {
-				name: 'Send Email',
-				url: user.links.email,
-				icon: MailIcon
-			}
+			email: { name: 'Send Email', url: user.links.email, icon: MailIcon }
 		}
 	}
 }
 
 export function ContactDock() {
+	const filteredSocial = Object.entries(DATA.contact.social).filter(
+		([, social]) => social.url
+	)
+
 	return (
 		<div className='relative'>
 			<TooltipProvider>
@@ -63,6 +58,7 @@ export function ContactDock() {
 					direction='middle'
 					className='bg-background'
 				>
+					{/* Navbar Icons */}
 					{DATA.navbar.map((item) => (
 						<DockIcon
 							key={item.label}
@@ -87,11 +83,10 @@ export function ContactDock() {
 							</Tooltip>
 						</DockIcon>
 					))}
-					<Separator
-						orientation='vertical'
-						className='hidden h-full md:block'
-					/>
-					{Object.entries(DATA.contact.social).map(([name, social]) => (
+					{/* Separator */}
+					<div className='separator hidden h-full md:block' />
+					{/* Social Icons */}
+					{filteredSocial.map(([name, social]) => (
 						<DockIcon key={name}>
 							<Tooltip>
 								<TooltipTrigger asChild>
@@ -103,7 +98,7 @@ export function ContactDock() {
 											'size-12 rounded-full'
 										)}
 										target='_blank'
-										rel='noreferrer noopenner'
+										rel='noreferrer noopener'
 									>
 										<social.icon className='size-4' />
 									</a>
@@ -114,17 +109,13 @@ export function ContactDock() {
 							</Tooltip>
 						</DockIcon>
 					))}
-					<Separator
-						orientation='vertical'
-						className='h-full'
-					/>
-					{/* CV */}
+					{/* CV Icon */}
 					<DockIcon>
 						<Tooltip>
 							<TooltipTrigger asChild>
 								<a
 									href={user.links.cv}
-									aria-label={'CV'}
+									aria-label='CV'
 									className={cn(
 										buttonVariants({ variant: 'ghost', size: 'icon' }),
 										'size-12 rounded-full'

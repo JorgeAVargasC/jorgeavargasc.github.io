@@ -2,6 +2,14 @@ import { ICourse } from '../../domain/interfaces'
 
 export const courses: ICourse[] = [
 	{
+		name: 'Docker - Guía práctica de uso para desarrolladores',
+		institution: 'DevTalles',
+		from: null,
+		to: '2024-02-01',
+		id: 'toru2s86yx',
+		link: 'https://cursos.devtalles.com/certificates/toru2s86yx'
+	},
+	{
 		name: 'Angular: De cero a experto',
 		institution: 'Udemy',
 		from: null,

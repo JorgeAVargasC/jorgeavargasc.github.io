@@ -1,10 +1,10 @@
-import { FaNodeJs, FaReact } from 'react-icons/fa'
 import { getUserInfo } from '../services'
 import BlurFade from './ui/blur-fade'
 
 import me from '@/assets/me.webp'
 import { getDelay } from '@/utils'
 import { cn } from '@/lib/utils'
+import { Icons } from './icons/icons'
 
 export const Banner = () => {
 	const { general } = getUserInfo()
@@ -48,7 +48,7 @@ export const Banner = () => {
 						'lg:w-[350px]'
 					)}
 				>
-					<FaReact
+					<Icons.react
 						className={cn(
 							'absolute',
 							'left-0',
@@ -59,7 +59,7 @@ export const Banner = () => {
 							'fill-sky-400'
 						)}
 					/>
-					<FaNodeJs
+					<Icons.node
 						className={cn(
 							'absolute',
 							'right-0',
@@ -73,7 +73,7 @@ export const Banner = () => {
 					<img
 						src={me}
 						alt='me'
-						className=''
+						className='w-[280px] h-[273px]'
 					/>
 				</div>
 			</BlurFade>

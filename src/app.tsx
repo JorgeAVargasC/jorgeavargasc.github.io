@@ -53,8 +53,12 @@ export default function App() {
 					delay={getDelay(3)}
 					inView
 				>
-					<a href='#banner'>
+					<a
+						href='#banner'
+						aria-label='Back to top'
+					>
 						<Button
+							aria-label='Back to top'
 							variant={'default'}
 							size={'icon'}
 						>

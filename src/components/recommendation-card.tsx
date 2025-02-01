@@ -32,6 +32,7 @@ export const RecommendationCard = ({
 					height='48'
 					alt={name}
 					src={img}
+					loading='lazy'
 				/>
 				<div className='flex flex-col'>
 					<div className='group flex items-center gap-1'>
@@ -41,7 +42,7 @@ export const RecommendationCard = ({
 						</figcaption>
 						<ArrowRightIcon className='w-0 duration-200 group-hover:w-6' />
 					</div>
-					<p className='text-start text-xs font-medium text-secondary-foreground line-clamp-2'>
+					<p className='line-clamp-2 text-start text-xs font-medium text-secondary-foreground'>
 						{role}
 					</p>
 				</div>

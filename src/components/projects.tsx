@@ -1,6 +1,5 @@
 import { getUserInfo } from '@/services'
 import ShineBorder from './ui/shine-border'
-import { TbBrandGithub, TbExternalLink } from 'react-icons/tb'
 import { Button } from './ui/button'
 import {
 	Tooltip,
@@ -8,7 +7,7 @@ import {
 	TooltipProvider,
 	TooltipTrigger
 } from './ui/tooltip'
-import { InfoIcon, LinkIcon } from 'lucide-react'
+import { ExternalLink, InfoIcon, LinkIcon } from 'lucide-react'
 import {
 	Accordion,
 	AccordionContent,
@@ -17,6 +16,7 @@ import {
 } from './ui/accordion'
 import { getDelay } from '@/utils'
 import BlurFade from './ui/blur-fade'
+import { Icons } from './icons/icons'
 
 export const Projects = () => {
 	const user = getUserInfo()
@@ -59,12 +59,13 @@ export const Projects = () => {
 									<img
 										src={project.imageUrl}
 										alt={project.name}
-										className='w-full rounded-lg'
+										className='w-[275px] h-[172px] rounded-lg'
+										loading='lazy'
 									/>
 								</a>
 
 								<div className='flex items-center justify-between'>
-									<h5 className='text-start'>{project.name}</h5>
+									<h3 className='text-start'>{project.name}</h3>
 
 									<div className='hidden lg:grid'>
 										<TooltipProvider>
@@ -96,7 +97,7 @@ export const Projects = () => {
 											className='w-full'
 										>
 											View Code
-											<TbBrandGithub size={24} />
+											<Icons.github />
 										</Button>
 									</a>
 									<a
@@ -107,7 +108,7 @@ export const Projects = () => {
 									>
 										<Button className='w-full'>
 											View Live
-											<TbExternalLink size={24} />
+											<ExternalLink />
 										</Button>
 									</a>
 								</div>

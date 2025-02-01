@@ -48,14 +48,14 @@ export const TimelineItem: React.FC<Props> = ({
 			</div>
 
 			<div className='grid gap-1 pb-6'>
-				<h6 className='flex h-7 items-center leading-none text-secondary-foreground'>
+				<h3 className='flex h-7 items-center leading-none text-secondary-foreground'>
 					{getDateLabel()}
-				</h6>
+				</h3>
 
-				<h5 className='flex gap-x-1.5 text-start'>
+				<h4 className='flex gap-x-1.5 text-start'>
 					{icon && <div className='min-w-5'>{icon}</div>}
 					{title}
-				</h5>
+				</h4>
 				{subtitle && (
 					<p className='text-justify text-sm text-secondary-foreground'>
 						{subtitle}
