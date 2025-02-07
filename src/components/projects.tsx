@@ -59,7 +59,7 @@ export const Projects = () => {
 									<img
 										src={project.imageUrl}
 										alt={project.name}
-										className='w-[275px] h-[172px] rounded-lg'
+										className='min-w-[275px] min-h-[172px] aspect-video rounded-lg'
 										loading='lazy'
 									/>
 								</a>
