@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://jorgeavargasc.github.io/sitemap.xml
