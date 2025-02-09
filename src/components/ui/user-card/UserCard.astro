@@ -1,0 +1,107 @@
+---
+import type { IRecommendation } from '@services/user-info/domain/interfaces/recommendation.interface'
+import LinkedInIcon from '../icons/LinkedInIcon.astro'
+import ArrowRightIcon from '../icons/ArrowRightIcon.astro'
+type Props = IRecommendation
+const { name, role, body, img, linkedIn } = Astro.props
+---
+
+<div
+	class:list={[
+		'relative w-72 cursor-pointer overflow-hidden rounded-xl border p-4 md:w-96',
+		'dark:border-border dark:bg-card dark:hover:bg-bunker-800'
+	]}
+>
+	<div class='flex h-full w-full min-w-full flex-col gap-2'>
+		{
+			(
+				<a
+					href={linkedIn || '#recommendations'}
+					class='flex flex-row items-center gap-2'
+				>
+					<img
+						class='rounded-full'
+						width='48'
+						height='48'
+						alt={name}
+						src={img}
+						loading='lazy'
+					/>
+					<div class='flex flex-col'>
+						<div class='group flex items-center gap-1'>
+							<LinkedInIcon class='w-4 h-fit' />
+							<figcaption class='text-sm font-medium text-card-foreground'>
+								{name}
+							</figcaption>
+							<ArrowRightIcon class='w-0 duration-200 group-hover:w-4' />
+						</div>
+						<p class='line-clamp-2 text-start text-xs font-medium text-secondary-foreground'>
+							{role}
+						</p>
+					</div>
+				</a>
+			)
+		}
+
+		<div class='min-w-full flex-1'>
+			<blockquote
+				class:list={['text-justify text-sm', body.length > 1 && 'line-clamp-4']}
+			>
+				{body[0]}
+			</blockquote>
+		</div>
+
+		<!-- {
+			body.length > 1 && (
+				<div>
+					<div>
+						<button class='w-full btn btn-outline'>See More</button>
+					</div>
+					<div>
+						<div class='mx-auto w-full max-w-xl'>
+							<div>
+								<div class='px-2'>
+									{
+										<a
+											href={linkedIn || '#recommendations'}
+											class='flex flex-row items-center gap-2'
+										>
+											<img
+												class='rounded-full'
+												width='48'
+												height='48'
+												alt={name}
+												src={img}
+												loading='lazy'
+											/>
+											<div class='flex flex-col'>
+												<div class='group flex items-center gap-1'>
+													<LinkedInIcon class="w-4 h-fit" />
+													<figcaption class='text-sm font-medium text-card-foreground'>
+														{name}
+													</figcaption>
+													<ArrowRightIcon class='w-0 duration-200 group-hover:w-6' />
+												</div>
+												<p class='line-clamp-2 text-start text-xs font-medium text-secondary-foreground'>
+													{role}
+												</p>
+											</div>
+										</a>
+									}
+								</div>
+								<div />
+							</div>
+							<div>
+								<div class='scrollbar grid max-h-[40vh] gap-5 overflow-y-auto px-2'>
+									{body.map((item, index) => (
+										<blockquote class='text-justify text-sm'>{item}</blockquote>
+									))}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			)
+		} -->
+	</div>
+</div>

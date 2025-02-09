@@ -93,20 +93,22 @@ const restCourses = user.courses.slice(3)
 
 <script>
 	import { userInfo } from '@services/user-info/infrastructure/user-info'
-
 	let showAll = false
 
-	const toggleBtn = document.getElementById('toggle-btn')
-	toggleBtn!.textContent = `Show ${userInfo.courses.length - 3} More`
+	const toggleBtn = document.getElementById('toggle-btn')!
+	const restCoursesDiv = document.getElementById('rest-courses')!
+
+	toggleBtn.textContent = `Show ${userInfo.courses.length - 3} More`
+	restCoursesDiv.style.display = 'none'
 
 	toggleBtn!.addEventListener('click', () => {
 		showAll = !showAll
 
 		if (showAll) {
-			document.getElementById('rest-courses')!.style.display = 'block'
+			restCoursesDiv.style.display = 'block'
 			toggleBtn!.textContent = 'Show Less'
 		} else {
-			document.getElementById('rest-courses')!.style.display = 'none'
+			restCoursesDiv.style.display = 'none'
 			toggleBtn!.textContent = `Show ${userInfo.courses.length - 3} More`
 		}
 	})

@@ -22,7 +22,7 @@ const user = userInfo
 		{
 			user.projects.map((project) => (
 				<div class='animate-fade-in-blur'>
-					<div class='border border-white'>
+					<div class='bg-card border border-border p-4 hover:bg-bunker-800 duration-200 rounded-lg'>
 						<div class='z-10 flex flex-1 flex-col gap-4'>
 							<a
 								href={project.liveURL}
@@ -32,7 +32,7 @@ const user = userInfo
 								<img
 									src={project.imageUrl}
 									alt={project.name}
-									class='min-w-[275px] min-h-[172px] aspect-video rounded-lg'
+									class='aspect-video object-top object-cover rounded-lg'
 									loading='lazy'
 								/>
 							</a>
