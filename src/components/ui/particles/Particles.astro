@@ -1,0 +1,44 @@
+---
+const numParticles = 30
+const particles = Array.from({ length: numParticles }, (_, i) => ({
+	id: i,
+	size: Math.random() * 5 + 2 + 'px',
+	top: Math.random() * 100 + '%',
+	left: Math.random() * 100 + '%',
+	duration: Math.random() * 15 + 5 + 's'
+}))
+---
+
+<style>
+	@keyframes float {
+		0% {
+			transform: translateY(0) scale(1);
+			opacity: 0.5;
+		}
+		50% {
+			opacity: 1;
+			transform: translateY(-50vh) scale(0.5);
+		}
+		100% {
+			transform: translateY(-100vh) scale(0);
+			opacity: 0;
+		}
+	}
+</style>
+
+<div class='fixed inset-0 overflow-hidden z-0'>
+	{
+		particles.map((particle) => (
+			<div
+				class='absolute bg-white rounded-full opacity-50'
+				style={{
+					width: particle.size,
+					height: particle.size,
+					top: particle.top,
+					left: particle.left,
+					animation: `float ${particle.duration} linear infinite`
+				}}
+			/>
+		))
+	}
+</div>

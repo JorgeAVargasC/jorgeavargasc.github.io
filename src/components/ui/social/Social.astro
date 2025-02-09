@@ -1,0 +1,44 @@
+---
+import { userInfo } from '@services/user-info/infrastructure/user-info'
+import LinkedInIcon from '../icons/LinkedInIcon.astro'
+import GitHubIcon from '../icons/GitHubIcon.astro'
+import NoteBookIcon from '../icons/NoteBookIcon.astro'
+import ExternalLinkIcon from '../icons/ExternalLinkIcon.astro'
+
+const user = userInfo
+---
+
+<div class='grid grid-cols-3 gap-2'>
+	<a
+		href={user.links.linkedIn}
+		target='_blank'
+		rel='noopener noreferrer'
+	>
+		<button class='btn btn-outline w-full'>
+			<LinkedInIcon />
+			LinkedIn
+		</button>
+	</a>
+
+	<a
+		href={user.links.github}
+		target='_blank'
+		rel='noopener noreferrer'
+	>
+		<button class='btn btn-outline w-full'>
+			<GitHubIcon />
+			GitHub
+		</button>
+	</a>
+
+	<a
+		href={user.links.cv}
+		target='_blank'
+		rel='noopener noreferrer'
+	>
+		<button class='btn btn-primary w-full'>
+			<ExternalLinkIcon />
+			CV
+		</button>
+	</a>
+</div>

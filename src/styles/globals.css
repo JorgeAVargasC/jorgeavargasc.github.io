@@ -1,0 +1,205 @@
+@import 'tailwindcss';
+
+:root {
+	--bunker-50: #f2f4f7;
+	--bunker-100: #e2e6ee;
+	--bunker-200: #c1cbdb;
+	--bunker-300: #a1b0c9;
+	--bunker-400: #8195b6;
+	--bunker-500: #6079a3;
+	--bunker-600: #4c6184;
+	--bunker-700: #3a4a64;
+	--bunker-800: #273243;
+	--bunker-900: #141a23;
+	--bunker-950: #0b0e13;
+}
+
+@theme {
+	--color-bunker-50: var(--bunker-50);
+	--color-bunker-100: var(--bunker-100);
+	--color-bunker-200: var(--bunker-200);
+	--color-bunker-300: var(--bunker-300);
+	--color-bunker-400: var(--bunker-400);
+	--color-bunker-500: var(--bunker-500);
+	--color-bunker-600: var(--bunker-600);
+	--color-bunker-700: var(--bunker-700);
+	--color-bunker-800: var(--bunker-800);
+	--color-bunker-900: var(--bunker-900);
+	--color-bunker-950: var(--bunker-950);
+
+	--radius: 0.5rem;
+
+	--color-background: var(--bunker-950);
+	--color-foreground: var(--bunker-50);
+	--color-card: var(--bunker-950);
+	--color-card-foreground: var(--bunker-50);
+	--color-popover: var(--bunker-950);
+	--color-popover-foreground: var(--bunker-50);
+	--color-primary: var(--bunker-50);
+	--color-primary-foreground: var(--bunker-900);
+	--color-secondary: var(--bunker-800);
+	--color-secondary-foreground: var(--bunker-300);
+	--color-muted: var(--bunker-800);
+	--color-muted-foreground: var(--bunker-100);
+	--color-accent: var(--bunker-900);
+	--color-accent-foreground: var(--bunker-100);
+	--color-destructive: red;
+	--color-destructive-foreground: var(--bunker-100);
+	--color-border: var(--bunker-900);
+	--color-input: var(--bunker-900);
+	--color-ring: var(--bunker-200);
+	--color-chart-1: hsl(220 70% 50%);
+	--color-chart-2: hsl(160 60% 45%);
+	--color-chart-3: hsl(30 80% 55%);
+	--color-chart-4: hsl(280 65% 60%);
+	--color-chart-5: hsl(340 75% 55%);
+
+	/* * [ANIMATIONS] * */
+
+	--animate-fade-in-blur: fade-in-blur 0.4s ease-out;
+	--animate-levitate: levitate 2s ease-in-out infinite;
+	--animate-shine: shine 1.5s ease-in-out infinite;
+	--animate-scroll-left: scroll-left 20s linear infinite;
+	--animate-scroll-right: scroll-right 20s linear infinite;
+
+	@keyframes shine {
+		0% {
+			background-position: 0% 0%;
+		}
+
+		50% {
+			background-position: 100% 100%;
+		}
+
+		to {
+			background-position: 0% 0%;
+		}
+	}
+
+	@keyframes fade-in-blur {
+		0% {
+			opacity: 0;
+			transform: translateY(50px);
+			filter: blur(6px);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+			filter: blur(0px);
+		}
+	}
+
+	@keyframes levitate {
+		0% {
+			transform: translateY(0);
+		}
+
+		30% {
+			transform: translateY(-10px);
+		}
+
+		50% {
+			transform: translateY(4px);
+		}
+
+		70% {
+			transform: translateY(-15px);
+		}
+
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes scroll-left {
+		from {
+			transform: translateX(0%);
+		}
+
+		to {
+			transform: translateX(-50%);
+		}
+	}
+
+	@keyframes scroll-right {
+		from {
+			transform: translateX(-50%);
+		}
+
+		to {
+			transform: translateX(0%);
+		}
+	}
+}
+
+@utility scrollbar-hidden {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@layer components {
+	.text-gradient {
+		@apply bg-gradient-to-br from-sky-500 to-green-400 bg-clip-text text-transparent;
+	}
+
+	/* Estilos base para todos los botones */
+	.btn {
+		@apply focus-visible:ring-ring inline-flex h-9 cursor-pointer items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0;
+	}
+
+	/* Variantes */
+	.btn-primary {
+		@apply bg-primary text-primary-foreground hover:bg-primary/90 shadow;
+	}
+
+	.btn-outline {
+		@apply border-input bg-background hover:bg-accent hover:text-accent-foreground border shadow-sm;
+	}
+
+	.btn-secondary {
+		@apply bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm;
+	}
+
+	.card {
+		@apply dark:bg-background dark:text-foreground relative grid min-h-[60px] w-fit min-w-full place-items-center rounded-md p-4;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+
+	body {
+		@apply bg-background text-foreground;
+	}
+
+	html {
+		@apply bg-background text-foreground scroll-smooth antialiased;
+	}
+
+	h1 {
+		@apply text-[1.6rem] font-semibold md:text-3xl lg:text-4xl;
+	}
+
+	h2 {
+		@apply text-lg font-semibold;
+	}
+
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-sm font-semibold;
+	}
+
+	small {
+		@apply text-xs;
+	}
+
+	p {
+		@apply text-sm;
+	}
+}

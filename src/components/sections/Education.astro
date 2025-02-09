@@ -1,0 +1,27 @@
+---
+import GraduationCapIcon from '@components/ui/icons/GraduationCapIcon.astro'
+import TimeLineItem from '@components/ui/time-line-item/TimeLineItem.astro'
+import { userInfo } from '@services/user-info/infrastructure/user-info'
+const user = userInfo
+---
+
+<div>
+	{
+		user.education.map((education) => (
+			<div class='animate-fade-in-blur'>
+				<TimeLineItem
+					from={education.from}
+					to={education.to}
+					link={education.companyLink}
+					linkLabel={education.institution}
+					title={education.name}
+				>
+					<GraduationCapIcon
+						class='w-4 h-fit'
+						slot='icon'
+					/>
+				</TimeLineItem>
+			</div>
+		))
+	}
+</div>

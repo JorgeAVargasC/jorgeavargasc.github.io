@@ -1,0 +1,20 @@
+---
+import LinkedInIcon from '@components/ui/icons/LinkedInIcon.astro'
+
+interface Props {
+	href: string
+}
+
+const { href } = Astro.props
+---
+
+<a
+	href={href}
+	target='_blank'
+	rel='noreferrer noopener'
+>
+	<button class='btn bg-[#005FBF] hover:bg-[#005FBF]/80 h-8 px-2 py-4'>
+		<LinkedInIcon />
+		Show All
+	</button>
+</a>

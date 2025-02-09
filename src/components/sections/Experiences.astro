@@ -1,0 +1,28 @@
+---
+import LinkIcon from '@components/ui/icons/LinkIcon.astro'
+import TimeLineItem from '@components/ui/time-line-item/TimeLineItem.astro'
+import { userInfo } from '@services/user-info/infrastructure/user-info'
+import BriefcaseBusinessIcon from '@components/ui/icons/BriefcaseBusinessIcon.astro'
+const user = userInfo
+---
+
+<div>
+	{
+		user.experience.map((experience) => (
+			<div class='animate-fade-in-blur'>
+				<TimeLineItem
+					from={experience.from}
+					to={experience.to}
+					link={experience.companyLink}
+					linkLabel={experience.company}
+					title={experience.name}
+				>
+					<BriefcaseBusinessIcon
+						class='w-4 h-fit'
+						slot='icon'
+					/>
+				</TimeLineItem>
+			</div>
+		))
+	}
+</div>

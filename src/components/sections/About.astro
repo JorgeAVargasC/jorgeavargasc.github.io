@@ -1,0 +1,16 @@
+---
+import LinkIcon from '@components/ui/icons/LinkIcon.astro'
+import { userInfo } from '@services/user-info/infrastructure/user-info'
+
+const general = userInfo.general
+---
+
+<div class='grid gap-4 text-justify'>
+	{
+		general.bio.map((bio) => (
+			<div class='animate-fade-in-blur'>
+				<p class='text-secondary-foreground'>{bio}</p>
+			</div>
+		))
+	}
+</div>
