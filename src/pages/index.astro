@@ -1,0 +1,36 @@
+---
+import About from '@components/sections/About.astro'
+import Banner from '@components/sections/Banner.astro'
+import Projects from '@components/sections/Projects.astro'
+import Layout from '@layouts/Layout.astro'
+import '@styles/globals.css'
+---
+
+<Layout>
+	<!-- <Welcome /> -->
+
+	<main class='min-h-[100vh] bg-background pb-20 text-foreground'>
+		<div class='mx-auto grid max-w-5xl px-5'>
+			<section
+				id='banner'
+				class='grid min-h-[100vh]'
+			>
+				<Banner />
+			</section>
+
+			<section
+				id='about'
+				class='grid py-8'
+			>
+				<About class='border border-red' />
+			</section>
+
+			<section
+				id='projects'
+				class='grid py-8'
+			>
+				<Projects />
+			</section>
+		</div>
+	</main>
+</Layout>
