@@ -1,0 +1,90 @@
+---
+import ExternalLinkIcon from '../icons/ExternalLinkIcon.astro'
+
+interface Props {
+	from: string | null
+	to: string | null
+	title: string
+	subtitle?: string
+	link?: string | null
+	linkLabel?: string | null
+}
+
+const { from, title, to, link, linkLabel, subtitle } = Astro.props
+
+const f = new Intl.DateTimeFormat('en', {
+	year: 'numeric',
+	month: 'short',
+	day: 'numeric'
+})
+
+const getDateLabel = () => {
+	if (from && to) {
+		const fromDate = new Date(from)
+		const toDate = new Date(to)
+		return `${f.format(fromDate)} - ${f.format(toDate)}`
+	}
+
+	if (from) {
+		const fromDate = new Date(from)
+		return `${f.format(fromDate)} - Present`
+	}
+
+	if (to) {
+		const toDate = new Date(to)
+		return `${f.format(toDate)}`
+	}
+
+	return ''
+}
+---
+
+<div class='flex gap-x-2'>
+	<div
+		class='relative after:absolute after:bottom-0 after:start-3.5 after:top-7 after:w-px after:-translate-x-[0.5px] after:bg-secondary-foreground last:after:hidden'
+	>
+		<div class='relative z-10 flex size-7 items-center justify-center'>
+			<div class='size-2 rounded-full bg-secondary-foreground'></div>
+		</div>
+	</div>
+
+	<div class='grid gap-1 pb-6'>
+		<h3 class='flex h-7 items-center leading-none text-secondary-foreground'>
+			{getDateLabel()}
+		</h3>
+
+		<h4 class='flex gap-x-1.5 text-start'>
+			{
+				(
+					<slot
+						name='icon'
+						class='min-w-5'
+					/>
+				)
+			}
+			{title}
+		</h4>
+		{
+			subtitle && (
+				<p class='text-justify text-sm text-secondary-foreground'>{subtitle}</p>
+			)
+		}
+
+		{
+			link && linkLabel && (
+				<a
+					href={link}
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					<button class='btn btn-outline'>
+						<div class='grid'>
+							<small class='truncate'>{linkLabel}</small>
+						</div>
+						<ExternalLinkIcon />
+					</button>
+				</a>
+			)
+		}
+	</div>
+</div>

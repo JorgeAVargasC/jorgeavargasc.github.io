@@ -4,7 +4,7 @@ export const experience: IExperience[] = [
 	{
 		name: 'Frontend Developer',
 		company: 'BPO Labs Solutions',
-		from: '2022-10-11',
+		from: '2022-10-11T00:00:00',
 		to: null,
 		companyLink: 'https://www.linkedin.com/company/bpolabs',
 		description: ''
@@ -12,8 +12,8 @@ export const experience: IExperience[] = [
 	{
 		name: 'Full-stack Developer',
 		company: 'IEEE Student Branch of the University of Cauca',
-		from: '2020-01-01',
-		to: '2022-12-31',
+		from: '2020-01-01T00:00:00',
+		to: '2022-12-31T00:00:00',
 		companyLink: 'https://www.linkedin.com/company/ieee-unicauca',
 		description: ''
 	}

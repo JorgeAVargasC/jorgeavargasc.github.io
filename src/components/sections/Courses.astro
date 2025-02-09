@@ -1,0 +1,113 @@
+---
+import LinkIcon from '@components/ui/icons/LinkIcon.astro'
+import { userInfo } from '@services/user-info/infrastructure/user-info'
+import LinkedInIcon from '@components/ui/icons/LinkedInIcon.astro'
+import TimeLineItem from '@components/ui/time-line-item/TimeLineItem.astro'
+import NoteBookIcon from '@components/ui/icons/NoteBookIcon.astro'
+
+const user = userInfo
+const firstCourses = user.courses.slice(0, 3)
+const restCourses = user.courses.slice(3)
+---
+
+<div class='flex flex-col gap-5'>
+	<div class='animate-fade-in-blur'>
+		<div class='flex items-center justify-between'>
+			<a
+				href='#courses'
+				class='group flex flex-row items-center'
+			>
+				<LinkIcon class='w-0 duration-200 group-hover:w-6' />
+				<h2>Courses</h2>
+			</a>
+
+			<a
+				href={user.links.linkedInCourses}
+				target='_blank'
+				rel='noreferrer noopener'
+			>
+				<button class='btn bg-[#005FBF] hover:bg-[#005FBF]/80'>
+					<LinkedInIcon />
+					Show All
+				</button>
+			</a>
+		</div>
+	</div>
+
+	<div>
+		{
+			(
+				<div id='first-courses'>
+					{firstCourses.map((course) => (
+						<div class='animate-fade-in-blur'>
+							<TimeLineItem
+								from={course.from}
+								to={course.to}
+								link={course.link}
+								linkLabel='View Certificate'
+								title={course.name}
+								subtitle={course.institution}
+							>
+								<NoteBookIcon
+									class='w-4 h-fit'
+									slot='icon'
+								/>
+							</TimeLineItem>
+						</div>
+					))}
+				</div>
+			)
+		}
+
+		{
+			restCourses.length > 0 && (
+				<div id='rest-courses'>
+					{restCourses.map((course) => (
+						<div class='animate-fade-in-blur'>
+							<TimeLineItem
+								from={course.from}
+								to={course.to}
+								link={course.link}
+								linkLabel='View Certificate'
+								title={course.name}
+								subtitle={course.institution}
+							>
+								<NoteBookIcon
+									class='w-4 h-fit'
+									slot='icon'
+								/>
+							</TimeLineItem>
+						</div>
+					))}
+				</div>
+			)
+		}
+		<div class='animate-fade-in-blur'>
+			<button
+				id='toggle-btn'
+				class='mt-4 btn btn-outline'
+			></button>
+		</div>
+	</div>
+</div>
+
+<script>
+	import { userInfo } from '@services/user-info/infrastructure/user-info'
+
+	let showAll = false
+
+	const toggleBtn = document.getElementById('toggle-btn')
+	toggleBtn!.textContent = `Show ${userInfo.courses.length - 3} More`
+
+	toggleBtn!.addEventListener('click', () => {
+		showAll = !showAll
+
+		if (showAll) {
+			document.getElementById('rest-courses')!.style.display = 'block'
+			toggleBtn!.textContent = 'Show Less'
+		} else {
+			document.getElementById('rest-courses')!.style.display = 'none'
+			toggleBtn!.textContent = `Show ${userInfo.courses.length - 3} More`
+		}
+	})
+</script>

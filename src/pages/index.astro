@@ -1,6 +1,9 @@
 ---
 import About from '@components/sections/About.astro'
 import Banner from '@components/sections/Banner.astro'
+import Courses from '@components/sections/Courses.astro'
+import Education from '@components/sections/Education.astro'
+import Experiences from '@components/sections/Experiences.astro'
 import Projects from '@components/sections/Projects.astro'
 import Layout from '@layouts/Layout.astro'
 import '@styles/globals.css'
@@ -30,6 +33,27 @@ import '@styles/globals.css'
 				class='grid py-8'
 			>
 				<Projects />
+			</section>
+
+			<section
+				id='experience'
+				class='grid py-8'
+			>
+				<Experiences />
+			</section>
+
+			<section
+				id='education'
+				class='grid py-8'
+			>
+				<Education />
+			</section>
+
+			<section
+				id='courses'
+				class='grid py-8'
+			>
+				<Courses />
 			</section>
 		</div>
 	</main>
