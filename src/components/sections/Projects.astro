@@ -7,74 +7,62 @@ import ExternalLinkIcon from '@components/ui/icons/ExternalLinkIcon.astro'
 const user = userInfo
 ---
 
-<div class='flex flex-col gap-8'>
-	<a
-		href='#projects'
-		class='group flex flex-row items-center'
-	>
-		<LinkIcon />
-		<div class='animate-fade-in-blur'>
-			<h2>My Last Projects</h2>
-		</div>
-	</a>
+<div class='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+	{
+		user.projects.map((project) => (
+			<div class='animate-fade-in-blur'>
+				<div class='bg-card border border-border p-4 hover:bg-bunker-900 duration-200 rounded-lg'>
+					<div class='z-10 flex flex-1 flex-col gap-4'>
+						<a
+							href={project.liveURL}
+							target='_blank'
+							rel='noreferrer'
+						>
+							<img
+								src={project.imageUrl}
+								alt={project.name}
+								class='aspect-video object-top object-cover rounded-lg'
+								loading='lazy'
+							/>
+						</a>
 
-	<div class='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-		{
-			user.projects.map((project) => (
-				<div class='animate-fade-in-blur'>
-					<div class='bg-card border border-border p-4 hover:bg-bunker-800 duration-200 rounded-lg'>
-						<div class='z-10 flex flex-1 flex-col gap-4'>
+						<div class='flex items-center justify-between'>
+							<h3 class='text-start'>{project.name}</h3>
+						</div>
+
+						<div class='grid grid-cols-2 gap-4'>
+							<a
+								href={project.githubURL}
+								target='_blank'
+								rel='noreferrer'
+								class='cursor-pointer'
+							>
+								<button class='w-full btn btn-outline'>
+									View Code
+									<GitHubIcon class='w-4 h-4' />
+								</button>
+							</a>
 							<a
 								href={project.liveURL}
 								target='_blank'
 								rel='noreferrer'
+								class='cursor-pointer'
 							>
-								<img
-									src={project.imageUrl}
-									alt={project.name}
-									class='aspect-video object-top object-cover rounded-lg'
-									loading='lazy'
-								/>
+								<button class='w-full btn btn-primary'>
+									View Live
+									<ExternalLinkIcon class='w-4 h-4' />
+								</button>
 							</a>
+						</div>
 
-							<div class='flex items-center justify-between'>
-								<h3 class='text-start'>{project.name}</h3>
-							</div>
-
-							<div class='grid grid-cols-2 gap-4'>
-								<a
-									href={project.githubURL}
-									target='_blank'
-									rel='noreferrer'
-									class='cursor-pointer'
-								>
-									<button class='w-full btn btn-outline'>
-										View Code
-										<GitHubIcon class='w-4 h-4' />
-									</button>
-								</a>
-								<a
-									href={project.liveURL}
-									target='_blank'
-									rel='noreferrer'
-									class='cursor-pointer'
-								>
-									<button class='w-full btn btn-primary'>
-										View Live
-										<ExternalLinkIcon class='w-4 h-4' />
-									</button>
-								</a>
-							</div>
-
-							<div class='grid mt-2'>
-								<p class='text-justify text-secondary-foreground'>
-									{project.description}
-								</p>
-							</div>
+						<div class='grid mt-2'>
+							<p class='text-justify text-secondary-foreground'>
+								{project.description}
+							</p>
 						</div>
 					</div>
 				</div>
-			))
-		}
-	</div>
+			</div>
+		))
+	}
 </div>

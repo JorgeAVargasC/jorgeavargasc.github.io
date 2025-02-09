@@ -5,25 +5,12 @@ import { userInfo } from '@services/user-info/infrastructure/user-info'
 const general = userInfo.general
 ---
 
-<div class='flex flex-col gap-5'>
-	<a
-		href='#about'
-		class='group flex flex-row items-center'
-	>
-		<LinkIcon />
-
-		<div class='animate-fade-in-blur'>
-			<h2>About</h2>
-		</div>
-	</a>
-
-	<div class='grid gap-4 text-justify'>
-		{
-			general.bio.map((bio) => (
-				<div class='animate-fade-in-blur'>
-					<p class='text-secondary-foreground'>{bio}</p>
-				</div>
-			))
-		}
-	</div>
+<div class='grid gap-4 text-justify'>
+	{
+		general.bio.map((bio) => (
+			<div class='animate-fade-in-blur'>
+				<p class='text-secondary-foreground'>{bio}</p>
+			</div>
+		))
+	}
 </div>

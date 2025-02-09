@@ -1,4 +1,5 @@
 ---
+import '@styles/globals.css'
 import About from '@components/sections/About.astro'
 import Banner from '@components/sections/Banner.astro'
 import Courses from '@components/sections/Courses.astro'
@@ -6,15 +7,22 @@ import Education from '@components/sections/Education.astro'
 import Experiences from '@components/sections/Experiences.astro'
 import Projects from '@components/sections/Projects.astro'
 import Recommendations from '@components/sections/Recommendations.astro'
+import LinkedInButton from '@components/ui/buttons/LinkedInButton.astro'
+import SectionContainer from '@components/ui/section-container/SectionContainer.astro'
 import Layout from '@layouts/Layout.astro'
-import '@styles/globals.css'
+import ScrollProgress from '@components/ui/scroll-progress/ScrollProgress.astro'
+import Particles from '@components/ui/particles/Particles.astro'
+import { userInfo } from '@services/user-info/infrastructure/user-info'
+import { sections } from '@services/sections/sections'
+import Navigation from '@components/ui/navigation/Navigation.astro'
 ---
 
 <Layout>
-	<!-- <Welcome /> -->
-
+	<ScrollProgress />
+	<Particles />
+	<Navigation />
 	<main class='min-h-[100vh] bg-background pb-20 text-foreground'>
-		<div class='mx-auto grid max-w-5xl px-5'>
+		<div class='mx-auto grid max-w-5xl px-5 relative'>
 			<section
 				id='banner'
 				class='grid min-h-[100vh]'
@@ -22,47 +30,40 @@ import '@styles/globals.css'
 				<Banner />
 			</section>
 
-			<section
-				id='about'
-				class='grid py-8'
-			>
-				<About class='border border-red' />
-			</section>
+			{
+				sections.map((section) => (
+					<SectionContainer
+						id={section.id}
+						title={section.title}
+					>
+						{section.id === 'about' && <About slot={'content'} />}
+						{section.id === 'projects' && <Projects slot={'content'} />}
+						{section.id === 'experience' && <Experiences slot={'content'} />}
+						{section.id === 'education' && <Education slot={'content'} />}
 
-			<section
-				id='projects'
-				class='grid py-8'
-			>
-				<Projects />
-			</section>
+						{/* Courses */}
+						{section.id === 'courses' && <Courses slot={'content'} />}
+						{section.id === 'courses' && (
+							<LinkedInButton
+								href={userInfo.links.linkedInCourses}
+								slot={'end-title-actions'}
+							/>
+						)}
 
-			<section
-				id='experience'
-				class='grid py-8'
-			>
-				<Experiences />
-			</section>
+						{/* Recommendations */}
 
-			<section
-				id='education'
-				class='grid py-8'
-			>
-				<Education />
-			</section>
-
-			<section
-				id='courses'
-				class='grid py-8'
-			>
-				<Courses />
-			</section>
-
-			<section
-				id='recommendations'
-				class='grid py-8'
-			>
-				<Recommendations />
-			</section>
+						{section.id === 'recommendations' && (
+							<Recommendations slot={'content'} />
+						)}
+						{section.id === 'recommendations' && (
+							<LinkedInButton
+								href={userInfo.links.linkedInRecommendations}
+								slot={'end-title-actions'}
+							/>
+						)}
+					</SectionContainer>
+				))
+			}
 		</div>
 	</main>
 </Layout>

@@ -1,0 +1,35 @@
+<div
+	id='scroll-progress'
+	class:list={[
+		'top-0',
+		'z-50',
+		'fixed',
+		'left-0',
+		'h-1',
+		'w-0',
+		'bg-gradient-to-r',
+		'from-sky-400',
+		'via-sky-500',
+		'to-green-400',
+		'transition-[width]',
+		'duration-200',
+		'ease-out'
+	]}
+>
+</div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const progressBar = document.getElementById('scroll-progress')!
+
+		const updateScrollProgress = () => {
+			const scrollTop = window.scrollY
+			const docHeight =
+				document.documentElement.scrollHeight - window.innerHeight
+			const progress = (scrollTop / docHeight) * 100
+			progressBar.style.width = `${progress}%`
+		}
+
+		window.addEventListener('scroll', updateScrollProgress)
+	})
+</script>

@@ -1,40 +1,27 @@
 ---
 import GraduationCapIcon from '@components/ui/icons/GraduationCapIcon.astro'
-import LinkIcon from '@components/ui/icons/LinkIcon.astro'
 import TimeLineItem from '@components/ui/time-line-item/TimeLineItem.astro'
 import { userInfo } from '@services/user-info/infrastructure/user-info'
 const user = userInfo
 ---
 
-<div class='flex flex-col gap-5'>
-	<a
-		href='#education'
-		class='group flex flex-row items-center'
-	>
-		<LinkIcon class='w-0 duration-200 group-hover:w-6' />
-		<div class='animate-fade-in-blur'>
-			<h2>Education</h2>
-		</div>
-	</a>
-
-	<div>
-		{
-			user.education.map((education) => (
-				<div class='animate-fade-in-blur'>
-					<TimeLineItem
-						from={education.from}
-						to={education.to}
-						link={education.companyLink}
-						linkLabel={education.institution}
-						title={education.name}
-					>
-						<GraduationCapIcon
-							class='w-4 h-fit'
-							slot='icon'
-						/>
-					</TimeLineItem>
-				</div>
-			))
-		}
-	</div>
+<div>
+	{
+		user.education.map((education) => (
+			<div class='animate-fade-in-blur'>
+				<TimeLineItem
+					from={education.from}
+					to={education.to}
+					link={education.companyLink}
+					linkLabel={education.institution}
+					title={education.name}
+				>
+					<GraduationCapIcon
+						class='w-4 h-fit'
+						slot='icon'
+					/>
+				</TimeLineItem>
+			</div>
+		))
+	}
 </div>

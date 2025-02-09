@@ -59,6 +59,8 @@
 	--animate-fade-in-blur: fade-in-blur 0.4s ease-out;
 	--animate-levitate: levitate 2s ease-in-out infinite;
 	--animate-shine: shine 1.5s ease-in-out infinite;
+	--animate-scroll-left: scroll-left 20s linear infinite;
+	--animate-scroll-right: scroll-right 20s linear infinite;
 
 	@keyframes shine {
 		0% {
@@ -109,6 +111,28 @@
 			transform: translateY(0);
 		}
 	}
+
+	@keyframes scroll-left {
+		from {
+			transform: translateX(0%);
+		}
+
+		to {
+			transform: translateX(-50%);
+		}
+	}
+
+	@keyframes scroll-right {
+		from {
+			transform: translateX(-50%);
+		}
+
+		to {
+			transform: translateX(0%);
+		}
+	}
+
+
 
 
 }
