@@ -18,5 +18,5 @@
 	"vueIndentScriptAndStyle": false,
 	"printWidth": 80,
 	"endOfLine": "auto",
-	"plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-astro"]
+	"plugins": ["prettier-plugin-tailwindcss"]
 }

@@ -64,15 +64,15 @@
 
 	@keyframes shine {
 		0% {
-			background-position: 0% 0%
+			background-position: 0% 0%;
 		}
 
 		50% {
-			background-position: 100% 100%
+			background-position: 100% 100%;
 		}
 
 		to {
-			background-position: 0% 0%
+			background-position: 0% 0%;
 		}
 	}
 
@@ -131,10 +131,6 @@
 			transform: translateX(0%);
 		}
 	}
-
-
-
-
 }
 
 @utility scrollbar-hidden {
@@ -144,33 +140,31 @@
 }
 
 @layer components {
-
 	.text-gradient {
 		@apply bg-gradient-to-br from-sky-500 to-green-400 bg-clip-text text-transparent;
 	}
 
 	/* Estilos base para todos los botones */
 	.btn {
-		@apply cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-9 px-4 py-2;
+		@apply focus-visible:ring-ring inline-flex h-9 cursor-pointer items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0;
 	}
 
 	/* Variantes */
 	.btn-primary {
-		@apply bg-primary text-primary-foreground shadow hover:bg-primary/90;
+		@apply bg-primary text-primary-foreground hover:bg-primary/90 shadow;
 	}
 
 	.btn-outline {
-		@apply border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground;
+		@apply border-input bg-background hover:bg-accent hover:text-accent-foreground border shadow-sm;
 	}
 
 	.btn-secondary {
-		@apply bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80;
+		@apply bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm;
 	}
 
 	.card {
-		@apply relative grid min-h-[60px] w-fit place-items-center rounded-md dark:bg-background dark:text-foreground min-w-full p-4;
+		@apply dark:bg-background dark:text-foreground relative grid min-h-[60px] w-fit min-w-full place-items-center rounded-md p-4;
 	}
-
 }
 
 @layer base {
@@ -208,5 +202,4 @@
 	p {
 		@apply text-sm;
 	}
-
 }

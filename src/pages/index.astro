@@ -24,14 +24,14 @@ import Navigation from '@components/ui/navigation/Navigation.astro'
 	<main class='min-h-[100vh] bg-background pb-20 text-foreground'>
 		<div class='mx-auto grid max-w-5xl px-5 relative'>
 			<section
-				id='banner'
+				id='home'
 				class='grid min-h-[100vh]'
 			>
 				<Banner />
 			</section>
 
 			{
-				sections.map((section) => (
+				sections.slice(1).map((section) => (
 					<SectionContainer
 						id={section.id}
 						title={section.title}

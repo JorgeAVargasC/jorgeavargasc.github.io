@@ -1,4 +1,5 @@
 type Id =
+	| 'home'
 	| 'about'
 	| 'projects'
 	| 'experience'
@@ -9,6 +10,7 @@ type Id =
 type Section = { id: Id; title: string }
 
 export const sections: Section[] = [
+	{ id: 'home', title: 'Home' },
 	{ id: 'about', title: 'About' },
 	{ id: 'projects', title: 'My Last Projects' },
 	{ id: 'experience', title: 'Experience' },

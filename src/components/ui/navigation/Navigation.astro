@@ -1,17 +1,17 @@
 ---
 import { sections } from '@services/sections/sections'
-import { userInfo } from '@services/user-info/infrastructure/user-info'
 import CircleUserRound from '../icons/CircleUserRound.astro'
 import CodeIcon from '../icons/CodeIcon.astro'
 import BriefcaseBusinessIcon from '../icons/BriefcaseBusinessIcon.astro'
 import GraduationCapIcon from '../icons/GraduationCapIcon.astro'
 import FileBadge from '../icons/FileBadge.astro'
 import Quote from '../icons/Quote.astro'
+import HomeIcon from '../icons/HomeIcon.astro'
 ---
 
-<div class='fixed z-50 bottom-8 left-1/2 -translate-x-1/2'>
+<div class='fixed bottom-6 left-1/2 z-50 -translate-x-1/2'>
 	<div
-		class='bg-background rounded-3xl border border-border p-2 lg:p-4 flex items-center justify-center gap-2 lg:gap-4'
+		class='bg-background border-border flex items-center justify-center gap-2 rounded-3xl border p-2 lg:gap-4 lg:p-4'
 	>
 		{
 			sections.map((section) => (
@@ -19,21 +19,22 @@ import Quote from '../icons/Quote.astro'
 					<a
 						href={`#${section.id}`}
 						aria-label={section.title}
-						class='size-8 lg:size-10 hover:mx-2 duration-200 flex items-center justify-center rounded-full hover:bg-bunker-900 hover:scale-125 hover:duration-200'
+						class='hover:bg-bunker-900 flex size-8 items-center justify-center rounded-full duration-200 hover:mx-2 hover:scale-125 hover:duration-200 lg:size-10'
 					>
+						{section.id === 'home' && <HomeIcon class='w-4 lg:w-5' />}
 						{section.id === 'about' && <CircleUserRound class='w-4 lg:w-5' />}
 						{section.id === 'projects' && <CodeIcon class='w-4 lg:w-5' />}
 						{section.id === 'experience' && (
-							<BriefcaseBusinessIcon class='w-4 lg:w-5 ' />
+							<BriefcaseBusinessIcon class='w-4 lg:w-5' />
 						)}
 						{section.id === 'education' && (
-							<GraduationCapIcon class='w-4 lg:w-5 ' />
+							<GraduationCapIcon class='w-4 lg:w-5' />
 						)}
-						{section.id === 'courses' && <FileBadge class='w-4 lg:w-5 ' />}
-						{section.id === 'recommendations' && <Quote class='w-4 lg:w-5 ' />}
+						{section.id === 'courses' && <FileBadge class='w-4 lg:w-5' />}
+						{section.id === 'recommendations' && <Quote class='w-4 lg:w-5' />}
 					</a>
 					{/* tooltip */}
-					<div class='absolute min-w-max px-2 py-1 bg-bunker-900 rounded -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 duration-200'>
+					<div class='bg-bunker-900 absolute -top-12 left-1/2 min-w-max -translate-x-1/2 rounded px-2 py-1 opacity-0 duration-200 group-hover:opacity-100'>
 						<p>{section.title}</p>
 					</div>
 				</div>
