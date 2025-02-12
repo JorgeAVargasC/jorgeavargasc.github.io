@@ -12,9 +12,9 @@ type Section = { id: Id; title: string }
 export const sections: Section[] = [
 	{ id: 'home', title: 'Home' },
 	{ id: 'about', title: 'About' },
+	{ id: 'recommendations', title: 'Recommendations' },
 	{ id: 'projects', title: 'My Last Projects' },
 	{ id: 'experience', title: 'Experience' },
 	{ id: 'education', title: 'Education' },
-	{ id: 'courses', title: 'Courses' },
-	{ id: 'recommendations', title: 'Recommendations' }
+	{ id: 'courses', title: 'Courses' }
 ]

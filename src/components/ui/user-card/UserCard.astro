@@ -9,7 +9,8 @@ const { name, role, body, img, linkedIn } = Astro.props
 <div
 	class:list={[
 		'relative w-72 cursor-pointer overflow-hidden rounded-xl border p-4 md:w-96',
-		'border-border hover:bg-bunker-900'
+		'border-bunker-200/20 bg-bunker-800/10 border shadow-lg backdrop-blur-xs',
+		'hover:border-bunker-200/40 hover:bg-bunker-800/30',
 	]}
 >
 	<div class='flex h-full w-full min-w-full flex-col gap-2'>
@@ -29,13 +30,13 @@ const { name, role, body, img, linkedIn } = Astro.props
 					/>
 					<div class='flex flex-col'>
 						<div class='group flex items-center gap-1'>
-							<LinkedInIcon class='w-3 ' />
-							<figcaption class='text-sm font-medium text-card-foreground'>
+							<LinkedInIcon class='h-3 w-3' />
+							<figcaption class='text-card-foreground text-sm font-medium'>
 								{name}
 							</figcaption>
 							<ArrowRightIcon class='w-0 duration-200 group-hover:w-4' />
 						</div>
-						<p class='line-clamp-2 text-start text-xs font-medium text-secondary-foreground'>
+						<p class='text-secondary-foreground line-clamp-2 text-start text-xs font-medium'>
 							{role}
 						</p>
 					</div>

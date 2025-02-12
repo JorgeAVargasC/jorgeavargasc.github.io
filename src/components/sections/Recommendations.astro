@@ -8,26 +8,36 @@ const firstRow = r.slice(0, r.length / 2)
 const secondRow = r.slice(r.length / 2)
 ---
 
-<div class='grid relative'>
+<div class='relative grid'>
 	<div class='flex flex-col gap-4 overflow-hidden'>
 		<div
-			class='flex w-max gap-4 animate-scroll-left hover:[animation-play-state:paused]'
+			class='animate-scroll-left flex w-max gap-4 will-change-auto hover:[animation-play-state:paused]'
 		>
-			{firstRow.concat(firstRow).map((review) => <UserCard {...review} />)}
+			{
+				firstRow
+					.concat(firstRow)
+					.concat(firstRow)
+					.map((review) => <UserCard {...review} />)
+			}
 		</div>
 
 		<div
-			class='flex w-max gap-4 animate-scroll-right hover:[animation-play-state:paused]'
+			class='animate-scroll-right flex w-max gap-4 will-change-auto hover:[animation-play-state:paused]'
 		>
-			{secondRow.concat(secondRow).map((review) => <UserCard {...review} />)}
+			{
+				secondRow
+					.concat(secondRow)
+					.concat(secondRow)
+					.map((review) => <UserCard {...review} />)
+			}
 		</div>
 
 		<div
-			class='absolute top-0 left-0 h-full w-1/6 bg-gradient-to-l from-transparent to-background'
+			class='to-background absolute top-0 left-0 h-full w-1/6 bg-gradient-to-l from-transparent'
 		>
 		</div>
 		<div
-			class='absolute top-0 right-0 h-full w-1/6 bg-gradient-to-r from-transparent to-background'
+			class='to-background absolute top-0 right-0 h-full w-1/6 bg-gradient-to-r from-transparent'
 		>
 		</div>
 	</div>
