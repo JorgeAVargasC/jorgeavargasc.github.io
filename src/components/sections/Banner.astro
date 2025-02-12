@@ -8,12 +8,10 @@ const general = userInfo.general
 <div
 	class='flex flex-col items-center justify-center gap-5 md:flex-row md:justify-between'
 >
-	<div class='flex flex-col gap-8 items-center'>
+	<div class='flex flex-col items-center gap-8'>
 		<h1 class='grid gap-2 text-balance'>
 			<span class='animate-fade-in-blur'>Hi, I'm {general.name} a</span>
-			<div
-				class='animate-fade-in-blur relative grid place-items-center delay-[2000ms]'
-			>
+			<div class='animate-fade-in-blur relative grid place-items-center'>
 				<span class='text-gradient z-10'>{general.role}</span>
 				<span class='text-gradient absolute z-0 blur-xl'>{general.role}</span>
 				<span class='text-gradient absolute blur-3xl'>{general.role}</span>
@@ -26,7 +24,7 @@ const general = userInfo.general
 	</div>
 
 	<div
-		class='animate-fade-in-blur relative grid h-[340px] w-[280px] place-items-center delay-[200ms] lg:h-auto lg:w-[350px]'
+		class='animate-fade-in-blur relative grid h-[340px] w-[280px] place-items-center lg:h-auto lg:w-[350px]'
 	>
 		<svg
 			stroke='currentColor'
@@ -63,9 +61,8 @@ const general = userInfo.general
 			alt='me'
 			class='h-[273px] w-[280px]'
 		/>
-
-		<div class='block md:hidden'>
-			<Social />
-		</div>
+	</div>
+	<div class='block md:hidden'>
+		<Social />
 	</div>
 </div>

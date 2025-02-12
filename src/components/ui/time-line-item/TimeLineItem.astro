@@ -41,32 +41,29 @@ const getDateLabel = () => {
 
 <div class='flex gap-x-2'>
 	<div
-		class='relative after:absolute after:bottom-0 after:start-3.5 after:top-7 after:w-px after:-translate-x-[0.5px] after:bg-secondary-foreground last:after:hidden'
+		class='after:bg-secondary-foreground relative after:absolute after:start-3.5 after:top-7 after:bottom-0 after:w-px after:-translate-x-[0.5px] last:after:hidden'
 	>
 		<div class='relative z-10 flex size-7 items-center justify-center'>
-			<div class='size-2 rounded-full bg-secondary-foreground'></div>
+			<div class='bg-secondary-foreground size-2 rounded-full'></div>
 		</div>
 	</div>
 
 	<div class='grid gap-1 pb-6'>
-		<h3 class='flex h-7 items-center leading-none text-secondary-foreground'>
+		<h3 class='text-secondary-foreground flex h-7 items-center leading-none'>
 			{getDateLabel()}
 		</h3>
 
-		<h4 class='flex gap-x-1.5 text-start'>
-			{
-				(
-					<slot
-						name='icon'
-						class='min-w-5'
-					/>
-				)
-			}
-			{title}
-		</h4>
+		<div class='flex items-start gap-x-0.5'>
+			<div class='grid min-w-5 min-h-5 place-items-center'>
+				<slot name='icon' />
+			</div>
+			<h4>
+				{title}
+			</h4>
+		</div>
 		{
 			subtitle && (
-				<p class='text-justify text-sm text-secondary-foreground'>{subtitle}</p>
+				<p class='text-secondary-foreground text-justify text-sm'>{subtitle}</p>
 			)
 		}
 
