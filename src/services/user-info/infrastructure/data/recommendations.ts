@@ -13,6 +13,18 @@ export const recommendations: IRecommendation[] = [
 		linkedIn: 'https://linkedin.com/in/dgomez216'
 	},
 	{
+		name: 'Valentina Solano',
+		username: '@valentina-solano',
+		role: 'Services Director | Expert in Agile Project Management and Innovation',
+		body: [
+			"I've had the privilege of working with Jorge, and I can confidently say that he is one of the most resilient and talented frontend developers I’ve encountered. From tackling complex UI challenges to optimizing user experiences, he brings not just technical expertise but also a problem-solving mindset that makes him a total rock star.",
+			'What truly stands out is his ability to stay calm under pressure, find innovative solutions, and continuously push for excellence. Whether it’s a tight deadline, a demanding feature request, or a last-minute change, Jorge handles everything with professionalism and a can-do attitude.',
+			'Beyond technical skills, he is a fantastic team player—collaborative, supportive, and always willing to mentor and share knowledge. Any team would be lucky to have such a dedicated and talented frontend developer!'
+		],
+		img: '/images/recommendations/valentina-solano.webp',
+		linkedIn: 'https://www.linkedin.com/in/valentina-solano'
+	},
+	{
 		name: 'Elmer Muñoz',
 		username: '@el-jose',
 		role: 'IT Business Analyst | Software Developer | Project Manager',
@@ -59,15 +71,5 @@ export const recommendations: IRecommendation[] = [
 		],
 		img: '/images/recommendations/sofia-henao.webp',
 		linkedIn: 'https://www.linkedin.com/in/sofia-henao-5634ab222'
-	},
-	{
-		name: 'James',
-		username: '@james',
-		role: 'Role',
-		body: [
-			"I've worked with Jorge on a few projects, and he's a great developer. He's always been helpful and friendly, and I'm looking forward to working with him again!"
-		],
-		img: 'https://avatar.vercel.sh/james',
-		linkedIn: null
 	}
 ]
