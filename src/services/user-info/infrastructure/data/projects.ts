@@ -4,33 +4,30 @@ import type { IProject } from '../../domain/interfaces/project.interface'
 export const projects: IProject[] = [
 	{
 		id: '1',
-		name: '🐝 Beehive Management Dashboard',
+		name: '🚀 QR Code | 📲 Generator ⚡',
 		description:
-			"Efficiently manage and monitor the conditions of your beehives 🐝 with this comprehensive administrative panel. Track key metrics 📊, control hive health 🌡️, and optimize your apiary's performance with real-time data 🕒. Stay connected to your bees and ensure a thriving colony! 🍯",
-		githubURL: 'https://github.com/JorgeAVargasC/bee-key-frontend',
-		liveURL: 'https://bee-key-frontend.vercel.app',
+			'🎨✨ Create unique and customizable QR codes with a generator that lets you adjust colors, shapes, and styles to match any brand or design. 🔗📱 Scan effortlessly and turn every code into a visually appealing and functional experience. Transform any link into a QR code masterpiece! 🚀🔍',
+		githubURL: 'https://github.com/JorgeAVargasC/qr-code-generator',
+		liveURL: 'https://javc-qr-code-generator.vercel.app',
 		imageUrl: '/images/projects/1.webp',
 		techStack: [
 			TechStackEnum.REACT,
-			TechStackEnum.FIREBASE,
 			TechStackEnum.TYPESCRIPT,
-			TechStackEnum.TAILWIND,
-			TechStackEnum.NEXT_UI
+			TechStackEnum.TAILWIND_V4
 		]
 	},
 	{
 		id: '2',
-		name: '🎮 Twitch Stream Finder',
+		name: '👨‍💻 Developer Portfolio',
 		description:
-			'Discover your favorite streamers with ease and explore the hottest games right now! 🔥 This project uses the Twitch API to let you search for live streams 🎥 and get the top 20 most played games 🎮. Stay updated with the world of streaming in just a few clicks! 🌟',
-		githubURL: 'https://github.com/jorgeavargasc/twitch',
-		liveURL: 'https://jorgeavargasc.github.io/twitch/',
+			'🚀 Discover the portfolio of Jorge Vargas, a frontend developer specializing in React and TypeScript. 💻 Explore his projects and reach out for future collaborations! 🤝',
+		githubURL: 'https://github.com/JorgeAVargasC/jorgeavargasc.github.io',
+		liveURL: 'https://jorgeavargasc.github.io',
 		imageUrl: '/images/projects/2.webp',
 		techStack: [
-			TechStackEnum.REACT,
+			TechStackEnum.ASTRO,
 			TechStackEnum.TYPESCRIPT,
-			TechStackEnum.TAILWIND,
-			TechStackEnum.NEXT_UI
+			TechStackEnum.TAILWIND_V4
 		]
 	},
 	{
@@ -45,7 +42,7 @@ export const projects: IProject[] = [
 			TechStackEnum.REACT,
 			TechStackEnum.TYPESCRIPT,
 			TechStackEnum.TAILWIND,
-			TechStackEnum.NEXT_UI
+			TechStackEnum.MUI
 		]
 	}
 ]

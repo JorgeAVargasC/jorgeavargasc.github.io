@@ -1,17 +1,30 @@
 ---
-import LinkIcon from '@components/ui/icons/LinkIcon.astro'
-import ShineBorder from '@components/ui/shine-border/ShineBorder.astro'
 import GitHubIcon from '@components/ui/icons/GitHubIcon.astro'
 import { userInfo } from '@services/user-info/infrastructure/user-info'
 import ExternalLinkIcon from '@components/ui/icons/ExternalLinkIcon.astro'
+import { TechStackEnum } from '@services/user-info/domain/enums/tech-stack.enum'
+import badgeAstro from '@assets/badge-astro.svg'
+import badgeReact from '@assets/badge-react.svg'
+import badgeTailwind from '@assets/badge-tailwindcss.svg'
+import badgeTypescript from '@assets/badge-typescript.svg'
+import badgeMui from '@assets/badge-mui.svg'
 const user = userInfo
+
+const badges: Partial<Record<TechStackEnum, string>> = {
+	[TechStackEnum.ASTRO]: badgeAstro.src,
+	[TechStackEnum.REACT]: badgeReact.src,
+	[TechStackEnum.TAILWIND]: badgeTailwind.src,
+	[TechStackEnum.TAILWIND_V4]: badgeTailwind.src,
+	[TechStackEnum.TYPESCRIPT]: badgeTypescript.src,
+	[TechStackEnum.MUI]: badgeMui.src
+}
 ---
 
-<div class='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+<div class='grid grid-rows-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
 	{
 		user.projects.map((project) => (
 			<div class='animate-fade-in-blur'>
-				<div class='bg-card border border-border p-4 hover:bg-bunker-900 duration-200 rounded-lg'>
+				<div class='bg-card border-border hover:bg-bunker-900 rounded-lg border p-4 duration-200'>
 					<div class='z-10 flex flex-1 flex-col gap-4'>
 						<a
 							href={project.liveURL}
@@ -21,7 +34,7 @@ const user = userInfo
 							<img
 								src={project.imageUrl}
 								alt={project.name}
-								class='aspect-video object-top object-cover rounded-lg'
+								class='aspect-video rounded-lg object-cover object-top'
 								loading='lazy'
 							/>
 						</a>
@@ -37,9 +50,9 @@ const user = userInfo
 								rel='noreferrer'
 								class='cursor-pointer'
 							>
-								<button class='w-full btn btn-outline'>
+								<button class='btn btn-outline w-full'>
 									View Code
-									<GitHubIcon class='w-4 h-4' />
+									<GitHubIcon class='h-4 w-4' />
 								</button>
 							</a>
 							<a
@@ -48,18 +61,31 @@ const user = userInfo
 								rel='noreferrer'
 								class='cursor-pointer'
 							>
-								<button class='w-full btn btn-primary'>
+								<button class='btn btn-primary w-full'>
 									View Live
-									<ExternalLinkIcon class='w-4 h-4' />
+									<ExternalLinkIcon class='h-4 w-4' />
 								</button>
 							</a>
 						</div>
 
-						<div class='grid mt-2'>
-							<p class='text-justify text-secondary-foreground'>
+						<div class='mt-2 flex flex-wrap gap-1'>
+							{project.techStack.map((tech) => (
+								<div class='border-muted flex items-center gap-1.5 rounded-full border px-3 py-1.5 leading-1 capitalize'>
+									<img
+										src={badges[tech as TechStackEnum]}
+										alt={tech}
+										class='aspect-square h-3.5'
+									/>
+									<p>{tech}</p>
+								</div>
+							))}
+						</div>
+
+						{/* <div class='mt-2 grid'>
+							<p class='text-secondary-foreground text-justify'>
 								{project.description}
 							</p>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
