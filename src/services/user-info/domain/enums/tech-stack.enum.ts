@@ -4,7 +4,7 @@ export enum TechStackEnum {
 	NEXT = 'next',
 	ANGULAR = 'angular',
 	TAILWIND = 'tailwind',
-	NEXT_UI = 'next-ui',
+	HERO_UI = 'hero-ui',
 	MUI = 'mui',
 	TYPESCRIPT = 'typescript',
 	FIREBASE = 'firebase',

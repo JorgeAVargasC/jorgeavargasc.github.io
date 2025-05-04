@@ -32,12 +32,27 @@ export const projects: IProject[] = [
 	},
 	{
 		id: '3',
+		name: '🌎 Bio Sphere!',
+		description:
+			'Efficiently monitor and manage environmental conditions 🌿 with this powerful dashboard. Track key metrics like air quality 🌬️, temperature 🌡️, humidity 💧, and more — all in real-time 📊. Stay connected to your stations and ensure optimal conditions for your surroundings! 🌎',
+		githubURL: 'https://github.com/jorgeavargasc/bio-sphere-frontend',
+		liveURL: 'https://bio-sphere-frontend.vercel.app/',
+		imageUrl: '/images/projects/3.webp',
+		techStack: [
+			TechStackEnum.REACT,
+			TechStackEnum.TYPESCRIPT,
+			TechStackEnum.TAILWIND,
+			TechStackEnum.HERO_UI
+		]
+	},
+	{
+		id: '4',
 		name: '📝 Material-UI Forms',
 		description:
 			'Material-UI Forms Create dynamic and responsive forms effortlessly with this intuitive form builder powered by Material-UI 🚀. Customize your forms with ease ✨, and generate clean, user-friendly interfaces for any application 📑. Start building forms faster and more efficiently!',
 		githubURL: 'https://github.com/jorgeavargasc/material-ui-forms',
 		liveURL: 'https://material-ui-forms.vercel.app/',
-		imageUrl: '/images/projects/3.webp',
+		imageUrl: '/images/projects/4.webp',
 		techStack: [
 			TechStackEnum.REACT,
 			TechStackEnum.TYPESCRIPT,

@@ -5,7 +5,7 @@ export const courses: ICourse[] = [
 		name: 'Docker - Guía práctica de uso para desarrolladores',
 		institution: 'DevTalles',
 		from: null,
-		to: '2024-02-01T00:00:00',
+		to: '2025-02-01T00:00:00',
 		id: 'toru2s86yx',
 		link: 'https://cursos.devtalles.com/certificates/toru2s86yx'
 	},
