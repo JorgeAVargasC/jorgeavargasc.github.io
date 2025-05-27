@@ -2,6 +2,14 @@ import type { ICourse } from '../../domain/interfaces/course.interface'
 
 export const courses: ICourse[] = [
 	{
+		name: 'Patrones de Diseño: Soluciones prácticas y eficientes',
+		institution: 'DevTalles',
+		from: null,
+		to: '2025-05-27T00:00:00',
+		id: 't7adkwmnrv',
+		link: 'https://cursos.devtalles.com/certificates/t7adkwmnrv'
+	},
+	{
 		name: 'Docker - Guía práctica de uso para desarrolladores',
 		institution: 'DevTalles',
 		from: null,
