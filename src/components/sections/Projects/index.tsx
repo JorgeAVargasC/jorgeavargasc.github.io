@@ -28,49 +28,55 @@ export function Projects({ projects }: ProjectsProps) {
   const current = projects[active]
 
   return (
-    <section id="projects" className="section-padding max-w-6xl mx-auto">
+    <section id="projects" className="section-padding mx-auto max-w-6xl">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-80px' }}
       >
-        <motion.p variants={fadeInUp} className="text-sm text-violet-500 font-medium tracking-widest uppercase mb-3">
+        <motion.p
+          variants={fadeInUp}
+          className="mb-3 text-sm font-medium tracking-widest text-violet-500 uppercase"
+        >
           Portfolio
         </motion.p>
         <motion.h2
           variants={fadeInUp}
-          className="text-[clamp(2rem,5vw,3.5rem)] font-extrabold tracking-tight text-white mb-12"
+          className="mb-12 text-[clamp(2rem,5vw,3.5rem)] font-extrabold tracking-tight text-white"
         >
           Projects
         </motion.h2>
 
-        <motion.div variants={fadeInUp} className="flex flex-col md:grid md:grid-cols-[160px_1fr] gap-5">
+        <motion.div
+          variants={fadeInUp}
+          className="flex flex-col gap-5 md:grid md:grid-cols-[160px_1fr]"
+        >
           {/* Left — thumbnails nav */}
-          <div className="flex md:flex-col gap-2 overflow-x-auto md:overflow-visible pb-2 md:pb-0 shrink-0">
+          <div className="flex shrink-0 gap-2 overflow-x-auto pb-2 md:flex-col md:overflow-visible md:pb-0">
             {projects.map((proj, i) => (
               <button
                 key={proj.id}
                 onClick={() => setActive(i)}
                 className={[
-                  'shrink-0 rounded-xl border overflow-hidden transition-all duration-300',
+                  'shrink-0 overflow-hidden rounded-xl border transition-all duration-300',
                   active === i
                     ? 'border-violet-500/50 shadow-[0_0_12px_rgba(5,223,114,0.25)]'
                     : 'border-[#1c1c1c] opacity-45 hover:opacity-100',
                 ].join(' ')}
               >
-                <div className="w-28 md:w-full h-16 bg-[#0f0f0f] relative">
+                <div className="relative h-16 w-28 bg-[#0f0f0f] md:w-full">
                   <img
                     src={proj.imageUrl}
                     alt={proj.name}
-                    className="w-full h-full object-cover"
+                    className="h-full w-full object-cover"
                     onError={(e) => {
                       ;(e.currentTarget as HTMLImageElement).style.display = 'none'
                     }}
                   />
                   {active === i && (
                     <div
-                      className="absolute bottom-0 left-0 right-0 h-0.5"
+                      className="absolute right-0 bottom-0 left-0 h-0.5"
                       style={{ background: 'linear-gradient(to right, #05df72, #06b6d4)' }}
                     />
                   )}
@@ -87,50 +93,55 @@ export function Projects({ projects }: ProjectsProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="rounded-2xl overflow-hidden border border-[#1c1c1c]"
+              className="overflow-hidden rounded-2xl border border-[#1c1c1c]"
             >
               <div className="grid md:grid-cols-2">
                 {/* Left — image */}
-                <div className="relative h-52 md:h-auto bg-[#0f0f0f] group">
+                <div className="group relative h-48 bg-[#0f0f0f] md:h-auto">
                   <img
                     src={current.imageUrl}
                     alt={current.name}
-                    className="w-full h-full object-cover"
+                    className="h-full w-full object-contain"
                     onError={(e) => {
                       ;(e.currentTarget as HTMLImageElement).style.display = 'none'
                     }}
                   />
-                  <div className="absolute inset-0 bg-[#070707]/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+                  <div className="absolute inset-0 flex items-center justify-center gap-3 bg-[#070707]/75 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <a
                       href={current.liveURL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 rounded-lg text-sm font-medium text-white"
+                      className="rounded-lg px-4 py-2 text-sm font-medium text-white"
                       style={{ background: 'linear-gradient(135deg, #05df72, #00a6f4)' }}
                     >
                       Live Demo
                     </a>
-                    <a
-                      href={current.githubURL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 rounded-lg glass border border-[#1c1c1c] text-sm font-medium text-white hover:border-violet-500/40 transition-all"
-                    >
-                      GitHub
-                    </a>
+
+                    {current.githubURL && (
+                      <a
+                        href={current.githubURL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="glass rounded-lg border border-[#1c1c1c] px-4 py-2 text-sm font-medium text-white transition-all hover:border-violet-500/40"
+                      >
+                        GitHub
+                      </a>
+                    )}
                   </div>
                 </div>
 
                 {/* Right — details */}
-                <div className="p-6 md:p-8 bg-[#080808] flex flex-col">
-                  <h3 className="text-xl font-semibold text-white mb-2">{current.name}</h3>
-                  <p className="text-sm text-[#a1a1aa] leading-relaxed mb-5 flex-1">{current.description}</p>
+                <div className="flex flex-col bg-[#080808] p-6 md:p-8">
+                  <h3 className="mb-2 text-xl font-semibold text-white">{current.name}</h3>
+                  <p className="mb-5 flex-1 text-sm leading-relaxed text-[#a1a1aa]">
+                    {current.description}
+                  </p>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="mb-6 flex flex-wrap gap-2">
                     {current.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-0.5 rounded-md text-xs font-mono"
+                        className="rounded-md px-2 py-0.5 font-mono text-xs"
                         style={{
                           background: `${techColors[tech] || '#05df72'}15`,
                           color: techColors[tech] || '#05df72',
@@ -143,19 +154,21 @@ export function Projects({ projects }: ProjectsProps) {
                   </div>
 
                   <div className="flex gap-3">
-                    <a
-                      href={current.githubURL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 py-2.5 rounded-xl glass border border-[#1c1c1c] text-sm font-medium text-center text-[#a1a1aa] hover:text-white hover:border-violet-500/40 transition-all"
-                    >
-                      GitHub
-                    </a>
+                    {current.githubURL && (
+                      <a
+                        href={current.githubURL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="glass flex-1 rounded-xl border border-[#1c1c1c] py-2.5 text-center text-sm font-medium text-[#a1a1aa] transition-all hover:border-violet-500/40 hover:text-white"
+                      >
+                        GitHub
+                      </a>
+                    )}
                     <a
                       href={current.liveURL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 py-2.5 rounded-xl text-sm font-medium text-center text-white transition-all duration-300 hover:opacity-90"
+                      className="flex-1 rounded-xl py-2.5 text-center text-sm font-medium text-white transition-all duration-300 hover:opacity-90"
                       style={{ background: 'linear-gradient(135deg, #05df72, #00a6f4)' }}
                     >
                       Live Demo ↗
