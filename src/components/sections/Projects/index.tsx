@@ -23,7 +23,7 @@ interface ProjectsProps {
   projects: IProject[]
 }
 
-export function Projects({ projects }: ProjectsProps) {
+export function Projects({ projects }: Readonly<ProjectsProps>) {
   const [active, setActive] = useState(0)
   const current = projects[active]
 
@@ -93,20 +93,20 @@ export function Projects({ projects }: ProjectsProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="overflow-hidden rounded-2xl border border-[#1c1c1c]"
+              className="border-border overflow-hidden rounded-2xl border"
             >
-              <div className="grid md:grid-cols-2">
+              <div className="grid md:flex md:min-w-fit">
                 {/* Left — image */}
-                <div className="group relative h-48 bg-[#0f0f0f] md:h-auto">
+                <div className="group bg-surface relative aspect-1280/800 h-full w-full md:min-w-120">
                   <img
                     src={current.imageUrl}
                     alt={current.name}
-                    className="h-full w-full object-contain"
+                    className="aspect-1280/800 h-full w-full object-contain"
                     onError={(e) => {
-                      ;(e.currentTarget as HTMLImageElement).style.display = 'none'
+                      e.currentTarget.style.display = 'none'
                     }}
                   />
-                  <div className="absolute inset-0 flex items-center justify-center gap-3 bg-[#070707]/75 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div className="bg-bg/75 absolute inset-0 flex items-center justify-center gap-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <a
                       href={current.liveURL}
                       target="_blank"
@@ -122,7 +122,7 @@ export function Projects({ projects }: ProjectsProps) {
                         href={current.githubURL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="glass rounded-lg border border-[#1c1c1c] px-4 py-2 text-sm font-medium text-white transition-all hover:border-violet-500/40"
+                        className="glass border-border rounded-lg border px-4 py-2 text-sm font-medium text-white transition-all hover:border-violet-500/40"
                       >
                         GitHub
                       </a>
@@ -133,7 +133,7 @@ export function Projects({ projects }: ProjectsProps) {
                 {/* Right — details */}
                 <div className="flex flex-col bg-[#080808] p-6 md:p-8">
                   <h3 className="mb-2 text-xl font-semibold text-white">{current.name}</h3>
-                  <p className="mb-5 flex-1 text-sm leading-relaxed text-[#a1a1aa]">
+                  <p className="text-text-secondary mb-5 flex-1 text-sm leading-relaxed">
                     {current.description}
                   </p>
 
@@ -159,7 +159,7 @@ export function Projects({ projects }: ProjectsProps) {
                         href={current.githubURL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="glass flex-1 rounded-xl border border-[#1c1c1c] py-2.5 text-center text-sm font-medium text-[#a1a1aa] transition-all hover:border-violet-500/40 hover:text-white"
+                        className="glass border-border text-text-secondary flex-1 rounded-xl border py-2.5 text-center text-sm font-medium transition-all hover:border-violet-500/40 hover:text-white"
                       >
                         GitHub
                       </a>

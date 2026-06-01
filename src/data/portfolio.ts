@@ -104,7 +104,7 @@ export const user: IUser = {
   ],
   projects: [
     {
-      id: '3',
+      id: '1',
       name: '🥐 Buch | ☕ Bakery & Café',
       description:
         '🥐✨ Brand identity & landing page for Buch, an artisan bakery concept. Logo, color palette, and full visual system brought to life with warm earthy tones and elegant typography. ☕🎨',
@@ -114,13 +114,13 @@ export const user: IUser = {
       techStack: [TechStackEnum.REACT, TechStackEnum.TYPESCRIPT, TechStackEnum.TAILWIND_V4],
     },
     {
-      id: '1',
-      name: '🚀 QR Code | 📲 Generator ⚡',
+      id: '2',
+      name: '🍸 Brysa | 🥩 Cóctel & Tapas',
       description:
-        '🎨✨ Create unique and customizable QR codes with a generator that lets you adjust colors, shapes, and styles to match any brand or design. 🔗📱 Scan effortlessly and turn every code into a visually appealing and functional experience.',
-      githubURL: 'https://github.com/JorgeAVargasC/qr-code-generator',
-      liveURL: 'https://javc-qr-code-generator.vercel.app',
-      imageUrl: '/images/projects/1.webp',
+        '🍸✨ Brand identity & landing page for Brysa, a premium cocktail bar and Spanish tapas venue in El Peñón, Cali. Dark, elegant aesthetic with a rotating artisan cocktail menu and private events. 🥂🖤',
+      githubURL: '',
+      liveURL: 'https://brysa.vercel.app',
+      imageUrl: '/images/projects/brysa.webp',
       techStack: [TechStackEnum.REACT, TechStackEnum.TYPESCRIPT, TechStackEnum.TAILWIND_V4],
     },
     {
@@ -130,13 +130,23 @@ export const user: IUser = {
         'Efficiently monitor and manage environmental conditions 🌿 with this powerful dashboard. Track key metrics like air quality 🌬️, temperature 🌡️, humidity 💧, and more — all in real-time 📊.',
       githubURL: 'https://github.com/jorgeavargasc/bio-sphere-frontend',
       liveURL: 'https://bio-sphere-frontend.vercel.app/',
-      imageUrl: '/images/projects/3.webp',
+      imageUrl: '/images/projects/bio-sphere.webp',
       techStack: [
         TechStackEnum.REACT,
         TechStackEnum.TYPESCRIPT,
         TechStackEnum.TAILWIND,
         TechStackEnum.HERO_UI,
       ],
+    },
+    {
+      id: '4',
+      name: '🚀 QR Code | 📲 Generator ⚡',
+      description:
+        '🎨✨ Create unique and customizable QR codes with a generator that lets you adjust colors, shapes, and styles to match any brand or design. 🔗📱 Scan effortlessly and turn every code into a visually appealing and functional experience.',
+      githubURL: 'https://github.com/JorgeAVargasC/qr-code-generator',
+      liveURL: 'https://javc-qr-code-generator.vercel.app',
+      imageUrl: '/images/projects/qr-code.webp',
+      techStack: [TechStackEnum.REACT, TechStackEnum.TYPESCRIPT, TechStackEnum.TAILWIND_V4],
     },
   ],
   experience: [
@@ -164,6 +174,7 @@ export const user: IUser = {
       name: 'Electronic and Telecommunications Engineering',
       institution: 'Universidad del Cauca',
       companyLink: 'https://www.linkedin.com/school/universidad-del-cauca/',
+      logo: '/images/institutions/unicauca.png',
       from: 'Aug 2016',
       to: 'Mar 2024',
     },
@@ -280,6 +291,7 @@ export const user: IUser = {
       id: 'CA218708A001',
       name: 'Codificación y Programación',
       institution: 'Pontificia Universidad Javeriana / Samsung Innovation Campus',
+      logo: '/images/institutions/javeriana.jpg',
       from: null,
       to: 'Mar 2021',
       link: 'https://wallet.xertify.co/certificates/CA218708A001',
